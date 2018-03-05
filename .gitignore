@@ -5,6 +5,9 @@
 node_modules
 dist
 
+assets
+css
+
 ### macOS ###
 *.DS_Store
 .AppleDouble

@@ -1,0 +1,492 @@
+@import './_essentials.scss';
+
+// =============================================================================================
+// generico
+
+html, body {
+  height: 100%;
+}
+
+.pti-main {
+  
+  .spfx-header {
+    // background-color: $cor-vivo-9;
+    height: 50px;
+    color: $cor-white;
+    padding-top: 1.2rem;
+    background: radial-gradient(circle, $cor-vivo-3, $cor-vivo-9 75%);
+  }
+
+  /* ======================================================
+      Genericos
+  */
+  .pti-list {
+    padding-left: 0;
+
+    li {
+      list-style: none;
+    }
+  }
+  
+  .pti-link-all {
+    position: relative;
+    color: $cor-vivo-6;
+    display: flex;
+    align-items: flex-end;
+    @extend %nowrap;
+    margin-top: .5rem;
+
+    &:focus, &:hover {
+      color: $cor-vivo-1;
+    }
+
+    .icon {
+      position: relative;
+      top: .2rem;
+      font-size: 1.5rem;
+      padding: 0 .5rem;
+    }
+  }
+
+  a.pti-title {
+    &:focus, &:hover {
+      color: $cor-vivo-1;
+
+      &.pti-title-line {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .pti-title {
+    line-height: 1.1;
+    font-size: 2.6rem;
+    color: $cor-vivo-9;
+
+    &.pti-title-line:after {
+      content: '';
+      display: block;
+      width: 20rem;
+      height: 2px;
+      margin: .4rem 0;
+      margin-left: -15px;
+      background-color: $cor-vivo-1;
+    }
+  }
+
+  .pti-container {    
+    margin-top: 1rem;
+  }
+
+  .pti-news-group-text {
+    position: relative;
+  }
+
+  .pti-link-more {
+    position: absolute;
+    right: 0;
+    bottom: -.5rem;
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: $cor-vivo-1;
+    color: $cor-white;
+    font-size: 2.5rem;
+    padding: 0 0 0 .5rem;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+    @extend %transition-fast;
+    z-index: 3;
+
+    &:focus, &:hover {
+      background-color: $cor-vivo-7;
+    }
+  }
+
+
+
+
+  /* ======================================================
+      Header
+  */
+  .pti-header {
+    position: relative;
+    background-color: $cor-black-200;
+
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      background-color: rgba($cor-white, .3);
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .pti-header-container {
+      margin: 1rem;
+    }
+
+    .pti-header-group {
+      position: absolute;
+      width: 100%;
+      z-index: 2;
+      // background: linear-gradient(rgba($cor-white, 40%), rgba($cor-white, 0%));
+    }
+
+    .pti-logo {
+      font-size: 3rem;
+      color: $cor-black-1;
+      text-decoration: none;
+      @extend %font-light;
+    }
+
+    .pti-search {
+      .pti-btn-search {
+        font-size: 1.6rem;
+        padding: .5rem .8rem;
+        color: $cor-vivo-7;
+        border-radius: 100%;
+        @extend %transition;
+
+        &:focus, &:hover {
+          color: $cor-white;
+          background-color: $cor-vivo-7;
+          border-radius: .3rem;
+        }
+      }
+    }
+
+    .pti-main-menu {
+      margin-bottom: 1.5rem;
+
+      a {
+        color: $cor-vivo-7;
+        font-size: 1.6rem;
+        text-decoration: none;
+        // @extend %font-light;
+
+        &:focus, &:hover {
+          color: $cor-vivo-3;
+        }
+      }
+    }
+
+    .pti-main-news {
+      .pti-title {
+        margin-bottom: 0;
+      }
+
+      .pti-img-back {
+        text-align: center;
+        max-height: 40rem;
+        overflow: hidden;
+      }
+
+      .pti-news-group-text {
+        position: absolute;
+        bottom: 0;
+        z-index: 2;
+        max-width: 40rem;
+      }
+
+      .pti-news-subtitle {
+        color: $cor-black-1;
+      }
+    }
+  }
+
+  /* ======================================================
+      Section
+  */
+  .pti-section {
+    padding: 0;
+
+    .pti-box-separate {
+      padding-top: 3rem;
+    }
+  }
+
+  /* ======================================================
+      Footer
+  */
+  .pti-footer {
+    background-color: $cor-vivo-9;
+    color: $cor-white;
+    padding: 1rem 0;
+    margin-top: 3rem;
+    font-size: 1.2rem;
+
+    h4 {
+      font-size: 1.4rem;
+    }
+
+    a {
+      color: $cor-white;
+
+      &:focus, &:hover {
+        color: $cor-vivo-2 !important;
+      }
+    }
+
+    .pti-links {
+      &, & a {
+        color: $cor-black-400;
+      }
+
+      .pti-link-title {
+        color: $cor-white;
+      }
+
+      @media screen and (max-width: $screen-xxs-max) {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+    }
+
+    .pti-box-separate {
+      padding-top: 1rem;
+    }
+
+    .pti-footer-text, .pti-links {
+      margin-top: 1rem;
+    }
+
+    .pti-footer-name {
+      margin-bottom: 1rem;
+    }
+
+    .pti-social-midias {
+      text-align: right;
+      
+      ul {
+        padding-left: 1.5rem;
+      }
+
+      ul, li {
+        display: inline-block;
+      }
+
+      ul:first-child {
+        padding: 0;
+      }
+
+      li {
+        padding: 0 .5rem;
+      }
+    }
+
+    @media screen and (max-width: $screen-xxs-max) {
+      .pti-footer-text > div {
+        flex-wrap: wrap;
+
+        .pti-footer-name,
+        .pti-social-midias,
+        ul {
+          text-align: center;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  /* ======================================================
+      Noticias thumbnails
+  */
+  
+  .pti-news-group-text {
+    padding-right: 3rem;
+    padding-top: 1rem;
+  }
+
+  .pti-news-subtitle {
+    line-height: 1.4;
+  }
+
+  .pti-news-container {
+    .pti-news-title {
+      font-size: 1.8rem;
+    }
+    
+    .pti-news-subtitle {
+      font-size: 1.4rem;
+    }
+  }
+
+
+  /* ======================================================
+      Calendario
+  */
+  .pti-calendar {
+  }
+
+  .pti-calendar-days {
+    padding: 0;
+    margin: 0 0 1rem 0;
+
+    .pti-calendar-day {
+      display: flex;
+      padding: 0 0 0 1rem;
+      margin-top: 1rem;
+      padding-top: 1rem;
+      background-color: $cor-black-200;
+      @extend %transition-fast;
+
+      &:hover {
+        background-color: $cor-black-300;
+
+        .pti-calendar-title {
+          color: $cor-black-1;
+        }
+      }
+
+      &:first-child {
+        margin: 0;
+      }
+
+      .pti-calendar-date {
+        @extend %nowrap;
+      }
+
+      .pti-calendar-label-day {
+        line-height: 1;
+        font-size: 3.2rem;
+        color: $cor-vivo-2;
+        @extend %font-light;
+        
+      }
+
+      .pti-calendar-label-month {
+        position: relative;
+        font-size: 1rem;
+        top: -1.3rem;
+      }
+
+      .pti-calendar-events {
+        width: 100%;
+      }
+
+      .pti-calendar-event {
+        position: relative;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+
+        &:after {
+          position: absolute;
+          bottom: 0;
+          content: '';
+          display: block;
+          width: 100%;
+          height: 1px;
+          background: linear-gradient(to right, transparent, rgba($cor-vivo-5, .3), transparent);
+        }
+
+        &:last-child {
+          margin: 0;
+          
+          &:after {
+            display: none;
+          }
+        }
+      }
+
+      .pti-calendar-title {
+        line-height: 1.3;
+        max-height: 3.5rem;
+        overflow: hidden;
+        padding-right: 2.5rem;        
+        padding-left: 1rem;
+      }
+    }
+  }
+
+  
+  /* ======================================================
+      Links uteis
+  */
+  .pti-links-group {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-gap: 0px;
+    grid-auto-rows: 10rem;
+
+    .pti-link {
+      box-sizing: border-box;
+      margin: 0 .5rem .5rem 0;
+
+      &:first {
+        grid-column-start: 1; 
+        grid-column-end: 2;
+        grid-row-start: 1; 
+        grid-row-end: 2;
+      }
+
+      &:nth-child(2) {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 1; 
+      }
+
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: #CCC;
+
+        &:focus, &:hover {
+          background-color: #333;
+        }
+      }
+    }
+  }
+
+
+
+  /* ======================================================
+      Portal
+  */
+  .pti-portal {
+    .pti-portal-chart {
+    }
+
+    .row > div{
+      margin: .5rem 0 0 .5rem;
+      
+      &:first-child {      
+        margin: 0;
+      }
+    }
+  }  
+
+  .pti-portal-icons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .pti-portal-icon {
+      width: 3rem;
+      height: 3rem;
+      margin: 0 .5rem .5rem 0;
+
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: .6rem 0;
+        text-align: center;
+        color: $cor-black-300;
+        background-color: $cor-vivo-3;
+        
+        &:focus, &:hover {
+          color: $cor-white;
+          text-decoration: none;
+          background-color: $cor-vivo-5;
+        }
+      }
+    }
+  }
+
+}

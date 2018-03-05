@@ -1,0 +1,56 @@
+﻿
+// =============================================================================================
+%vertical-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+%nowrap {
+  white-space: nowrap;
+}
+
+%noselect {
+  user-select: none;
+}
+
+%nolist-style {
+  list-style: none;
+}
+
+%list-inline {
+  ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+      @extend %nolist-style;
+      display: inline-block;
+    }
+  }
+}
+
+%transition {
+    transition: all .3s ease-in-out;
+}
+
+%transition-fast {
+    transition: all .1s ease-in-out;
+}
+
+%transition-fast-linear {
+    transition: all .1s linear;
+}
+
+%transition-slow {
+    transition: all .6s ease-in-out;
+}
+
+// =============================================================================================
+@mixin setImageHeight($image, $width, $height, $proporcao: 1) {
+    width: $width * $proporcao;
+    height: $height * $proporcao;
+    background-image: url($image);
+    padding: $height * $proporcao 0 0 0; /* padding-top=altura imagem */
+    height /**/:$height * $proporcao; /* height=altura imagem - hack IE5's */
+}

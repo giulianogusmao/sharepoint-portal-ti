@@ -1,18 +1,627 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Poc - Portal de TI</title>
-    <!-- build:css -->
-    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <!-- endbuild -->
-  </head>
-  <body>
-    <h1>Poc - Portal de TI</h1>
-    <!-- build:js -->
-    <!-- <script src="js/plugins.js"></script> -->
-    <!-- <script src="js/script.js"></script> -->
-    <!-- endbuild  -->
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Poc - Portal de TI</title>
+  <!-- build:css -->
+  <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- endbuild -->
+</head>
+
+<body>
+  <div class="pti-main">
+
+    <!-- header sharepoint -->
+    <div class="spfx-header">
+      <div class="container">
+        Office 365 ...
+      </div>
+    </div>
+
+    <!-- header -->
+    <div class="pti-header">
+
+      <!-- header com logo e campo de busca -->
+      <div class="pti-header-group">
+        <div class="pti-header-container">
+          <div class="container">
+
+            <div class="row align-items-center">
+              <div class="col-sm">
+                <a href="#" class="pti-logo">Portal de TI</a>
+              </div>
+
+              <div class="col-sm text-right">
+                <div class="pti-search">
+                  <a href="#" class="pti-btn-search" title="buscar">
+                    <i class="fa fa-search"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- menu -->
+        <div class="pti-main-menu">
+          <div class="container">
+            <nav class="nav nav-pills nav-fill">
+              <a class="nav-item active" href="#">Home</a>
+              <a class="nav-item" href="#">A Telefônica</a>
+              <a class="nav-item" href="#">Notícias</a>
+              <a class="nav-item" href="#">Vídeos</a>
+              <a class="nav-item" href="#">Documentos</a>
+              <a class="nav-item" href="#">Programas</a>
+              <a class="nav-item" href="#">Áreas da Empresa</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <!-- noticia principal -->
+      <div class="pti-main-news">
+        <div class="pti-news">
+          <div class="pti-img-back">
+            <img src="./img/banner/img4.jpg" class="img-fluid" alt="Responsive image">
+          </div>
+
+          <div class="container">
+            <div class="pti-news-group-text">
+              <h1 class="pti-title pti-title-line pti-news-title">Lorem ipsum</h1>
+              <h4 class="pti-news-subtitle">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos</h4>
+              <a href="#" class="pti-link-more" title="ver mais"> +
+                <span class="text-hide">ver mais</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pti-section">
+      <div class="container">
+        <div class="row">
+
+          <!-- Noticias -->
+          <div class="col-md-8 pti-box-separate">
+            <div class="pti-news">
+
+              <!-- titulo principal -->
+              <div class="d-flex justify-content-between align-items-start flex-wrap">
+                <a href="#" class="pti-title pti-title-line" title="Notícias">
+                  Notícias
+                </a>
+
+                <a href="#" class="pti-link-all" title="Ver todas notícias">
+                  <span>ver todas</span>
+                  <span class="icon">
+                    <i class="fa fa-chevron-right"></i>
+                  </span>
+                </a>
+              </div>
+
+              <!-- noticias thumbnail -->
+              <div class="pti-container pti-news-container">
+                <div class="row">
+
+                  <div class="col-sm">
+                    <div class="pti-news">
+                      <div class="pti-img-back">
+                        <img src="./img/banner/img4.jpg" class="img-fluid" alt="Responsive image">
+                      </div>
+
+                      <div class="pti-news-group-text">
+                        <h2 class="pti-news-title">Lorem ipsum</h2>
+                        <h4 class="pti-news-subtitle">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos</h4>
+                        <a href="#" class="pti-link-more" title="ver mais"> +
+                          <span class="text-hide">ver mais</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm">
+                    <div class="pti-news">
+                      <div class="pti-img-back">
+                        <img src="./img/banner/img4.jpg" class="img-fluid" alt="Responsive image">
+                      </div>
+
+                      <div class="pti-news-group-text">
+                        <h2 class="pti-news-title">Lorem ipsum</h2>
+                        <h4 class="pti-news-subtitle">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos</h4>
+                        <a href="#" class="pti-link-more" title="ver mais"> +
+                          <span class="text-hide">ver mais</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+            <!-- fim noticias -->
+
+          </div>
+          <!-- fim Noticias -->
+
+          <!-- Calendário -->
+          <div class="col-md pti-box-separate">
+            <div class="pti-calendar">
+
+              <!-- titulo principal -->
+              <div class="d-flex justify-content-between align-items-start flex-wrap">
+                <a href="#" class="pti-title pti-title-line" title="Ver todos os eventos do calendário">
+                  Calendário de TI
+                </a>
+
+                <a href="#" class="pti-link-all" title="Ver todos os eventos do calendário">
+                  <span>ver todos</span>
+                  <span class="icon">
+                    <i class="fa fa-chevron-right"></i>
+                  </span>
+                </a>
+              </div>
+
+              <!-- eventos calendario -->
+              <div class="pti-container pti-calendar-container">
+                <ul class="pti-list pti-calendar-days">
+                  <li class="pti-calendar-day">
+                    <div class="pti-calendar-date">
+                      <span class="pti-calendar-label-day">25</span>
+                      <sup class="pti-calendar-label-month">jun</sup>
+                    </div>
+
+                    <ul class="pti-list pti-calendar-events">
+                      <li class="pti-calendar-event">
+                        <div class="pti-calendar-title">
+                          Lorem ipsum dolor sit am pq cuando zno nest msm doquesta
+                        </div>
+
+                        <a href="#" class="pti-link-more" title="ver mais"> +
+                          <span class="text-hide">ver mais</span>
+                        </a>
+                      </li>
+                      <li class="pti-calendar-event">
+                        <div class="pti-calendar-title">
+                          Lorem ipsum dolor sit am pq cuando zno nest msm doquesta
+                        </div>
+
+                        <a href="#" class="pti-link-more" title="ver mais"> +
+                          <span class="text-hide">ver mais</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="pti-calendar-day">
+                    <div class="pti-calendar-date">
+                      <span class="pti-calendar-label-day">27</span>
+                      <sup class="pti-calendar-label-month">jun</sup>
+                    </div>
+
+                    <ul class="pti-list pti-calendar-events">
+                      <li class="pti-calendar-event">
+                        <div class="pti-calendar-title">
+                          Lorem ipsum dolor sit am pq cuando zno nest msm doquesta
+                        </div>
+
+                        <a href="#" class="pti-link-more" title="ver mais"> +
+                          <span class="text-hide">ver mais</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="pti-calendar-day">
+                    <div class="pti-calendar-date">
+                      <span class="pti-calendar-label-day">27</span>
+                      <sup class="pti-calendar-label-month">jun</sup>
+                    </div>
+
+                    <ul class="pti-list pti-calendar-events">
+                      <li class="pti-calendar-event">
+                        <div class="pti-calendar-title">
+                          Lorem ipsum dolor sit am pq cuando zno nest msm doquesta
+                        </div>
+
+                        <a href="#" class="pti-link-more" title="ver mais"> +
+                          <span class="text-hide">ver mais</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+
+                </ul>
+              </div>
+
+            </div>
+          </div>
+          <!-- fim Calendário -->
+
+          <div class="w-100"></div>
+
+          <!-- Links úteis -->
+          <div class="col-md pti-box-separate">
+            <div class="pti-links">
+
+              <!-- titulo principal -->
+              <div class="d-flex justify-content-between align-items-start flex-wrap">
+                <h3 class="pti-title pti-title-line">
+                  Links úteis
+                </h3>
+
+                <!-- <a href="#" class="pti-link-all" title="Ver todas notícias">
+                  <span>ver todas</span>
+                  <span class="icon">
+                    <i class="fa fa-chevron-right"></i>
+                  </span>
+                </a> -->
+              </div>
+
+              <!-- links thumbnail -->
+              <div class="pti-container pti-links-container">
+                <ul class="pti-list pti-links-group">
+
+                  <li class="pti-link">
+                    <a href="#">
+                      <span class="pti-icon pti-link-icon">
+                        <i class="fa fa-paperclip"></i>
+                      </span>
+
+                      <span class="pti-link-text">Lorem ipsum</span>
+                    </a>
+                  </li>
+
+                  <li class="pti-link">
+                    <a href="#">
+                      <span class="pti-icon pti-link-icon">
+                        <i class="fa fa-paperclip"></i>
+                      </span>
+
+                      <span class="pti-link-text">Lorem ipsum</span>
+                    </a>
+                  </li>
+
+                  <li class="pti-link">
+                    <a href="#">
+                      <span class="pti-icon pti-link-icon">
+                        <i class="fa fa-paperclip"></i>
+                      </span>
+
+                      <span class="pti-link-text">Lorem ipsum</span>
+                    </a>
+                  </li>
+
+                  <li class="pti-link">
+                    <a href="#">
+                      <span class="pti-icon pti-link-icon">
+                        <i class="fa fa-paperclip"></i>
+                      </span>
+
+                      <span class="pti-link-text">Lorem ipsum</span>
+                    </a>
+                  </li>
+
+                  <li class="pti-link">
+                    <a href="#">
+                      <span class="pti-icon pti-link-icon">
+                        <i class="fa fa-paperclip"></i>
+                      </span>
+
+                      <span class="pti-link-text">Lorem ipsum</span>
+                    </a>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+
+          </div>
+          <!-- fim Links úteis -->
+
+          <!-- Portal - Dashboard -->
+          <div class="col-md pti-box-separate">
+            <div class="pti-portal">
+
+              <!-- titulo principal -->
+              <div class="d-flex justify-content-between align-items-start flex-wrap">
+                <a href="#" class="pti-title pti-title-line" title="Ir para o Dashboarde de TI">
+                  Dashboard de TI
+                </a>
+              </div>
+
+              <!-- gráficos do portal -->
+              <div class="pti-container pti-portal-container">
+                <div class="row">
+
+                  <div class="col">
+                    <a href="#" class="pti-portal-chart" title="Ir para Projetos & PPs do Dashboard de TI">
+                      <div class="pti-img pti-portal-img">
+                        <img src="./img/portais/grafico-1.jpg" class="img-fluid" alt="Gráfico Time to Market">
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="w-100 d-block d-sm-none d-md-block"></div>
+
+                  <div class="col">
+                    <a href="#" class="pti-portal-chart" title="Ir para Projetos & PPs do Dashboard de TI">
+                      <div class="pti-img pti-portal-img">
+                        <img src="./img/portais/grafico-2.jpg" class="img-fluid" alt="Gráfico Time to Market">
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- fim Portal - Dashboard -->
+
+          <!-- Portal - Desempenho -->
+          <div class="col-md pti-box-separate">
+            <div class="pti-portal">
+
+              <!-- titulo principal -->
+              <div class="d-flex justify-content-between align-items-start flex-wrap">
+                <a href="#" class="pti-title pti-title-line" title="Ir para o portal de Desempeho">
+                  Portal de Desempenho
+                </a>
+              </div>
+
+              <!-- gráficos do portal -->
+              <div class="pti-container pti-portal-container">
+                <div class="row">
+
+                  <div class="col">
+                    <div class="pti-portal-chart">
+                      <div class="pti-img pti-portal-img">
+                        <img src="./img/portais/grafico-1.jpg" class="img-fluid" alt="Gráfico Time to Market">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="w-100 d-block d-sm-none d-md-block"></div>
+
+                  <div class="col">
+                    <div class="pti-portal-chart">
+                      <div class="pti-img pti-portal-img">
+                        <img src="./img/portais/grafico-2.jpg" class="img-fluid" alt="Gráfico Time to Market">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- fim Portal - Desempenho -->
+
+          <div class="w-100"></div>
+          
+          <!-- Portais -->
+          <div class="col-md pti-box-separate">
+            <div class="pti-portal">
+
+              <!-- titulo principal -->
+              <div class="d-flex justify-content-between align-items-start flex-wrap">
+                <h3 class="pti-title pti-title-line">
+                  Portais
+                </h3>
+              </div>
+
+              <!-- gráficos do portal -->
+              <div class="pti-container pti-portal-container">
+                <ul class="pti-list pti-portal-icons">
+                  <li class="pti-portal-icon">
+                    <a href="#">
+                      <i class="fa fa-archive"></i>
+                    </a>
+                  </li>
+
+                  <li class="pti-portal-icon">
+                    <a href="#">
+                      <i class="fa fa-address-book"></i>
+                    </a>
+                  </li>
+                  </li>
+
+                  <li class="pti-portal-icon">
+                    <a href="#">
+                      <i class="fa fa-balance-scale"></i>
+                    </a>
+                  </li>
+
+                  <li class="pti-portal-icon">
+                    <a href="#">
+                      <i class="fa fa-archive"></i>
+                    </a>
+                  </li>
+
+                  <li class="pti-portal-icon">
+                    <a href="#">
+                      <i class="fa fa-address-book"></i>
+                    </a>
+                  </li>
+                  </li>
+
+                  <li class="pti-portal-icon">
+                    <a href="#">
+                      <i class="fa fa-balance-scale"></i>
+                    </a>
+                  </li>
+
+                  <li class="pti-portal-icon">
+                    <a href="#">
+                      <i class="fa fa-archive"></i>
+                    </a>
+                  </li>
+
+                  <li class="pti-portal-icon">
+                    <a href="#">
+                      <i class="fa fa-address-book"></i>
+                    </a>
+                  </li>
+                  </li>
+
+                  <li class="pti-portal-icon">
+                    <a href="#">
+                      <i class="fa fa-balance-scale"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+          <!-- fim Portal - Desempenho -->
+        </div>
+
+      </div>
+      <!-- .container -->
+    </div>
+    <!-- .pti-section -->
+
+
+    <!-- Footer -->
+    <div class="pti-footer">
+      <div class="container">
+
+        <div class="pti-links">
+          <div class="row">
+
+            <div class="col-sm pti-box-separate">
+              <div class="pti-link-group">
+                <h4 class="pti-link-title">Quem somos</h4>
+
+                <ul class="pti-list">
+                  <li>
+                    <a href="#">a empresa</a>
+                  </li>
+                  <li>
+                    <a href="#">contato</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-sm pti-box-separate">
+              <div class="pti-link-group">
+                <h4 class="pti-link-title">Quem somos</h4>
+
+                <ul class="pti-list">
+                  <li>
+                    <a href="#">a empresa</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="w-100 d-md-none d-lg-none"></div>
+
+            <div class="col-sm pti-box-separate">
+              <div class="pti-link-group">
+                <h4 class="pti-link-title">Quem somos</h4>
+
+                <ul class="pti-list">
+                  <li>
+                    <a href="#">a empresa</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-sm pti-box-separate">
+              <div class="pti-link-group">
+                <h4 class="pti-link-title">Quem somos</h4>
+
+                <ul class="pti-list">
+                  <li>
+                    <a href="#">a empresa</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="w-100 d-md-none d-lg-none"></div>
+
+          </div>
+        </div>
+
+        <div class="pti-footer-text">
+          <div class="d-flex align-items-center justify-content-between">
+            <div class="pti-footer-name">©&nbsp;Telefônica Brasil S.A.</div>
+
+            <div class="pti-social-midias">
+              <ul class="pti-list list-inline">
+                <li>Vivo</li>
+                <li>
+                  <a href="#">
+                    <i class="fa fa-facebook-square"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa fa-linkedin"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa fa-google-plus"></i>
+                  </a>
+                </li>
+              </ul>
+              <ul class="pti-list list-inline">
+                <li>Telefônica</li>
+                <li>
+                  <a href="#">
+                    <i class="fa fa-facebook-square"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa fa-linkedin"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa fa-google-plus"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <!-- .pti-main -->
+
+  <!-- 
+     Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o
+    século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou
+   -->
+
+  <!-- build:js -->
+  <!-- <script src="js/script.js"></script> -->
+  <!-- endbuild  -->
+</body>
+
 </html>
