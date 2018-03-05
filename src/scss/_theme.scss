@@ -405,41 +405,59 @@ html, body {
   /* ======================================================
       Links uteis
   */
+  
+  //https://pt.stackoverflow.com/questions/201461/como-fazer-divs-quadradas-e-responsivas
+  //https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
   .pti-links-group {
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    grid-gap: 0px;
-    grid-auto-rows: 10rem;
-
+    // display: flex;
+    // flex-wrap: wrap;
+    // align-items: center;
+    
     .pti-link {
+      margin: 0;
+      float: left;
+      display: inline-block;
+      position: relative;
       box-sizing: border-box;
-      margin: 0 .5rem .5rem 0;
+      height: 0;
+      width: 25%;
+      padding-bottom: 25%;
 
-      &:first {
-        grid-column-start: 1; 
-        grid-column-end: 2;
-        grid-row-start: 1; 
-        grid-row-end: 2;
-      }
+      @for $x from 1 through 4 {
+        @for $y from 1 through 4 {
+          &.pti-box-#{$x}-#{$y} {
+            width: $x * 25%;
+            padding-bottom: $y * 25%;
+            
+            // $mx: ($x - 5) * -1;
+            // $my: ($y - 5) * -1;
 
-      &:nth-child(2) {
-        grid-column-start: 3;
-        grid-column-end: 4;
-        grid-row-start: 1;
-        grid-row-end: 1; 
+            // a {
+              // width: #{(100 - $mx) + '%'};
+              // height: #{(100 - $my) + '%'};
+              // margin-right: #{$mx + '%'};
+              // margin-bottom: #{$my + '%'};
+            // }
+          }
+        }
       }
 
       a {
+        position: absolute;
         display: block;
-        width: 100%;
-        height: 100%;
-        background-color: #CCC;
-
+        width: 98%;
+        height: 98%;
+        // // margin: 0 5% 5% 0;
+        background-color: $cor-black-200;
+        text-align: center;
+        color: $cor-black-800;
+        
         &:focus, &:hover {
-          background-color: #333;
+          color: $cor-white;
+          background-color: $cor-vivo-2;
         }
-      }
+      }      
     }
   }
 

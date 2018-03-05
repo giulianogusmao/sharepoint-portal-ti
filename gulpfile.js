@@ -11,6 +11,7 @@ var changed = require('gulp-changed');
 var htmlReaplce = require('gulp-html-replace');
 var htmlMin = require('gulp-htmlmin');
 var del = require('del');
+// var gulpCopy = require('gulp-copy');
 var sequence = require('run-sequence');
 
 var config = {
@@ -29,7 +30,11 @@ var config = {
   cssoutname: 'style.css',
   jsoutname: 'script.js',
   cssreplaceout: 'css/style.css',
-  jsreplaceout: 'js/script.js'
+  jsreplaceout: 'js/script.js',
+  assets: 'src/assets/**/*',
+  assetsout: 'dist/assets/',
+  fonts: 'src/fonts/**/*.{ttf,woff,eof,svg}',
+  fontsout: 'dist/fonts/'
 };
 
 gulp.task('reload', function() {
@@ -62,6 +67,16 @@ gulp.task('css', function() {
     .pipe(concat(config.cssoutname))
     .pipe(cleanCSS())
     .pipe(gulp.dest(config.cssout));
+});
+
+gulp.task('assets', function() {
+  return gulp.src(config.assets)
+    .pipe(gulp.dest(config.assetsout));
+});
+
+gulp.task('fonts', function() {
+  return gulp.src(config.fonts)
+    .pipe(gulp.dest(config.fontsout));
 });
 
 gulp.task('js', function() {
@@ -97,7 +112,14 @@ gulp.task('clean', function() {
 });
 
 gulp.task('build', function() {
-  sequence('clean', ['html', 'js', 'css', 'img']);
+  sequence('clean', [
+    'html',
+    'js',
+    'css',
+    'img',
+    'assets',
+    'fonts'
+  ]);
 });
 
 gulp.task('default', ['serve']);
