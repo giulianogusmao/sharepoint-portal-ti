@@ -31,7 +31,7 @@ var config = {
   jsoutname: 'script.js',
   cssreplaceout: 'css/style.css',
   jsreplaceout: 'js/script.js',
-  assets: 'src/assets/**/*',
+  assets: 'src/assets/**/*.{js,css,jpg,jpeg,png,gif,ttf,woff,eof,svg}',
   assetsout: 'dist/assets/',
   fonts: 'src/fonts/**/*.{ttf,woff,eof,svg}',
   fontsout: 'dist/fonts/'

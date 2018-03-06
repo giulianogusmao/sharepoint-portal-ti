@@ -114,16 +114,6 @@ html, body {
     position: relative;
     background-color: $cor-black-200;
 
-    &:before {
-      content: '';
-      position: absolute;
-      display: block;
-      background-color: rgba($cor-white, .3);
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-    }
-
     .pti-header-container {
       margin: 1rem;
     }
@@ -132,7 +122,25 @@ html, body {
       position: absolute;
       width: 100%;
       z-index: 2;
+      @extend %transition;
       // background: linear-gradient(rgba($cor-white, 40%), rgba($cor-white, 0%));
+
+      &.pti-menu-show {
+        @media screen and (max-width: $screen-menu-mobile) { 
+          background-color: rgba($cor-vivo-5, .95);
+          z-index: 100;
+          .pti-main-menu {
+            .nav-link {
+              color: $cor-white;
+
+              &:focus, &:hover {
+                // color: $cor-vivo-1;
+                background-color: rgba($cor-vivo-6, .7);
+              }
+            }
+          }
+        }
+      }
     }
 
     .pti-logo {
@@ -140,6 +148,10 @@ html, body {
       color: $cor-black-1;
       text-decoration: none;
       @extend %font-light;
+
+      @media screen and (max-width: $screen-menu-mobile) {
+        margin-left: 3rem;
+      }
     }
 
     .pti-search {
@@ -160,6 +172,16 @@ html, body {
 
     .pti-main-menu {
       margin-bottom: 1.5rem;
+      z-index: 100;
+
+      .navbar {
+        padding: 0;
+      }
+
+      .navbar-toggler {
+        border: 0;
+        padding: .2rem .4rem;
+      }
 
       a {
         color: $cor-vivo-7;
@@ -171,28 +193,22 @@ html, body {
           color: $cor-vivo-3;
         }
       }
-    }
+      
+      @media screen and (max-width: $screen-menu-mobile) {
+        .navbar {
+          margin-top: -4.2rem;
+        }
 
-    .pti-main-news {
-      .pti-title {
-        margin-bottom: 0;
-      }
+        .nav-item {
+          &:first-child {
+            margin-top: 1rem;
+          }
 
-      .pti-img-back {
-        text-align: center;
-        max-height: 40rem;
-        overflow: hidden;
-      }
-
-      .pti-news-group-text {
-        position: absolute;
-        bottom: 0;
-        z-index: 2;
-        max-width: 40rem;
-      }
-
-      .pti-news-subtitle {
-        color: $cor-black-1;
+          a {
+            padding-left: 1rem;
+            padding-right: 1rem;
+          }
+        }
       }
     }
   }
@@ -239,7 +255,7 @@ html, body {
         color: $cor-white;
       }
 
-      @media screen and (max-width: $screen-xxs-max) {
+      @media screen and (max-width: $screen-xs-max) {
         text-align: center;
         margin-bottom: 3rem;
       }
@@ -277,7 +293,7 @@ html, body {
       }
     }
 
-    @media screen and (max-width: $screen-xxs-max) {
+    @media screen and (max-width: $screen-xs-max) {
       .pti-footer-text > div {
         flex-wrap: wrap;
 
@@ -292,9 +308,66 @@ html, body {
   }
 
   /* ======================================================
+      Noticia principal
+  */
+  .pti-main-news {
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      background-color: rgba($cor-white, .3);
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .pti-title {
+      margin-bottom: 0;
+    }
+
+    .pti-img-back {
+      text-align: center;
+      max-height: 40rem;
+      overflow: hidden;
+    }
+
+    .pti-news-group-text {
+      position: absolute;
+      bottom: 0;
+      z-index: 2;
+      max-width: 40rem;
+    }
+
+    .pti-news-subtitle {
+      color: $cor-black-1;
+    }
+    
+    @media screen and (max-width: $screen-xs-max) {
+      .pti-news-group-text {
+        max-width: none;
+        margin-right: 15px;
+      }
+
+      .pti-img-back {
+        height: 35rem;
+        overflow: hidden;
+
+        img {
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+          height: 100%;
+          max-width: none;
+        }
+      }
+    }
+  }
+
+  /* ======================================================
       Noticias thumbnails
   */
-  
   .pti-news-group-text {
     padding-right: 3rem;
     padding-top: 1rem;

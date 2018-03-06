@@ -10,6 +10,8 @@ dist
 assets
 css
 
+package-lock.json
+
 ### macOS ###
 *.DS_Store
 .AppleDouble

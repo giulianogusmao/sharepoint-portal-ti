@@ -1,17 +1,15 @@
-# gulp-starter-kit
-
-If you want to know how to build that kind of startet kit you can watch the YouTube videos I created while working on this starter kit: https://goo.gl/sMFmyN (Note: Videos are in Polish).
+# sharepoint-portal-ti
 
 ## Usage
 
 ### 1. Clone repo
 ```
-git clone https://github.com/marcinkrzeminski/gulp-starter-kit.git
+git clone https://github.com/giulianogusmao/sharepoint-portal-ti
 ```
 
 ### 2. Go inside cloned repo
 ```
-cd gulp-starter-kit
+cd sharepoint-portal-ti
 ```
 
 ### 3. Install all dependencies (make sure nodejs with npm is installed on your machine)
@@ -25,24 +23,10 @@ gulp
 ```
 
 ## Build 
+```
+gulp build
+```
 
-In order to build the production version of your project run __gulp build__ from the root of cloned repo.
+## Ref
 
-## List of npm packaged used
-
-- gulp
-- browser-sync
-- gulp-sass
-- gulp-sourcemaps
-- gulp-autoprefixer
-- gulp-clean-css
-- gulp-uglify
-- gulp-concat
-- gulp-imagemin
-- gulp-changed
-- gulp-html-replace
-- gulp-htlmin
-- del
-- run-sequence
-
-Big thanks to all the authors of these packages :heart:
+- gulp-starter-kit (https://github.com/marcinkrzeminski/gulp-starter-kit.git)
