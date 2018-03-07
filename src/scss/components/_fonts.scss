@@ -13,40 +13,49 @@
     }
 }
 
-html {
-  font-size: $font-size-reset;
-}
+// html {
+//   font-size: $font-size-reset;
+// }
 
-// fonte regular
-html, body {
-  @extend %font-regular;
-  color: $cor-text;
-}
+// // fonte regular
+// html, body {
+//   @extend %font-regular;
+//   color: $cor-text;
+// }
 
-body {  
-  font-size: $font-size;
-}
+// body {  
+//   font-size: $font-size;
+// }
 
 // Fonte negrito
-strong, b {
+
+.#{$project-name} {
+  strong, b {
     font-style: normal;
     font-weight: bold;
-}
+  }
 
-em, i {
-	@extend %font-italic; // fonte-italic
+  em, i:not(.fa) {
+    @extend %font-italic; // fonte-italic
     font-style: normal;
     font-weight: normal;
 
-	& b, & strong, b &, strong & {
-		@extend %font-italic; // fonte-bold-italic
-        font-style: normal;
-        font-weight: bold;
-	}
+    & b, & strong, b &, strong & {
+      @extend %font-italic; // fonte-bold-italic
+      font-style: normal;
+      font-weight: bold;
+    }
+  }
+
+  @for $i from 0 through 5 {
+    h#{$i} {
+      font-weight: normal;
+    }
+  }
 }
 
 @each $name in ('light', 'regular') {
-  .font-#{$name} {
+  .#{$project-name} .font-#{$name} {
     @extend %font-#{$name};
   }
 }

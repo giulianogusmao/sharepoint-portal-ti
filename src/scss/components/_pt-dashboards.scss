@@ -1,0 +1,44 @@
+
+/* ======================================================
+    Portal
+*/
+.#{$project-ref}portal {
+  .#{$project-ref}portal-chart {
+  }
+
+  .row > div{
+    margin: cRem(.5rem) 0 0 cRem(.5rem);
+    
+    &:first-child {      
+      margin: 0;
+    }
+  }
+}  
+
+.#{$project-ref}portal-icons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  .#{$project-ref}portal-icon {
+    width: cRem(3rem);
+    height: cRem(3rem);
+    margin: 0 cRem(.5rem) cRem(.5rem) 0;
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding: cRem(.6rem) 0;
+      text-align: center;
+      color: $cor-white;
+      background-color: $cor-vivo-3;
+      
+      &:focus, &:hover {
+        color: $cor-white;
+        text-decoration: none;
+        background-color: $cor-vivo-7;
+      }
+    }
+  }
+}

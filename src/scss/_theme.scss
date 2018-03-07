@@ -1,583 +1,126 @@
-@import './_essentials.scss';
 
-// =============================================================================================
-// generico
+/* ======================================================
+    Genericos
+*/
 
-html, body {
-  height: 100%;
+// utilizado apenas no prototipo
+.spfx-header {
+  height: 50px;
+  color: $cor-white;
+  padding-top: 12px;
+  background: radial-gradient(circle, $cor-vivo-3, $cor-vivo-9 75%);
 }
 
-.pti-main {
-  
-  .spfx-header {
-    // background-color: $cor-vivo-9;
-    height: 50px;
-    color: $cor-white;
-    padding-top: 1.2rem;
-    background: radial-gradient(circle, $cor-vivo-3, $cor-vivo-9 75%);
+// font-default;
+.#{$project-name} {
+  font-size: cRem(1.4rem);
+}
+
+// remove style list
+.#{$project-ref}list {
+  padding-left: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+/* ======================================================
+    Links
+*/
+
+// links - ver todos
+.#{$project-ref}link-all {
+  position: relative;
+  color: $cor-vivo-6;
+  display: flex;
+  align-items: flex-end;
+  @extend %nowrap;
+  margin-top: cRem(.5rem);
+
+  &:focus, &:hover {
+    color: $cor-vivo-1;
   }
 
-  /* ======================================================
-      Genericos
-  */
-  .pti-list {
-    padding-left: 0;
-
-    li {
-      list-style: none;
-    }
-  }
-  
-  .pti-link-all {
+  .icon {
     position: relative;
-    color: $cor-vivo-6;
-    display: flex;
-    align-items: flex-end;
-    @extend %nowrap;
-    margin-top: .5rem;
-
-    &:focus, &:hover {
-      color: $cor-vivo-1;
-    }
-
-    .icon {
-      position: relative;
-      top: .2rem;
-      font-size: 1.5rem;
-      padding: 0 .5rem;
-    }
+    top: cRem(.2rem);
+    font-size: cRem(1.5rem);
+    padding: 0 cRem(.5rem);
   }
+}
 
-  a.pti-title {
-    &:focus, &:hover {
-      color: $cor-vivo-1;
-
-      &.pti-title-line {
-        text-decoration: none;
-      }
-    }
-  }
-
-  .pti-title {
-    line-height: 1.1;
-    font-size: 2.6rem;
-    color: $cor-vivo-9;
-
-    &.pti-title-line:after {
-      content: '';
-      display: block;
-      width: 20rem;
-      height: 2px;
-      margin: .4rem 0;
-      margin-left: -15px;
-      background-color: $cor-vivo-1;
-    }
-  }
-
-  .pti-container {    
-    margin-top: 1rem;
-  }
-
-  .pti-news-group-text {
+// link - ver mais
+.#{$project-ref}link-more {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+  bottom: cRem(-.5rem);
+  width: cRem(2.5rem);
+  height: cRem(2.5rem);
+  background-color: $cor-vivo-1;
+  color: $cor-white !important;
+  font-size: cRem(1.5rem);
+  @extend %transition-fast;
+  z-index: 3;
+  
+  .pti-icon {
     position: relative;
+    top: cRem(.2rem);
   }
-
-  .pti-link-more {
-    position: absolute;
-    right: 0;
-    bottom: -.5rem;
-    display: inline-block;
-    width: 2.5rem;
-    height: 2.5rem;
-    background-color: $cor-vivo-1;
-    color: $cor-white;
-    font-size: 2.5rem;
-    padding: 0 0 0 .5rem;
-    line-height: 1;
-    text-align: center;
+  
+  &:focus, &:hover {
+    background-color: $cor-vivo-7;
     text-decoration: none;
-    @extend %transition-fast;
-    z-index: 3;
-
-    &:focus, &:hover {
-      background-color: $cor-vivo-7;
-    }
   }
+}
 
 
+/* ======================================================
+    Boxs
+*/
+// Titulo box
+.#{$project-ref}title {
+  line-height: 1.1;
+  font-size: cRem(2.6rem);
+  color: $cor-vivo-9;
 
+  &.#{$project-ref}title-line:after {
+    content: '';
+    display: block;
+    width: cRem(20rem);
+    height: 2px;
+    margin: cRem(.4rem) 0;
+    margin-left: -15px;
+    background-color: $cor-vivo-1;
+  }
+}
 
-  /* ======================================================
-      Header
-  */
-  .pti-header {
-    position: relative;
-    background-color: $cor-black-200;
+// link Titulo box
+a.#{$project-ref}title {
+  &:focus, &:hover {
+    color: $cor-vivo-1;
 
-    .pti-header-container {
-      margin: 1rem;
-    }
-
-    .pti-header-group {
-      position: absolute;
-      width: 100%;
-      z-index: 2;
-      @extend %transition;
-      // background: linear-gradient(rgba($cor-white, 40%), rgba($cor-white, 0%));
-
-      &.pti-menu-show {
-        @media screen and (max-width: $screen-menu-mobile) { 
-          background-color: rgba($cor-vivo-5, .95);
-          z-index: 100;
-          .pti-main-menu {
-            .nav-link {
-              color: $cor-white;
-
-              &:focus, &:hover {
-                // color: $cor-vivo-1;
-                background-color: rgba($cor-vivo-6, .7);
-              }
-            }
-          }
-        }
-      }
-    }
-
-    .pti-logo {
-      font-size: 3rem;
-      color: $cor-black-1;
+    &.#{$project-ref}title-line {
       text-decoration: none;
-      @extend %font-light;
-
-      @media screen and (max-width: $screen-menu-mobile) {
-        margin-left: 3rem;
-      }
-    }
-
-    .pti-search {
-      .pti-btn-search {
-        font-size: 1.6rem;
-        padding: .5rem .8rem;
-        color: $cor-vivo-7;
-        border-radius: 100%;
-        @extend %transition;
-
-        &:focus, &:hover {
-          color: $cor-white;
-          background-color: $cor-vivo-7;
-          border-radius: .3rem;
-        }
-      }
-    }
-
-    .pti-main-menu {
-      margin-bottom: 1.5rem;
-      z-index: 100;
-
-      .navbar {
-        padding: 0;
-      }
-
-      .navbar-toggler {
-        border: 0;
-        padding: .2rem .4rem;
-      }
-
-      a {
-        color: $cor-vivo-7;
-        font-size: 1.6rem;
-        text-decoration: none;
-        // @extend %font-light;
-
-        &:focus, &:hover {
-          color: $cor-vivo-3;
-        }
-      }
-      
-      @media screen and (max-width: $screen-menu-mobile) {
-        .navbar {
-          margin-top: -4.2rem;
-        }
-
-        .nav-item {
-          &:first-child {
-            margin-top: 1rem;
-          }
-
-          a {
-            padding-left: 1rem;
-            padding-right: 1rem;
-          }
-        }
-      }
     }
   }
+}
 
-  /* ======================================================
-      Section
-  */
-  .pti-section {
-    padding: 0;
+.#{$project-ref}container {    
+  margin-top: cRem(1rem);
+}
 
-    .pti-box-separate {
-      padding-top: 3rem;
-    }
+
+/* ======================================================
+    Section
+*/
+.#{$project-name}.#{$project-ref}section {
+  padding: 0;
+
+  .#{$project-ref}box-separate {
+    padding-top: cRem(3rem);
   }
-
-  /* ======================================================
-      Footer
-  */
-  .pti-footer {
-    background-color: $cor-vivo-9;
-    color: $cor-white;
-    padding: 1rem 0;
-    margin-top: 3rem;
-    font-size: 1.2rem;
-
-    h4 {
-      font-size: 1.4rem;
-    }
-
-    a {
-      color: $cor-white;
-
-      &:focus, &:hover {
-        color: $cor-vivo-2 !important;
-      }
-    }
-
-    .pti-links {
-      &, & a {
-        color: $cor-black-400;
-      }
-
-      .pti-link-title {
-        color: $cor-white;
-      }
-
-      @media screen and (max-width: $screen-xs-max) {
-        text-align: center;
-        margin-bottom: 3rem;
-      }
-    }
-
-    .pti-box-separate {
-      padding-top: 1rem;
-    }
-
-    .pti-footer-text, .pti-links {
-      margin-top: 1rem;
-    }
-
-    .pti-footer-name {
-      margin-bottom: 1rem;
-    }
-
-    .pti-social-midias {
-      text-align: right;
-      
-      ul {
-        padding-left: 1.5rem;
-      }
-
-      ul, li {
-        display: inline-block;
-      }
-
-      ul:first-child {
-        padding: 0;
-      }
-
-      li {
-        padding: 0 .5rem;
-      }
-    }
-
-    @media screen and (max-width: $screen-xs-max) {
-      .pti-footer-text > div {
-        flex-wrap: wrap;
-
-        .pti-footer-name,
-        .pti-social-midias,
-        ul {
-          text-align: center;
-          width: 100%;
-        }
-      }
-    }
-  }
-
-  /* ======================================================
-      Noticia principal
-  */
-  .pti-main-news {
-    position: relative;
-
-    &:before {
-      content: '';
-      position: absolute;
-      display: block;
-      background-color: rgba($cor-white, .3);
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-    }
-
-    .pti-title {
-      margin-bottom: 0;
-    }
-
-    .pti-img-back {
-      text-align: center;
-      max-height: 40rem;
-      overflow: hidden;
-    }
-
-    .pti-news-group-text {
-      position: absolute;
-      bottom: 0;
-      z-index: 2;
-      max-width: 40rem;
-    }
-
-    .pti-news-subtitle {
-      color: $cor-black-1;
-    }
-    
-    @media screen and (max-width: $screen-xs-max) {
-      .pti-news-group-text {
-        max-width: none;
-        margin-right: 15px;
-      }
-
-      .pti-img-back {
-        height: 35rem;
-        overflow: hidden;
-
-        img {
-          position: relative;
-          left: 50%;
-          transform: translateX(-50%);
-          height: 100%;
-          max-width: none;
-        }
-      }
-    }
-  }
-
-  /* ======================================================
-      Noticias thumbnails
-  */
-  .pti-news-group-text {
-    padding-right: 3rem;
-    padding-top: 1rem;
-  }
-
-  .pti-news-subtitle {
-    line-height: 1.4;
-  }
-
-  .pti-news-container {
-    .pti-news-title {
-      font-size: 1.8rem;
-    }
-    
-    .pti-news-subtitle {
-      font-size: 1.4rem;
-    }
-  }
-
-
-  /* ======================================================
-      Calendario
-  */
-  .pti-calendar {
-  }
-
-  .pti-calendar-days {
-    padding: 0;
-    margin: 0 0 1rem 0;
-
-    .pti-calendar-day {
-      display: flex;
-      padding: 0 0 0 1rem;
-      margin-top: 1rem;
-      padding-top: 1rem;
-      background-color: $cor-black-200;
-      @extend %transition-fast;
-
-      &:hover {
-        background-color: $cor-black-300;
-
-        .pti-calendar-title {
-          color: $cor-black-1;
-        }
-      }
-
-      &:first-child {
-        margin: 0;
-      }
-
-      .pti-calendar-date {
-        @extend %nowrap;
-      }
-
-      .pti-calendar-label-day {
-        line-height: 1;
-        font-size: 3.2rem;
-        color: $cor-vivo-2;
-        @extend %font-light;
-        
-      }
-
-      .pti-calendar-label-month {
-        position: relative;
-        font-size: 1rem;
-        top: -1.3rem;
-      }
-
-      .pti-calendar-events {
-        width: 100%;
-      }
-
-      .pti-calendar-event {
-        position: relative;
-        margin-bottom: 1rem;
-        padding-bottom: 1rem;
-
-        &:after {
-          position: absolute;
-          bottom: 0;
-          content: '';
-          display: block;
-          width: 100%;
-          height: 1px;
-          background: linear-gradient(to right, transparent, rgba($cor-vivo-5, .3), transparent);
-        }
-
-        &:last-child {
-          margin: 0;
-          
-          &:after {
-            display: none;
-          }
-        }
-      }
-
-      .pti-calendar-title {
-        line-height: 1.3;
-        max-height: 3.5rem;
-        overflow: hidden;
-        padding-right: 2.5rem;        
-        padding-left: 1rem;
-      }
-    }
-  }
-
-  
-  /* ======================================================
-      Links uteis
-  */
-  
-  //https://pt.stackoverflow.com/questions/201461/como-fazer-divs-quadradas-e-responsivas
-  //https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
-  .pti-links-group {
-    width: 100%;
-    // display: flex;
-    // flex-wrap: wrap;
-    // align-items: center;
-    
-    .pti-link {
-      margin: 0;
-      float: left;
-      display: inline-block;
-      position: relative;
-      box-sizing: border-box;
-      height: 0;
-      width: 25%;
-      padding-bottom: 25%;
-
-      @for $x from 1 through 4 {
-        @for $y from 1 through 4 {
-          &.pti-box-#{$x}-#{$y} {
-            width: $x * 25%;
-            padding-bottom: $y * 25%;
-            
-            // $mx: ($x - 5) * -1;
-            // $my: ($y - 5) * -1;
-
-            // a {
-              // width: #{(100 - $mx) + '%'};
-              // height: #{(100 - $my) + '%'};
-              // margin-right: #{$mx + '%'};
-              // margin-bottom: #{$my + '%'};
-            // }
-          }
-        }
-      }
-
-      a {
-        position: absolute;
-        display: block;
-        width: 98%;
-        height: 98%;
-        // // margin: 0 5% 5% 0;
-        background-color: $cor-black-200;
-        text-align: center;
-        color: $cor-black-800;
-        
-        &:focus, &:hover {
-          color: $cor-white;
-          background-color: $cor-vivo-2;
-        }
-      }      
-    }
-  }
-
-
-
-  /* ======================================================
-      Portal
-  */
-  .pti-portal {
-    .pti-portal-chart {
-    }
-
-    .row > div{
-      margin: .5rem 0 0 .5rem;
-      
-      &:first-child {      
-        margin: 0;
-      }
-    }
-  }  
-
-  .pti-portal-icons {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-
-    .pti-portal-icon {
-      width: 3rem;
-      height: 3rem;
-      margin: 0 .5rem .5rem 0;
-
-      a {
-        display: block;
-        width: 100%;
-        height: 100%;
-        padding: .6rem 0;
-        text-align: center;
-        color: $cor-black-300;
-        background-color: $cor-vivo-3;
-        
-        &:focus, &:hover {
-          color: $cor-white;
-          text-decoration: none;
-          background-color: $cor-vivo-5;
-        }
-      }
-    }
-  }
-
 }

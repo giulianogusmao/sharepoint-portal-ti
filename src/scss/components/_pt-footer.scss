@@ -1,0 +1,83 @@
+
+/* ======================================================
+    Footer
+*/
+.#{$project-name}.#{$project-ref}footer {
+  background-color: $cor-vivo-9;
+  color: $cor-white;
+  padding: cRem(1rem) 0;
+  margin-top: cRem(3rem);
+  font-size: cRem(1.2rem);
+
+  h4 {
+    font-size: cRem(1.4rem);
+  }
+
+  a {
+    color: $cor-white;
+
+    &:focus, &:hover {
+      color: $cor-vivo-2 !important;
+    }
+  }
+
+  .#{$project-ref}links {
+    &, & a {
+      color: $cor-black-400;
+    }
+
+    .#{$project-ref}link-title {
+      color: $cor-white;
+    }
+
+    @media screen and (max-width: $screen-xs-max) {
+      text-align: center;
+      margin-bottom: cRem(3rem);
+    }
+  }
+
+  .#{$project-ref}box-separate {
+    padding-top: cRem(1rem);
+  }
+
+  .#{$project-ref}footer-text, .#{$project-ref}links {
+    margin-top: cRem(1rem);
+  }
+
+  .#{$project-ref}footer-name {
+    margin-bottom: cRem(1rem);
+  }
+
+  .#{$project-ref}social-midias {
+    text-align: right;
+    
+    ul {
+      padding-left: cRem(1.5rem);
+    }
+
+    ul, li {
+      display: inline-block;
+    }
+
+    ul:first-child {
+      padding: 0;
+    }
+
+    li {
+      padding: 0 cRem(.5rem);
+    }
+  }
+
+  @media screen and (max-width: $screen-xs-max) {
+    .#{$project-ref}footer-text > div {
+      flex-wrap: wrap;
+
+      .#{$project-ref}footer-name,
+      .#{$project-ref}social-midias,
+      ul {
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+
+/* ======================================================
+    Calendario
+*/
+.#{$project-ref}calendar {
+}
+
+.#{$project-ref}calendar-days {
+  padding: 0;
+  margin: 0 0 cRem(1rem) 0;
+
+  .#{$project-ref}calendar-day {
+    display: flex;
+    padding: 0 0 0 cRem(1rem);
+    margin-top: cRem(1rem);
+    padding-top: cRem(1rem);
+    background-color: $cor-black-200;
+    @extend %transition-fast;
+
+    &:hover {
+      background-color: $cor-black-300;
+
+      .#{$project-ref}calendar-title {
+        color: $cor-black-1;
+      }
+    }
+
+    &:first-child {
+      margin: 0;
+    }
+
+    .#{$project-ref}calendar-date {
+      @extend %nowrap;
+    }
+
+    .#{$project-ref}calendar-label-day {
+      line-height: 1;
+      font-size: cRem(3.2rem);
+      color: $cor-vivo-2;
+      @extend %font-light;
+      
+    }
+
+    .#{$project-ref}calendar-label-month {
+      position: relative;
+      font-size: cRem(1rem);
+      top: cRem(-1.3rem);
+    }
+
+    .#{$project-ref}calendar-events {
+      width: 100%;
+    }
+
+    .#{$project-ref}calendar-event {
+      position: relative;
+      margin-bottom: cRem(1rem);
+      padding-bottom: cRem(1rem);
+
+      &:after {
+        position: absolute;
+        bottom: 0;
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(to right, transparent, rgba($cor-vivo-5, .3), transparent);
+      }
+
+      &:last-child {
+        margin: 0;
+        
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+    .#{$project-ref}calendar-title {
+      line-height: 1.3;
+      max-height: cRem(3.5rem);
+      overflow: hidden;
+      padding-right: cRem(2.5rem);        
+      padding-left: cRem(1rem);
+    }
+  }
+}

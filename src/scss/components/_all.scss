@@ -1,2 +1,20 @@
+
+/* ======================================================
+    Utilities
+*/
 @import './_utilities.scss';
+
+/* ======================================================
+    Fonts
+*/
 @import './_fonts.scss';
+
+/* ======================================================
+    Partials
+*/
+@import '_pt-header.scss';
+@import '_pt-footer.scss';
+@import '_pt-news.scss';
+@import '_pt-calendar.scss';
+@import '_pt-useful-links.scss';
+@import '_pt-dashboards.scss';

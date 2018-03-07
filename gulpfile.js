@@ -31,9 +31,9 @@ var config = {
   jsoutname: 'script.js',
   cssreplaceout: 'css/style.css',
   jsreplaceout: 'js/script.js',
-  assets: 'src/assets/**/*.{js,css,jpg,jpeg,png,gif,ttf,woff,eof,svg}',
+  assets: 'src/assets/**/*.{js,css,jpg,jpeg,png,gif,ttf,woff,woff2,eot,eof,otf,svg}',
   assetsout: 'dist/assets/',
-  fonts: 'src/fonts/**/*.{ttf,woff,eof,svg}',
+  fonts: 'src/fonts/**/*.{ttf,woff,woff2,eot,eof,otf,svg}',
   fontsout: 'dist/fonts/'
 };
 
@@ -53,7 +53,7 @@ gulp.task('serve', ['sass'], function() {
 gulp.task('sass', function() {
   return gulp.src(config.scssin)
     .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
     .pipe(autoprefixer({
       browsers: ['last 3 versions']
     }))

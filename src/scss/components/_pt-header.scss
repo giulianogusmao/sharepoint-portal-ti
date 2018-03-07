@@ -1,0 +1,124 @@
+
+/* ======================================================
+    Header
+*/
+.#{$project-name}.#{$project-ref}header {
+  position: relative;
+  background-color: $cor-black-200;
+
+  .#{$project-ref}header-container {
+    margin: cRem(1rem);
+  }
+
+  .#{$project-ref}header-group {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    @extend %transition;
+    // background: linear-gradient(rgba($cor-white, 40%), rgba($cor-white, 0%));
+
+    &.#{$project-ref}menu-show {
+      @media screen and (max-width: $screen-menu-mobile) { 
+        background-color: rgba($cor-vivo-5, .95);
+        z-index: 100;
+        .#{$project-ref}main-menu {
+          .nav-link {
+            color: $cor-white;
+
+            &:focus, &:hover {
+              // color: $cor-vivo-1;
+              background-color: rgba($cor-vivo-6, .7);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .#{$project-ref}logo {
+    font-size: cRem(3rem);
+    color: $cor-black-1;
+    text-decoration: none;
+    @extend %font-light;
+
+    @media screen and (max-width: $screen-menu-mobile) {
+      margin-left: cRem(4rem);
+    }
+  }
+
+  .#{$project-ref}search {
+    .#{$project-ref}btn-search {
+      font-size: cRem(1.6rem);
+      padding: cRem(.5rem) cRem(.8rem);
+      color: $cor-vivo-7;
+      border-radius: 100%;
+      @extend %transition;
+
+      &:focus, &:hover {
+        color: $cor-white;
+        background-color: $cor-vivo-7;
+        border-radius: cRem(.3rem);
+      }
+    }
+  }
+
+  .#{$project-ref}main-menu {
+    margin-bottom: cRem(1.5rem);
+    z-index: 100;
+
+    .navbar {
+      padding: 0;
+    }
+
+    .navbar-toggler {
+      border: 0;
+      padding: cRem(.2rem) cRem(.4rem);
+    }
+
+    a {
+      color: $cor-vivo-7;
+      font-size: cRem(1.6rem);
+      text-decoration: none;
+
+      &:after {
+        @extend %transition-fast;
+      }
+
+      &:focus, &:hover {
+        color: $cor-vivo-9;
+
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+    
+    @media screen and (max-width: $screen-menu-mobile) {
+      .navbar {
+        margin-top: cRem(-4.5rem);
+      }
+
+      .nav-item {
+        &:first-child {
+          margin-top: cRem(1rem);
+        }
+
+        a {
+          padding-left: cRem(1rem);
+          padding-right: cRem(1rem);
+        }
+      }
+    }
+
+    @media screen and (min-width: $screen-menu-desktop) {
+      a:after {
+        content: '';
+        display: block;
+        width: 0%;
+        height: 2px;
+        margin: 0 auto;
+        background-color: $cor-vivo-2;
+      }
+    }
+  }
+}
