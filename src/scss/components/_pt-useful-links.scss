@@ -3,57 +3,33 @@
     Links uteis
 */
 
-//https://pt.stackoverflow.com/questions/201461/como-fazer-divs-quadradas-e-responsivas
-//https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
-.#{$project-ref}links-group {
-  width: 100%;
-  // display: flex;
-  // flex-wrap: wrap;
-  // align-items: center;
-  
-  .#{$project-ref}link {
-    margin: 0;
-    float: left;
-    // display: inline-block;
-    position: relative;
-    box-sizing: border-box;
-    height: 0;
-    width: 25%;
-    padding-bottom: 25%;
+.#{$project-ref}links-uteis {
+  .#{$project-ref}wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    // grid-template-columns: 40px 40px 40px 40px;
+    grid-auto-rows: 40px;
+  }
 
-    @for $x from 1 through 4 {
-      @for $y from 1 through 4 {
-        &.#{$project-ref}box-#{$x}-#{$y} {
-          width: $x * 25%;
-          padding-bottom: $y * 25%;
-          
-          // $mx: ($x - 5) * -1;
-          // $my: ($y - 5) * -1;
+  a.#{$project-ref}box {
+    background-color: $cor-vivo-3;
+    border: 1px solid $cor-vivo-9;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-decoration: none;
+    @extend %transition;
 
-          // a {
-            // width: #{(100 - $mx) + '%'};
-            // height: #{(100 - $my) + '%'};
-            // margin-right: #{$mx + '%'};
-            // margin-bottom: #{$my + '%'};
-          // }
-        }
-      }
+    &:hover, &:focus {
+      color: $cor-white !important;
+      background-color: $cor-vivo-1;
     }
+  }
 
-    a {
-      position: absolute;
-      display: block;
-      width: 98%;
-      height: 98%;
-      // // margin: 0 5% 5% 0;
-      background-color: $cor-black-200;
-      text-align: center;
-      color: $cor-black-800;
-      
-      &:focus, &:hover {
-        color: $cor-white;
-        background-color: $cor-vivo-2;
-      }
-    }      
+  .#{$project-ref}box2 {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
   }
 }
