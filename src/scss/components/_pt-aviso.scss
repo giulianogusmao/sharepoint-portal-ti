@@ -1,0 +1,48 @@
+.#{$project-ref}aviso-main {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+
+    .#{$project-ref}aviso-container {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: cRem(.5rem);
+        padding: cRem(.3rem) cRem(1rem);
+        background-color: rgba($cor-vivo-3, .9);
+        border-radius: cRem(.2rem);
+        color: $cor-white;
+    }
+
+    .#{$project-ref}avisos {
+        margin-bottom: 0;
+        padding: 0;
+
+        .#{$project-ref}aviso {
+            list-style: none;
+        }
+    }
+
+    [class*="col-"] {
+        &:first-child {
+            padding-left: 0;
+        }
+
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+
+    .#{$project-ref}avisos-icon {
+        max-width: cRem(3rem);
+    }
+
+    a {
+        color: $cor-white;
+    }
+
+    
+    .#{$project-ref}avisos-link-more {
+        white-space: nowrap;
+    }
+}

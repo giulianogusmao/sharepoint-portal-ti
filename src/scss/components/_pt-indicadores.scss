@@ -1,0 +1,24 @@
+.pti-indicadores-container {
+    .row [class*="col-"] {
+        margin-top: 0;
+    }
+
+     a.pti-indicadores-title {
+        color: inherit;
+
+        &:focus, &:hover {
+            color: $cor-vivo-1;
+        }
+    }
+
+
+    @media screen and (max-width: $screen-sm-max){
+        .pti-indicadores-chart, [class*="col-"] .row {
+            margin-top: cRem(2.5rem);
+        }
+        
+        [class*="col-"]:first-child .pti-indicadores-chart {
+            margin-top: 0;
+        }
+    }
+}

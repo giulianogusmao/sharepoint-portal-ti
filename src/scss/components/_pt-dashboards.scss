@@ -13,7 +13,7 @@
       margin: 0;
     }
   }
-}  
+}
 
 .#{$project-ref}portal-icons {
   display: flex;
@@ -26,18 +26,47 @@
     margin: 0 cRem(.5rem) cRem(.5rem) 0;
 
     a {
+      position: relative;
       display: block;
       width: 100%;
       height: 100%;
       padding: cRem(.6rem) 0;
       text-align: center;
-      color: $cor-white;
-      background-color: $cor-vivo-3;
+      color: $cor-white;      
+      // background-color: $cor-vivo-3;
+
+      i {
+        position: relative;
+        z-index: 2;
+      }
+
+      &:before {
+        content: '';
+        width: 0;
+        height: 0;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background-color: green;
+        border-radius: 100%;
+        z-index: 0;
+        background-color: transparent;
+        @extend %transition-fast;
+      }
       
       &:focus, &:hover {
-        color: $cor-white;
+        color: $cor-white !important;
         text-decoration: none;
-        background-color: $cor-vivo-7;
+        // background-color: $cor-vivo-7;
+
+        &:before {
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: $cor-vivo-1;
+        }
       }
     }
   }

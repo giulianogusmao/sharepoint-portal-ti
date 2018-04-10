@@ -75,12 +75,20 @@
       }
     }
 
-    .#{$project-ref}calendar-title {
+    a.#{$project-ref}calendar-title {
       line-height: 1.3;
       max-height: cRem(3.5rem);
       overflow: hidden;
-      padding-right: cRem(2.5rem);        
+      padding-right: cRem(1rem);        
       padding-left: cRem(1rem);
+      display: block;
+
+      color: inherit;
+
+      &:focus, &:hover {
+        text-decoration: underline;
+        color: $cor-vivo-1;
+      }
     }
   }
 }

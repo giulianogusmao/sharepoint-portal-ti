@@ -30,8 +30,32 @@
       color: $cor-white;
     }
 
+    .#{$project-ref}list {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: flex-start;
+
+      // column-count: 3;
+      // column-gap: cRem(1rem);
+
+      .#{$project-ref}list-iten {
+        display: block;
+        width: 33%;
+        margin-bottom: cRem(.5rem);
+        padding-right: cRem(1rem);
+
+        @media screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+          width: 50%;
+        }
+
+        @media screen and (max-width: $screen-xs-max) {
+          width: 50%;
+        }
+      }
+    }
+
     @media screen and (max-width: $screen-xs-max) {
-      text-align: center;
+      // text-align: center;
       margin-bottom: cRem(3rem);
     }
   }
@@ -77,6 +101,7 @@
       ul {
         text-align: center;
         width: 100%;
+        padding: 0;
       }
     }
   }
