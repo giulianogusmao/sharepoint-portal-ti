@@ -11,9 +11,10 @@
 
   .#{$project-ref}calendar-day {
     display: flex;
+    align-items: center;
+    min-height: cRem(5.5rem);
     padding: 0 0 0 cRem(1rem);
     margin-top: cRem(1rem);
-    padding-top: cRem(1rem);
     background-color: $cor-black-200;
     @extend %transition-fast;
 
@@ -53,8 +54,8 @@
 
     .#{$project-ref}calendar-event {
       position: relative;
-      margin-bottom: cRem(1rem);
-      padding-bottom: cRem(1rem);
+      margin: cRem(.5rem) 0;
+      padding: cRem(1rem) 0;
 
       &:after {
         position: absolute;
@@ -91,4 +92,90 @@
       }
     }
   }
+}
+
+/*
+  Calendar Evento
+*/ 
+
+.#{$project-ref}calendar-grid {
+
+  .#{$project-ref}calendar-events {
+    // display: flex;
+    // flex-wrap: wrap;
+  }
+  
+  .#{$project-ref}calendar-event-detail {
+    display: flex;
+    margin-bottom: cRem(2rem);
+    // margin-right: cRem(1rem);
+
+    .#{$project-ref}calendar-date {
+      background-color: $cor-vivo-1;
+      color: $cor-white;
+      text-align: center;
+      flex: 1;
+      
+      & > div {        
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: cRem(2rem) cRem(1rem);
+      }
+    }
+
+    .#{$project-ref}calendar-label-month {
+      text-transform: uppercase;
+      line-height: 1;
+    }
+    
+    .#{$project-ref}calendar-label-day {
+      line-height: 1;
+      font-size: cRem(3.2rem);
+      @extend %font-light;
+    }
+
+    @media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+      flex-direction: column;
+    }
+  }
+
+  .pti-calendar-info {
+    flex: 3;
+    padding: cRem(1rem);
+    overflow: hidden;
+    background-color: $cor-black-200;    
+
+    p {
+      margin-bottom: cRem(.5rem);
+    }
+
+    .pti-calendar-title {
+      font-size: cRem(1.6rem);
+      margin-bottom: cRem(1.5rem);
+    }
+
+    .pti-calendar-categoria,
+    .pti-calendar-endereco {
+      font-size: 80%;
+    }
+
+    .pti-calendar-endereco {
+      overflow: hidden;
+      max-width: 100%;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .pti-calendar-btn-add {
+      display: none;
+    }
+
+
+    // .pti-calendar-data-hora {
+    //   font-size: 90%;
+    // }
+  }
+
+
 }

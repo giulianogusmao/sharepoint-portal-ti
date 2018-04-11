@@ -78,6 +78,12 @@
 }
 
 
+// icon
+.#{$project-ref}icon-gray {
+  color: $cor-black-500;
+}
+
+
 /* ======================================================
     Boxs
 */
@@ -123,4 +129,83 @@ a.#{$project-ref}title {
   .#{$project-ref}box-separate {
     padding-top: cRem(3rem);
   }
+  
+  .#{$project-ref}title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
 }
+
+
+/* ======================================================
+  Bread Crumb
+*/
+.#{$project-ref}bread-crumb {  
+  .#{$project-ref}list {
+    margin: cRem(1rem) 0 0 0;
+    color: $cor-black-500;
+  }
+
+  .#{$project-ref}list-item {
+    display: inline-block;
+    font-size: 80%;
+
+    &[class*="-divider"] {
+      color: rgba($cor-vivo-2, .5);
+      font-size: 60%;
+      margin: 0 cRem(.2rem);
+    }
+  }
+
+  a {
+    color: $cor-vivo-5;
+    font-weight: 500;
+
+    &:focus, &:hover {
+      color: $cor-vivo-1;
+    }
+  }
+}
+
+/* ======================================================
+  Button
+*/
+.#{$project-ref}btn-circle {
+  border-radius: 100%;
+  width: cRem(3.8rem);
+  height: cRem(3.8rem);
+  padding: cRem(.6rem);
+  text-align: center;
+  
+  &.btn-sm {
+    width: cRem(3rem);
+    height: cRem(3rem);
+    padding: cRem(.3rem);
+  }
+  
+  &.btn-xs {
+    width: cRem(2.2rem);
+    height: cRem(2.2rem);
+    padding: 0;
+    font-size: 90%;
+  }
+}
+
+.#{$project-ref}btn-collapse {
+  i {
+    transition: .2s transform ease-in-out;
+  }
+
+  &.collapsed {
+    i {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+
+/* ======================================================
+  Icon
+*/
