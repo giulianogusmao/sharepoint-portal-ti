@@ -4,11 +4,18 @@
 */
 .#{$project-ref}news-group-text {
   position: relative;
-}
-
-.#{$project-ref}news-group-text {
-  padding-right: cRem(3rem);
+  // padding-right: cRem(3rem);
   padding-top: cRem(1rem);
+
+  a {
+    display: block;
+    color: $cor-black-800;
+
+    &:focus, &:hover {
+      // text-decoration: none;
+      color: $cor-vivo-1;
+    }
+  }
 }
 
 .#{$project-ref}news-subtitle {
@@ -25,11 +32,32 @@
   }
 }
 
+.#{$project-ref}img-back {
+  position: relative;
+
+  a:after {
+    content: '';
+    border: 0 solid transparent;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;    
+    @extend %transition-fast;
+  }
+
+  a:focus:after, 
+  a:hover:after {
+    border: cRem(.2rem) solid $cor-vivo-1;  
+  }
+}
+
 /* ======================================================
     Noticia principal
 */
 .#{$project-ref}main-news {
   position: relative;
+  background-color: rgba($cor-vivo-1, .1);
 
   &:before {
     content: '';

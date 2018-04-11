@@ -46,20 +46,6 @@
         </div>
       </div>
 
-      <!-- menu -->
-      <!-- <div class="pti-main-menu">
-          <div class="container">
-            <nav class="nav nav-pills nav-fill">
-              <a class="nav-item active" href="#">Home</a>
-              <a class="nav-item" href="#">A Telefônica</a>
-              <a class="nav-item" href="#">Notícias</a>
-              <a class="nav-item" href="#">Vídeos</a>
-              <a class="nav-item" href="#">Documentos</a>
-              <a class="nav-item" href="#">Programas</a>
-              <a class="nav-item" href="#">Áreas da Empresa</a>
-            </nav>
-          </div>
-        </div> -->
 
       <div class="pti-main-menu">
         <div class="container">
@@ -71,7 +57,7 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-              <ul class="navbar-nav d-flex justify-content-between w-100">
+              <ul class="navbar-nav d-flex justify-content-center w-100">
                 <li class="nav-item active">
                   <a class="nav-link" href="#">Home</a>
                 </li>
@@ -112,16 +98,29 @@
           <img src="./img/banner/img4.jpg" class="img-fluid" alt="Responsive image">
         </div>
 
-        <div class="container">
-          <div class="pti-news-group-text">
-            <h1 class="pti-title pti-title-line pti-news-title">Lorem ipsum</h1>
-            <h4 class="pti-news-subtitle">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos</h4>
-            <a href="#" class="pti-link-more" title="ver mais">
-              <i class="pti-icon fa fa-plus"></i>
-              <span class="text-hide">ver mais</span>
-            </a>
+        <div class="pti-aviso-main">
+          <div class="container">
+
+            <div class="row pti-aviso-container">
+
+              <div class="col-sm pti-avisos-icon">
+                <i class="fa fa-exclamation-circle"></i>
+              </div>
+
+              <ul class="col-sm pti-avisos">
+                <li class="pti-aviso">
+                  <a href="#">Lorem ipsum dolor sit am pq cuando zno nest msm doquesta</a>
+                </li>
+              </ul>
+
+              <div class="col-sm-2 text-right pti-avisos-link-more">
+                <a href="#" title="Ver todos avisos">+ avisos</a>
+              </div>
+            </div>
+
           </div>
         </div>
+
       </div>
     </div>
 
@@ -129,7 +128,7 @@
       <div class="row">
 
         <!-- Noticias -->
-        <div class="col-md-8 pti-box-separate">
+        <div class="col-md pti-box-separate">
           <div class="pti-news">
 
             <!-- titulo principal -->
@@ -152,32 +151,21 @@
 
                 <div class="col-sm">
                   <div class="pti-news">
+
                     <div class="pti-img-back">
-                      <img src="./img/banner/img4.jpg" class="img-fluid" alt="Responsive image">
+                      <a href="#" title="Ver notícia completa">
+                        <img src="./img/banner/img4.jpg" class="img-fluid" alt="Responsive image">
+                      </a>
                     </div>
 
                     <div class="pti-news-group-text">
-                      <h2 class="pti-news-title">Lorem ipsum</h2>
-                      <h4 class="pti-news-subtitle">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos</h4>
-                      <a href="#" class="pti-link-more" title="ver mais">
-                        <i class="pti-icon fa fa-plus"></i>
+                      <a href="#" title="Ver notícia completa">
+                        <h2 class="pti-news-title">Lorem ipsum</h2>
+                        <h4 class="pti-news-subtitle">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos</h4>
                       </a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-sm">
-                  <div class="pti-news">
-                    <div class="pti-img-back">
-                      <img src="./img/banner/img4.jpg" class="img-fluid" alt="Responsive image">
-                    </div>
-
-                    <div class="pti-news-group-text">
-                      <h2 class="pti-news-title">Lorem ipsum</h2>
-                      <h4 class="pti-news-subtitle">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos</h4>
-                      <a href="#" class="pti-link-more" title="ver mais">
+                      <!-- <a href="#" class="pti-link-more" title="ver mais">
                         <i class="pti-icon fa fa-plus"></i>
-                      </a>
+                      </a> -->
                     </div>
                   </div>
                 </div>
@@ -190,6 +178,100 @@
 
         </div>
         <!-- fim Noticias -->
+
+        <!-- Treinamento -->
+        <div class="col-md pti-box-separate">
+          <div class="pti-calendar">
+
+            <!-- titulo principal -->
+            <div class="d-flex justify-content-between align-items-start flex-wrap">
+              <a href="#" class="pti-title pti-title-line" title="Ver todos os treinamentos">
+                Treinamento
+              </a>
+
+              <a href="#" class="pti-link-all" title="Ver todos os treinamentos">
+                <span>ver todos</span>
+                <span class="icon">
+                  <i class="fa fa-chevron-right"></i>
+                </span>
+              </a>
+            </div>
+
+            <!-- eventos calendario -->
+            <div class="pti-container pti-calendar-container">
+              <ul class="pti-list pti-calendar-days">
+                <li class="pti-calendar-day">
+                  <div class="pti-calendar-date">
+                    <span class="pti-calendar-label-day">25</span>
+                    <sup class="pti-calendar-label-month">jun</sup>
+                  </div>
+
+                  <ul class="pti-list pti-calendar-events">
+                    <li class="pti-calendar-event">
+                      <a href="#" class="pti-calendar-title">
+                        Lorem ipsum dolor sit am pq cuando zno nest msm doquesta
+                      </a>
+
+                      <!-- <a href="#" class="pti-link-more" title="ver mais">
+                        <i class="pti-icon fa fa-plus"></i>
+                      </a> -->
+                    </li>
+                    <li class="pti-calendar-event">
+                      <a href="#" class="pti-calendar-title">
+                        Lorem ipsum dolor sit am pq cuando zno nest msm doquesta
+                      </a>
+
+                      <!-- <a href="#" class="pti-link-more" title="ver mais">
+                        <i class="pti-icon fa fa-plus"></i>
+                      </a> -->
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="pti-calendar-day">
+                  <div class="pti-calendar-date">
+                    <span class="pti-calendar-label-day">27</span>
+                    <sup class="pti-calendar-label-month">jun</sup>
+                  </div>
+
+                  <ul class="pti-list pti-calendar-events">
+                    <li class="pti-calendar-event">
+                      <a href="#" class="pti-calendar-title">
+                        Lorem ipsum dolor sit am pq cuando zno nest msm doquesta
+                      </a>
+
+                      <!-- <a href="#" class="pti-link-more" title="ver mais">
+                        <i class="pti-icon fa fa-plus"></i>
+                      </a> -->
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="pti-calendar-day">
+                  <div class="pti-calendar-date">
+                    <span class="pti-calendar-label-day">27</span>
+                    <sup class="pti-calendar-label-month">jun</sup>
+                  </div>
+
+                  <ul class="pti-list pti-calendar-events">
+                    <li class="pti-calendar-event">
+                      <a href="#" class="pti-calendar-title">
+                        Lorem ipsum dolor sit am pq cuando zno nest msm doquesta
+                      </a>
+
+                      <!-- <a href="#" class="pti-link-more" title="ver mais">
+                        <i class="pti-icon fa fa-plus"></i>
+                      </a> -->
+                    </li>
+                  </ul>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+        </div>
+        <!-- fim Treinamento -->
 
         <!-- Calendário -->
         <div class="col-md pti-box-separate">
@@ -220,41 +302,22 @@
 
                   <ul class="pti-list pti-calendar-events">
                     <li class="pti-calendar-event">
-                      <div class="pti-calendar-title">
+                      <a href="#" class="pti-calendar-title">
                         Lorem ipsum dolor sit am pq cuando zno nest msm doquesta
-                      </div>
-
-                      <a href="#" class="pti-link-more" title="ver mais">
-                        <i class="pti-icon fa fa-plus"></i>
                       </a>
+
+                      <!-- <a href="#" class="pti-link-more" title="ver mais">
+                        <i class="pti-icon fa fa-plus"></i>
+                      </a> -->
                     </li>
                     <li class="pti-calendar-event">
-                      <div class="pti-calendar-title">
+                      <a href="#" class="pti-calendar-title">
                         Lorem ipsum dolor sit am pq cuando zno nest msm doquesta
-                      </div>
-
-                      <a href="#" class="pti-link-more" title="ver mais">
-                        <i class="pti-icon fa fa-plus"></i>
                       </a>
-                    </li>
-                  </ul>
-                </li>
 
-                <li class="pti-calendar-day">
-                  <div class="pti-calendar-date">
-                    <span class="pti-calendar-label-day">27</span>
-                    <sup class="pti-calendar-label-month">jun</sup>
-                  </div>
-
-                  <ul class="pti-list pti-calendar-events">
-                    <li class="pti-calendar-event">
-                      <div class="pti-calendar-title">
-                        Lorem ipsum dolor sit am pq cuando zno nest msm doquesta
-                      </div>
-
-                      <a href="#" class="pti-link-more" title="ver mais">
+                      <!-- <a href="#" class="pti-link-more" title="ver mais">
                         <i class="pti-icon fa fa-plus"></i>
-                      </a>
+                      </a> -->
                     </li>
                   </ul>
                 </li>
@@ -267,13 +330,32 @@
 
                   <ul class="pti-list pti-calendar-events">
                     <li class="pti-calendar-event">
-                      <div class="pti-calendar-title">
+                      <a href="#" class="pti-calendar-title">
                         Lorem ipsum dolor sit am pq cuando zno nest msm doquesta
-                      </div>
-
-                      <a href="#" class="pti-link-more" title="ver mais">
-                        <i class="pti-icon fa fa-plus"></i>
                       </a>
+
+                      <!-- <a href="#" class="pti-link-more" title="ver mais">
+                        <i class="pti-icon fa fa-plus"></i>
+                      </a> -->
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="pti-calendar-day">
+                  <div class="pti-calendar-date">
+                    <span class="pti-calendar-label-day">27</span>
+                    <sup class="pti-calendar-label-month">jun</sup>
+                  </div>
+
+                  <ul class="pti-list pti-calendar-events">
+                    <li class="pti-calendar-event">
+                      <a href="#" class="pti-calendar-title">
+                        Lorem ipsum dolor sit am pq cuando zno nest msm doquesta
+                      </a>
+
+                      <!-- <a href="#" class="pti-link-more" title="ver mais">
+                        <i class="pti-icon fa fa-plus"></i>
+                      </a> -->
                     </li>
                   </ul>
                 </li>
@@ -287,213 +369,73 @@
 
         <div class="w-100"></div>
 
-        <!-- Links úteis -->
+        <!-- Indicadores -->
         <div class="col-md pti-box-separate">
-          <div class="pti-links">
+          <div class="pti-indicadores">
 
             <!-- titulo principal -->
             <div class="d-flex justify-content-between align-items-start flex-wrap">
               <h3 class="pti-title pti-title-line">
-                Links úteis
+                Indicadores
               </h3>
-
-              <!-- <a href="#" class="pti-link-all" title="Ver todas notícias">
-                  <span>ver todas</span>
-                  <span class="icon">
-                    <i class="fa fa-chevron-right"></i>
-                  </span>
-                </a> -->
             </div>
 
-            <!-- links thumbnail -->
-            <div class="pti-container pti-links-container">
-              <ul class="pti-list pti-links-group">
-
-                <li class="pti-link pti-box-2-2">
-                  <a href="#">
-                    <span class="pti-icon pti-link-icon">
-                      <i class="fa fa-paperclip"></i>
-                    </span>
-
-                    <span class="pti-link-text">Lorem ipsum</span>
-                  </a>
-                </li>
-
-                <li class="pti-link pti-box-2-1">
-                  <a href="#">
-                    <span class="pti-icon pti-link-icon">
-                      <i class="fa fa-paperclip"></i>
-                    </span>
-
-                    <span class="pti-link-text">Lorem ipsum</span>
-                  </a>
-                </li>
-
-                <li class="pti-link pti-box-1-1">
-                  <a href="#">
-                    <span class="pti-icon pti-link-icon">
-                      <i class="fa fa-paperclip"></i>
-                    </span>
-
-                    <span class="pti-link-text">Lorem ipsum</span>
-                  </a>
-                </li>
-
-                <li class="pti-link pti-box-1-1">
-                  <a href="#">
-                    <span class="pti-icon pti-link-icon">
-                      <i class="fa fa-paperclip"></i>
-                    </span>
-
-                    <span class="pti-link-text">Lorem ipsum</span>
-                  </a>
-                </li>
-
-                <li class="pti-link pti-box-2-1">
-                  <a href="#">
-                    <span class="pti-icon pti-link-icon">
-                      <i class="fa fa-paperclip"></i>
-                    </span>
-
-                    <span class="pti-link-text">Lorem ipsum</span>
-                  </a>
-                </li>
-
-                <li class="pti-link pti-box-1-1">
-                  <a href="#">
-                    <span class="pti-icon pti-link-icon">
-                      <i class="fa fa-paperclip"></i>
-                    </span>
-
-                    <span class="pti-link-text">Lorem ipsum</span>
-                  </a>
-                </li>
-
-                <li class="pti-link pti-box-1-1">
-                  <a href="#">
-                    <span class="pti-icon pti-link-icon">
-                      <i class="fa fa-paperclip"></i>
-                    </span>
-
-                    <span class="pti-link-text">Lorem ipsum</span>
-                  </a>
-                </li>
-
-                <li class="pti-link pti-box-1-1">
-                  <a href="#">
-                    <span class="pti-icon pti-link-icon">
-                      <i class="fa fa-paperclip"></i>
-                    </span>
-
-                    <span class="pti-link-text">Lorem ipsum</span>
-                  </a>
-                </li>
-
-                <li class="pti-link pti-box-1-1">
-                  <a href="#">
-                    <span class="pti-icon pti-link-icon">
-                      <i class="fa fa-paperclip"></i>
-                    </span>
-
-                    <span class="pti-link-text">Lorem ipsum</span>
-                  </a>
-                </li>
-
-                <li class="pti-link pti-box-1-1">
-                  <a href="#">
-                    <span class="pti-icon pti-link-icon">
-                      <i class="fa fa-paperclip"></i>
-                    </span>
-
-                    <span class="pti-link-text">Lorem ipsum</span>
-                  </a>
-                </li>
-
-                <li class="pti-link pti-box-1-1">
-                  <a href="#">
-                    <span class="pti-icon pti-link-icon">
-                      <i class="fa fa-paperclip"></i>
-                    </span>
-
-                    <span class="pti-link-text">Lorem ipsum</span>
-                  </a>
-                </li>
-
-              </ul>
-            </div>
-          </div>
-
-        </div>
-        <!-- fim Links úteis -->
-
-        <!-- Portal - Dashboard -->
-        <div class="col-md pti-box-separate">
-          <div class="pti-portal">
-
-            <!-- titulo principal -->
-            <div class="d-flex justify-content-between align-items-start flex-wrap">
-              <a href="#" class="pti-title pti-title-line" title="Ir para o Dashboarde de TI">
-                Dashboard de TI
-              </a>
-            </div>
-
-            <!-- gráficos do portal -->
-            <div class="pti-container pti-portal-container">
+            <!-- gráficos do indicadores -->
+            <div class="pti-container pti-indicadores-container">
               <div class="row">
 
-                <div class="col">
-                  <a href="#" class="pti-portal-chart" title="Ir para Projetos & PPs do Dashboard de TI">
-                    <div class="pti-img pti-portal-img">
-                      <img src="./img/portais/grafico-1.jpg" class="img-fluid" alt="Gráfico Time to Market">
-                    </div>
-                  </a>
-                </div>
+                <div class="col-md">
+                  <div class="pti-indicadores-chart">
 
-                <div class="w-100 d-block d-sm-none d-md-block"></div>
+                    <a href="#" title="Ir para o Dashboard de TI" class="pti-indicadores-title">
+                      <h5>Dashboard de TI</h5>
+                    </a>
 
-                <div class="col">
-                  <a href="#" class="pti-portal-chart" title="Ir para Projetos & PPs do Dashboard de TI">
-                    <div class="pti-img pti-portal-img">
-                      <img src="./img/portais/grafico-2.jpg" class="img-fluid" alt="Gráfico Time to Market">
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-        <!-- fim Portal - Dashboard -->
-
-        <!-- Portal - Desempenho -->
-        <div class="col-md pti-box-separate">
-          <div class="pti-portal">
-
-            <!-- titulo principal -->
-            <div class="d-flex justify-content-between align-items-start flex-wrap">
-              <a href="#" class="pti-title pti-title-line" title="Ir para o portal de Desempeho">
-                Portal de Desempenho
-              </a>
-            </div>
-
-            <!-- gráficos do portal -->
-            <div class="pti-container pti-portal-container">
-              <div class="row">
-
-                <div class="col">
-                  <div class="pti-portal-chart">
-                    <div class="pti-img pti-portal-img">
+                    <div class="pti-img pti-indicadores-img">
                       <img src="./img/portais/grafico-1.jpg" class="img-fluid" alt="Gráfico Time to Market">
                     </div>
                   </div>
                 </div>
 
-                <div class="w-100 d-block d-sm-none d-md-block"></div>
+                <div class="col-md">
+                  <div class="row">
+                    <div class="col-md">
+                      <div class="pti-indicadores-chart">
 
-                <div class="col">
-                  <div class="pti-portal-chart">
-                    <div class="pti-img pti-portal-img">
-                      <img src="./img/portais/grafico-2.jpg" class="img-fluid" alt="Gráfico Time to Market">
+                        <a href="#" title="Ir para o Portal de Desempenho" class="pti-indicadores-title">
+                          <h5>Portal de Desempenho</h5>
+                        </a>
+
+                        <div class="row">
+                          <div class="pti-img pti-indicadores-img col-sm-6 col-md-12">
+                            <img src="./img/portais/grafico-2.jpg" class="img-fluid" alt="Gráfico Time to Market">
+                          </div>
+
+                          <div class="pti-img pti-indicadores-img col-sm-6 col-md-12">
+                            <img src="./img/portais/grafico-2.jpg" class="img-fluid" alt="Gráfico Time to Market">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md">
+                      <div class="pti-indicadores-chart">
+
+                        <a href="#" title="Ir para o Portal de Lorem Ipsum" class="pti-indicadores-title">
+                          <h5>Portal de Lorem Ipsum</h5>
+                        </a>
+
+                        <div class="row">
+                          <div class="pti-img pti-indicadores-img col-sm-6 col-md-12">
+                            <img src="./img/portais/grafico-2.jpg" class="img-fluid" alt="Gráfico Time to Market">
+                          </div>
+
+                          <div class="pti-img pti-indicadores-img col-sm-6 col-md-12">
+                            <img src="./img/portais/grafico-2.jpg" class="img-fluid" alt="Gráfico Time to Market">
+                          </div>
+                        </div>
+
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -502,86 +444,9 @@
 
           </div>
         </div>
-        <!-- fim Portal - Desempenho -->
+        <!-- fim Indicadores -->
 
         <div class="w-100"></div>
-
-        <!-- Portais -->
-        <div class="col-md pti-box-separate">
-          <div class="pti-portal">
-
-            <!-- titulo principal -->
-            <div class="d-flex justify-content-between align-items-start flex-wrap">
-              <h3 class="pti-title pti-title-line">
-                Portais
-              </h3>
-            </div>
-
-            <!-- gráficos do portal -->
-            <div class="pti-container pti-portal-container">
-              <ul class="pti-list pti-portal-icons">
-                <li class="pti-portal-icon">
-                  <a href="#">
-                    <i class="fa fa-archive"></i>
-                  </a>
-                </li>
-
-                <li class="pti-portal-icon">
-                  <a href="#">
-                    <i class="fa fa-address-book"></i>
-                  </a>
-                </li>
-                </li>
-
-                <li class="pti-portal-icon">
-                  <a href="#">
-                    <i class="fa fa-balance-scale"></i>
-                  </a>
-                </li>
-
-                <li class="pti-portal-icon">
-                  <a href="#">
-                    <i class="fa fa-archive"></i>
-                  </a>
-                </li>
-
-                <li class="pti-portal-icon">
-                  <a href="#">
-                    <i class="fa fa-address-book"></i>
-                  </a>
-                </li>
-                </li>
-
-                <li class="pti-portal-icon">
-                  <a href="#">
-                    <i class="fa fa-balance-scale"></i>
-                  </a>
-                </li>
-
-                <li class="pti-portal-icon">
-                  <a href="#">
-                    <i class="fa fa-archive"></i>
-                  </a>
-                </li>
-
-                <li class="pti-portal-icon">
-                  <a href="#">
-                    <i class="fa fa-address-book"></i>
-                  </a>
-                </li>
-                </li>
-
-                <li class="pti-portal-icon">
-                  <a href="#">
-                    <i class="fa fa-balance-scale"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-          </div>
-        </div>
-        <!-- fim Portal - Desempenho -->
       </div>
 
     </div>
@@ -596,56 +461,48 @@
       <div class="pti-links">
         <div class="row">
 
-          <div class="col-sm pti-box-separate">
-            <div class="pti-link-group">
-              <h4 class="pti-link-title">Quem somos</h4>
+          <div class="col-sm-12 pti-box-separate">
+            <div class="pti-link-group pti-links-uteis">
+              <h4 class="pti-link-title">Links Úteis</h4>
 
-              <ul class="pti-list">
-                <li>
-                  <a href="#">a empresa</a>
-                </li>
-                <li>
-                  <a href="#">contato</a>
-                </li>
-              </ul>
-            </div>
-          </div>
+              <div class="row">
+                <div class="pti-wrapper col-md">
+                  <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
+                  <a href="#" class="pti-box pti-box2" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
+                  <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
+                  <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
+                  <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
+                  <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
+                  <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
+                  <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
+                  <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
+                </div>
 
-          <div class="col-sm pti-box-separate">
-            <div class="pti-link-group">
-              <h4 class="pti-link-title">Quem somos</h4>
+                <div class="pti-wrapper col-md">
+                  <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
+                  <a href="#" class="pti-box pti-box2" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
+                  <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
+                  <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
+                  <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
+                  <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
+                  <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
+                  <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
+                  <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
+                </div>
 
-              <ul class="pti-list">
-                <li>
-                  <a href="#">a empresa</a>
-                </li>
-              </ul>
-            </div>
-          </div>
+                <div class="pti-wrapper col-md">
+                  <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
+                  <a href="#" class="pti-box pti-box2" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
+                  <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
+                  <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
+                  <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
+                  <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
+                  <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
+                  <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
+                  <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
+                </div>
+              </div>
 
-          <div class="w-100 d-md-none d-lg-none"></div>
-
-          <div class="col-sm pti-box-separate">
-            <div class="pti-link-group">
-              <h4 class="pti-link-title">Quem somos</h4>
-
-              <ul class="pti-list">
-                <li>
-                  <a href="#">a empresa</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-sm pti-box-separate">
-            <div class="pti-link-group">
-              <h4 class="pti-link-title">Quem somos</h4>
-
-              <ul class="pti-list">
-                <li>
-                  <a href="#">a empresa</a>
-                </li>
-              </ul>
             </div>
           </div>
 
@@ -654,6 +511,7 @@
         </div>
       </div>
 
+      <!-- footer telefonica .pti-footer-text -->
       <div class="pti-footer-text">
         <div class="d-flex align-items-center justify-content-between">
           <div class="pti-footer-name">©&nbsp;Telefônica Brasil S.A.</div>
@@ -708,6 +566,7 @@
           </div>
         </div>
       </div>
+      <!-- footer telefonica .pti-footer-text -->
 
     </div>
   </div>
@@ -721,6 +580,8 @@
       $('button.navbar-toggler').on('click', () => {
         $('.pti-header-group').toggleClass('pti-menu-show');
       });
+
+      $('[data-toggle="tooltip"]').tooltip();
     });
   </script>
   <!-- build:js -->
