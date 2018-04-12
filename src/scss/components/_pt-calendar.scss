@@ -101,25 +101,73 @@
 .#{$project-ref}calendar-grid {
 
   .#{$project-ref}calendar-events {
-    // display: flex;
-    // flex-wrap: wrap;
+
+    .col {
+      display: flex;
+      margin-bottom: cRem(2rem);
+
+      @media screen and (max-width: $screen-md-max) {
+        margin-bottom: cRem(1rem);
+      }
+    }
   }
   
-  .#{$project-ref}calendar-event-detail {
-    display: flex;
-    margin-bottom: cRem(2rem);
-    // margin-right: cRem(1rem);
+  .#{$project-ref}calendar-event-detail {   
+    // max-width: cRem(30rem);
+    width: 100%;
+
+    &:hover {
+      border-color: $cor-vivo-2;
+    }
+    
+    
+    .#{$project-ref}calendar-card {
+      display: flex;
+      flex: 1 2;
+      // flex-direction: column;
+      text-decoration: none;
+      color: $cor-black-800;
+
+      .pti-calendar-info {
+        display: flex;
+        flex: 1 0%;
+        flex-direction: column;
+        overflow: hidden;
+      }
+      
+      @media screen and (min-width: $screen-sm-min) and (max-width: $screen-md-max){
+        flex-direction: column;
+
+        .#{$project-ref}calendar-date {
+          max-width: 100%;
+          border-radius: cRem(.3rem) cRem(.3rem) 0 0;
+        }
+      }
+    }
+
+    a.#{$project-ref}calendar-card {
+      border-radius: cRem(.3rem);
+
+      &:focus, &:hover {
+        background-color: $cor-black-100;
+      }
+    }
 
     .#{$project-ref}calendar-date {
+      text-align: center;
+      text-decoration: none;
       background-color: $cor-vivo-1;
       color: $cor-white;
-      text-align: center;
-      flex: 1;
+      max-width: cRem(15rem);
+      border-radius: cRem(.3rem) 0 0 cRem(.3rem);
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
       
       & > div {        
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
+        // position: relative;
+        // top: 50%;
+        // transform: translateY(-50%);
         padding: cRem(2rem) cRem(1rem);
       }
     }
@@ -134,48 +182,47 @@
       font-size: cRem(3.2rem);
       @extend %font-light;
     }
-
-    @media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
-      flex-direction: column;
-    }
   }
 
-  .pti-calendar-info {
-    flex: 3;
-    padding: cRem(1rem);
+  .pti-calendar-body,
+  .pti-calendar-footer {
+    padding: cRem(1.2rem);
+  }
+
+  .pti-calendar-body {
+    padding-bottom: 0;
+  }
+  
+  p {
+    margin-bottom: cRem(.5rem);
+  }
+
+  .pti-calendar-footer {
+    padding-top: 0;
+    background-color: transparent;
+    border: 0;
+  }
+
+  .pti-calendar-endereco, .btn {
     overflow: hidden;
-    background-color: $cor-black-200;    
-
-    p {
-      margin-bottom: cRem(.5rem);
-    }
-
-    .pti-calendar-title {
-      font-size: cRem(1.6rem);
-      margin-bottom: cRem(1.5rem);
-    }
-
-    .pti-calendar-categoria,
-    .pti-calendar-endereco {
-      font-size: 80%;
-    }
-
-    .pti-calendar-endereco {
-      overflow: hidden;
-      max-width: 100%;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
-    .pti-calendar-btn-add {
-      display: none;
-    }
-
-
-    // .pti-calendar-data-hora {
-    //   font-size: 90%;
-    // }
+    max-width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
+
+  .pti-calendar-title {
+    font-size: cRem(1.6rem);
+    margin-bottom: cRem(1.5rem);
+  }
+
+  .pti-calendar-categoria,
+  .pti-calendar-endereco {
+    font-size: 80%;
+  }
+
+  .pti-calendar-btn-add {
+    display: none;
+  }
 
 }
