@@ -2,8 +2,8 @@
 /* ======================================================
     Portal
 */
-.#{$project-ref}portal {
-  .#{$project-ref}portal-chart {
+.pti-portal {
+  .pti-portal-chart {
   }
 
   .row > div{
@@ -15,12 +15,12 @@
   }
 }
 
-.#{$project-ref}portal-icons {
+.pti-portal-icons {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 
-  .#{$project-ref}portal-icon {
+  .pti-portal-icon {
     width: cRem(3rem);
     height: cRem(3rem);
     margin: 0 cRem(.5rem) cRem(.5rem) 0;

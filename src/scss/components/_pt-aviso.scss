@@ -1,10 +1,10 @@
-.#{$project-ref}aviso-main {
+.pti-aviso-main {
     position: absolute;
     bottom: 0;
     width: 100%;
     z-index: 10;
 
-    .#{$project-ref}aviso-container {
+    .pti-aviso-container {
         margin-left: 0;
         margin-right: 0;
         margin-bottom: cRem(.5rem);
@@ -14,11 +14,11 @@
         color: $cor-white;
     }
 
-    .#{$project-ref}avisos {
+    .pti-avisos {
         margin-bottom: 0;
         padding: 0;
 
-        .#{$project-ref}aviso {
+        .pti-aviso {
             list-style: none;
         }
     }
@@ -33,7 +33,7 @@
         }
     }
 
-    .#{$project-ref}avisos-icon {
+    .pti-avisos-icon {
         max-width: cRem(3rem);
     }
 
@@ -42,7 +42,7 @@
     }
 
     
-    .#{$project-ref}avisos-link-more {
+    .pti-avisos-link-more {
         white-space: nowrap;
     }
 }
