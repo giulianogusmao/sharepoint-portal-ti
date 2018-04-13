@@ -2,25 +2,26 @@
 /* ======================================================
     Calendario
 */
-.#{$project-ref}calendar {
+.pti-calendar {
 }
 
-.#{$project-ref}calendar-days {
+.pti-calendar-days {
   padding: 0;
   margin: 0 0 cRem(1rem) 0;
 
-  .#{$project-ref}calendar-day {
+  .pti-calendar-day {
     display: flex;
+    align-items: center;
+    min-height: cRem(5.5rem);
     padding: 0 0 0 cRem(1rem);
     margin-top: cRem(1rem);
-    padding-top: cRem(1rem);
     background-color: $cor-black-200;
     @extend %transition-fast;
 
     &:hover {
       background-color: $cor-black-300;
 
-      .#{$project-ref}calendar-title {
+      .pti-calendar-title {
         color: $cor-black-1;
       }
     }
@@ -29,11 +30,11 @@
       margin: 0;
     }
 
-    .#{$project-ref}calendar-date {
+    .pti-calendar-date {
       @extend %nowrap;
     }
 
-    .#{$project-ref}calendar-label-day {
+    .pti-calendar-label-day {
       line-height: 1;
       font-size: cRem(3.2rem);
       color: $cor-vivo-2;
@@ -41,20 +42,20 @@
       
     }
 
-    .#{$project-ref}calendar-label-month {
+    .pti-calendar-label-month {
       position: relative;
       font-size: cRem(1rem);
       top: cRem(-1.3rem);
     }
 
-    .#{$project-ref}calendar-events {
+    .pti-calendar-events {
       width: 100%;
     }
 
-    .#{$project-ref}calendar-event {
+    .pti-calendar-event {
       position: relative;
-      margin-bottom: cRem(1rem);
-      padding-bottom: cRem(1rem);
+      margin: cRem(.5rem) 0;
+      padding: cRem(1rem) 0;
 
       &:after {
         position: absolute;
@@ -75,7 +76,7 @@
       }
     }
 
-    a.#{$project-ref}calendar-title {
+    a.pti-calendar-title {
       line-height: 1.3;
       max-height: cRem(3.5rem);
       overflow: hidden;
@@ -92,3 +93,210 @@
     }
   }
 }
+
+/* ======================================================
+  Calendar Evento
+*/ 
+
+.pti-calendar-grid {
+
+  .pti-calendar-filter {
+    margin-bottom: cRem(2rem);
+  }
+
+  .pti-calendar-events {
+
+    .col {
+      display: flex;
+      margin-bottom: cRem(2rem);
+
+      @media screen and (max-width: $screen-md-max) {
+        margin-bottom: cRem(1rem);
+      }
+    }
+  }
+}
+
+
+  .pti-calendar-event-detail {   
+    // max-width: cRem(30rem);
+    width: 100%;
+    
+    &:hover {
+      border-color: $cor-vivo-2;
+    }
+    
+    .pti-calendar-card {
+      display: flex;
+      flex: 1 2;
+      // flex-direction: column;
+      text-decoration: none;
+      color: $cor-black-800;      
+      border-radius: cRem(.3rem);
+
+      &:focus, &:hover {
+        background-color: $cor-black-100;
+        
+        .pti-calendar-date {
+          background-color: $cor-vivo-3;
+        }
+      }
+
+      .pti-calendar-info {
+        display: flex;
+        flex: 1 0%;
+        flex-direction: column;
+        overflow: hidden;
+      }
+      
+      @media screen and (min-width: $screen-sm-min) and (max-width: $screen-md-max){
+        flex-direction: column;
+
+        .pti-calendar-date {
+          max-width: 100%;
+          border-radius: cRem(.3rem) cRem(.3rem) 0 0;
+        }
+      }
+    }
+
+    .pti-calendar-date {
+      text-align: center;
+      text-decoration: none;
+      background-color: $cor-vivo-1;
+      color: $cor-white;
+      max-width: cRem(15rem);
+      border-radius: cRem(.3rem) 0 0 cRem(.3rem);
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      
+      & > div {        
+        // position: relative;
+        // top: 50%;
+        // transform: translateY(-50%);
+        padding: cRem(2rem) cRem(1rem);
+      }
+    }
+
+    .pti-calendar-label-month {
+      text-transform: uppercase;
+      line-height: 1;
+    }
+    
+    .pti-calendar-label-day {
+      line-height: 1;
+      font-size: cRem(3.2rem);
+      @extend %font-light;
+    }
+  }
+
+  .pti-calendar-body,
+  .pti-calendar-footer {
+    padding: cRem(1.2rem);
+  }
+
+  .pti-calendar-body {
+    padding-bottom: 0;
+  }
+  
+  p {
+    margin-bottom: cRem(.5rem);
+  }
+
+  .pti-calendar-footer {
+    padding-top: 0;
+    background-color: transparent;
+    border: 0;
+  }
+
+  .pti-calendar-endereco, .btn {
+    overflow: hidden;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+
+  .pti-calendar-info {
+    .pti-calendar-title {
+      font-size: cRem(1.6rem);
+      margin-bottom: cRem(1.5rem);
+    }
+  }
+
+  .pti-calendar-categoria,
+  .pti-calendar-endereco {
+    font-size: 80%;
+  }
+
+  .pti-calendar-btn-add {
+    display: none;
+  }
+
+
+
+  /* ======================================================
+    Detalhe do evento do calendario
+  */ 
+  .pti-calendar-expanded {
+    width: auto;
+    border-color: $cor-black-300 !important;
+    max-width: cRem(45rem);
+    margin: 0 auto;
+    
+    @media screen and (max-width: $screen-sm-max) {
+      max-width: 100%;
+    }
+
+    .pti-calendar-date {
+      width: 100%;
+      max-width: 100%;
+    }
+    
+    .pti-calendar-card {
+      flex-direction: column;
+      background-color: $cor-white !important;
+
+      .pti-calendar-date {
+        background-color: $cor-vivo-1 !important;
+      }
+
+      .pti-calendar-info {
+        display: flex;
+        flex: 1 0%;
+        flex-direction: column;
+        overflow: hidden;
+      }
+
+      .pti-calendar-body {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .pti-calendar-categoria {
+        order: 2;
+      }
+
+      .pti-calendar-title {
+        font-size: cRem(2.6rem);
+        margin: cRem(.5rem) 0 cRem(2rem);
+      }
+
+      .pti-calendar-endereco,
+      .pti-calendar-categoria,
+      .pti-calendar-endereco,
+      .pti-calendar-data-hora,
+      .pti-calendar-descricao {
+        font-size: cRem(1.4rem);
+
+        .pti-calendar-label1 {
+          font-weight: bold;
+        }
+      }
+
+      .pti-calendar-endereco {
+        white-space: normal;
+        max-width: initial;
+      }
+    }
+  }

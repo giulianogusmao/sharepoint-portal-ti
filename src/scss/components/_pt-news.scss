@@ -2,7 +2,7 @@
 /* ======================================================
     Noticias
 */
-.#{$project-ref}news-group-text {
+.pti-news-group-text {
   position: relative;
   // padding-right: cRem(3rem);
   padding-top: cRem(1rem);
@@ -18,21 +18,11 @@
   }
 }
 
-.#{$project-ref}news-subtitle {
+.pti-news-subtitle {
   line-height: 1.4;
 }
 
-.#{$project-ref}news-container {
-  .#{$project-ref}news-title {
-    font-size: cRem(1.8rem);
-  }
-  
-  .#{$project-ref}news-subtitle {
-    font-size: cRem(1.4rem);
-  }
-}
-
-.#{$project-ref}img-back {
+.pti-img-back {
   position: relative;
 
   a:after {
@@ -55,7 +45,7 @@
 /* ======================================================
     Noticia principal
 */
-.#{$project-ref}main-news {
+.pti-main-news {
   position: relative;
   background-color: rgba($cor-vivo-1, .1);
 
@@ -69,35 +59,35 @@
     z-index: 1;
   }
 
-  .#{$project-ref}title {
+  .pti-title {
     margin-bottom: 0;
   }
 
-  .#{$project-ref}img-back {
+  .pti-img-back {
     text-align: center;
     max-height: cRem(40rem);
     overflow: hidden;
   }
 
-  .#{$project-ref}news-group-text {
+  .pti-news-group-text {
     position: absolute;
     bottom: 0;
     z-index: 2;
     max-width: cRem(40rem);
   }
 
-  .#{$project-ref}news-subtitle {
+  .pti-news-subtitle {
     color: $cor-black-1;
     font-size: cRem(1.7rem);
   }
   
   @media screen and (max-width: $screen-xs-max) {
-    .#{$project-ref}news-group-text {
+    .pti-news-group-text {
       max-width: none;
       margin-right: 15px;
     }
 
-    .#{$project-ref}img-back {
+    .pti-img-back {
       height: cRem(35rem);
       overflow: hidden;
 
@@ -108,6 +98,27 @@
         height: 100%;
         max-width: none;
       }
+    }
+  }
+}
+
+
+// noticia thumbnail
+.pti-news-container {
+  .pti-news-title {
+    font-size: cRem(1.8rem);
+  }
+  
+  .pti-news-subtitle {
+    font-size: cRem(1.4rem);
+  }
+
+  .pti-img-back {
+    overflow: hidden;
+    max-height: cRem(15.5rem);
+
+    @media screen and (max-width: $screen-sm-max) {
+      max-height: cRem(25rem);
     }
   }
 }

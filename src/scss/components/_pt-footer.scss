@@ -2,7 +2,7 @@
 /* ======================================================
     Footer
 */
-.#{$project-name}.#{$project-ref}footer {
+.#{$project-name}.pti-footer {
   background-color: $cor-vivo-9;
   color: $cor-white;
   padding: cRem(1rem) 0;
@@ -21,16 +21,16 @@
     }
   }
 
-  .#{$project-ref}links {
+  .pti-links {
     &, & a {
       color: $cor-black-400;
     }
 
-    .#{$project-ref}link-title {
+    .pti-link-title {
       color: $cor-white;
     }
 
-    .#{$project-ref}list {
+    .pti-list {
       display: flex;
       flex-wrap: wrap;
       align-content: flex-start;
@@ -38,7 +38,7 @@
       // column-count: 3;
       // column-gap: cRem(1rem);
 
-      .#{$project-ref}list-iten {
+      .pti-list-iten {
         display: block;
         width: 33%;
         margin-bottom: cRem(.5rem);
@@ -60,19 +60,19 @@
     }
   }
 
-  .#{$project-ref}box-separate {
+  .pti-box-separate {
     padding-top: cRem(1rem);
   }
 
-  .#{$project-ref}footer-text, .#{$project-ref}links {
+  .pti-footer-text, .pti-links {
     margin-top: cRem(1rem);
   }
 
-  .#{$project-ref}footer-name {
+  .pti-footer-name {
     margin-bottom: cRem(1rem);
   }
 
-  .#{$project-ref}social-midias {
+  .pti-social-midias {
     text-align: right;
     
     ul {
@@ -93,11 +93,11 @@
   }
 
   @media screen and (max-width: $screen-xs-max) {
-    .#{$project-ref}footer-text > div {
+    .pti-footer-text > div {
       flex-wrap: wrap;
 
-      .#{$project-ref}footer-name,
-      .#{$project-ref}social-midias,
+      .pti-footer-name,
+      .pti-social-midias,
       ul {
         text-align: center;
         width: 100%;

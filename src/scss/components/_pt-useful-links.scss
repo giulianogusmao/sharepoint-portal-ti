@@ -3,15 +3,15 @@
     Links uteis
 */
 
-.#{$project-ref}links-uteis {
-  .#{$project-ref}wrapper {
+.pti-links-uteis {
+  .pti-wrapper {
+    /* autoprefixer: off */
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    // grid-template-columns: 40px 40px 40px 40px;
     grid-auto-rows: 40px;
   }
 
-  a.#{$project-ref}box {
+  a.pti-box {
     background-color: $cor-vivo-3;
     border: 1px solid $cor-vivo-9;
     text-align: center;
@@ -27,7 +27,7 @@
     }
   }
 
-  .#{$project-ref}box2 {
+  .pti-box2 {
     grid-column-start: 2;
     grid-row-start: 1;
     grid-row-end: 3;
