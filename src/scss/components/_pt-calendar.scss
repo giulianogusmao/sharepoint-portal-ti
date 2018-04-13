@@ -115,7 +115,9 @@
       }
     }
   }
-  
+}
+
+
   .pti-calendar-event-detail {   
     // max-width: cRem(30rem);
     width: 100%;
@@ -215,9 +217,11 @@
   }
 
 
-  .pti-calendar-title {
-    font-size: cRem(1.6rem);
-    margin-bottom: cRem(1.5rem);
+  .pti-calendar-info {
+    .pti-calendar-title {
+      font-size: cRem(1.6rem);
+      margin-bottom: cRem(1.5rem);
+    }
   }
 
   .pti-calendar-categoria,
@@ -229,4 +233,70 @@
     display: none;
   }
 
-}
+
+
+  /* ======================================================
+    Detalhe do evento do calendario
+  */ 
+  .pti-calendar-expanded {
+    width: auto;
+    border-color: $cor-black-300 !important;
+    max-width: cRem(45rem);
+    margin: 0 auto;
+    
+    @media screen and (max-width: $screen-sm-max) {
+      max-width: 100%;
+    }
+
+    .pti-calendar-date {
+      width: 100%;
+      max-width: 100%;
+    }
+    
+    .pti-calendar-card {
+      flex-direction: column;
+      background-color: $cor-white !important;
+
+      .pti-calendar-date {
+        background-color: $cor-vivo-1 !important;
+      }
+
+      .pti-calendar-info {
+        display: flex;
+        flex: 1 0%;
+        flex-direction: column;
+        overflow: hidden;
+      }
+
+      .pti-calendar-body {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .pti-calendar-categoria {
+        order: 2;
+      }
+
+      .pti-calendar-title {
+        font-size: cRem(2.6rem);
+        margin: cRem(.5rem) 0 cRem(2rem);
+      }
+
+      .pti-calendar-endereco,
+      .pti-calendar-categoria,
+      .pti-calendar-endereco,
+      .pti-calendar-data-hora,
+      .pti-calendar-descricao {
+        font-size: cRem(1.4rem);
+
+        .pti-calendar-label1 {
+          font-weight: bold;
+        }
+      }
+
+      .pti-calendar-endereco {
+        white-space: normal;
+        max-width: initial;
+      }
+    }
+  }
