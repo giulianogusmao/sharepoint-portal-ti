@@ -126,8 +126,12 @@ a.pti-title {
 .#{$project-name}.pti-section {
   padding: 0;
 
+  .pti-section-body {
+    margin: cRem(2rem) 0;
+  }
+
   .pti-box-separate {
-    padding-top: cRem(3rem);
+    padding-top: cRem(2rem);
   }
   
   .pti-title-container {
@@ -142,21 +146,25 @@ a.pti-title {
 /* ======================================================
   Bread Crumb
 */
-.pti-bread-crumb {  
+.pti-bread-crumb {
   .pti-list {
     margin: cRem(1rem) 0 0 0;
-    color: $cor-black-500;
+    color: $cor-vivo-2;
   }
-
+  
   .pti-list-item {
     display: inline-block;
-    font-size: 80%;
-
+    font-size: 82%;
+    
     &[class*="-divider"] {
       color: rgba($cor-vivo-2, .5);
       font-size: 60%;
       margin: 0 cRem(.2rem);
     }
+  }
+  
+  .pti-item-active {
+    color: $cor-black-800;
   }
 
   a {
