@@ -6,12 +6,17 @@
   position: relative;
   // background-color: $cor-black-200;
 
+  &.pti-header-home {
+    .pti-header-group {
+      position: absolute;
+    }
+  }
+
   .pti-header-container {
     margin: cRem(1rem);
   }
 
   .pti-header-group {
-    // position: absolute;
     width: 100%;
     z-index: 2;
     @extend %transition;
@@ -75,24 +80,12 @@
       padding: cRem(.2rem) cRem(.4rem);
     }
 
+    @extend .pti-link-show-line;
     a {
       padding-left: cRem(1.5rem);
       padding-right: cRem(1.5rem);
       color: $cor-vivo-7;
       font-size: cRem(1.6rem);
-      text-decoration: none;
-
-      &:after {
-        @extend %transition-fast;
-      }
-
-      &:focus, &:hover {
-        color: $cor-vivo-9;
-
-        &:after {
-          width: 100%;
-        }
-      }
     }
 
     @media screen and (max-width: $screen-menu-mobile) {
@@ -109,17 +102,6 @@
           padding-left: cRem(1rem);
           padding-right: cRem(1rem);
         }
-      }
-    }
-
-    @media screen and (min-width: $screen-menu-desktop) {
-      a:after {
-        content: '';
-        display: block;
-        width: 0%;
-        height: 2px;
-        margin: 0 auto;
-        background-color: $cor-vivo-2;
       }
     }
   }

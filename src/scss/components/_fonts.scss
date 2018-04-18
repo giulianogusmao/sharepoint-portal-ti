@@ -34,6 +34,10 @@
   color: $cor-text;
   font-size: cRem($font-size);
 
+  @media screen and (max-width: $screen-md-max) {
+    font-size: 80%;
+  }
+
   strong, b {
     font-style: normal;
     font-weight: bold;
