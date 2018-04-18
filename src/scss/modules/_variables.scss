@@ -26,7 +26,7 @@ $font-outras: 'Helvetica Neue, Helvetica, Arial, sans-serif';
 
 // fonts size
 $font-size-reset: 62.5% !default;
-$font-size: 1.4rem !default;
+$font-size: 1.5rem !default;
 
 $project-name: 'pti-main';
 
@@ -61,6 +61,18 @@ $cor-vivo-3: #1a8b9c;
 $cor-vivo-2: #309fb1;
 $cor-vivo-1: #00c6da;
 $cor-default: $cor-vivo-1;
+$colors-vivo: (
+  $cor-vivo-1,
+  $cor-vivo-2,
+  $cor-vivo-3,
+  $cor-vivo-4,
+  $cor-vivo-5,
+  $cor-vivo-6,
+  $cor-vivo-7,
+  $cor-vivo-8,
+  $cor-vivo-9,
+  $cor-vivo-10
+);
 
 // cores bootstrap
 $cor-bootstrap-primary: #337ab7;
