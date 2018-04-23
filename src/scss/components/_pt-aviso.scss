@@ -17,9 +17,25 @@
     .pti-avisos {
         margin-bottom: 0;
         padding: 0;
+        overflow: hidden;
 
         .pti-aviso {
             list-style: none;
+            display: inline-block;
+            padding: 0 cRem(.5rem);
+            position: relative;
+            animation: linear infinite;
+            animation-name: left-to-right;
+            animation-duration: 15s;
+
+            @keyframes left-to-right {
+                0% {
+                    left: 100%;
+                }
+                100% {
+                    left: -100%;
+                }
+            }
         }
     }
 
