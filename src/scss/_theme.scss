@@ -198,34 +198,32 @@ a.pti-title {
 /* ======================================================
     Section
 */
+/* IMAGEM DE DESTAQUE */ 
 .pti-img-destaque {
-  position: relative;
-  height: cRem(25rem);
-  overflow: hidden;
-  // border-radius: .25rem;
+  .pti-img {
+    position: relative;
+    height: cRem(25rem);
+    overflow: hidden;
 
-  // width: auto;
-  // background-position: center center;
-  // background-size: 100% auto;
+    @media screen and (max-width: $screen-sm-max) {
+      height: cRem(20rem);
+    }
+
+    @media screen and (max-width: $screen-xs-max) {
+      height: cRem(18rem);
+    }
+  }
 
   img {
     position: absolute;
     top:-100%; left:0; right: 0; bottom:-100%;
     margin: auto;
   }
-
-  @media screen and (max-width: $screen-sm-max) {
-    height: cRem(20rem);
-  }
-
-  @media screen and (max-width: $screen-xs-max) {
-    height: cRem(18rem);
-  }
 }
 
-
+/* TEXTO */ 
 .pti-text-container {
-  max-width: cRem(70rem);
+  max-width: cRem(75rem);
   margin-left: auto;
   margin-right: auto;
 
