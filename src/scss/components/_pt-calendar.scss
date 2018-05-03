@@ -144,7 +144,7 @@
       }
 
       &:focus {
-        @include btn-box-shadow($cor-vivo-2);
+        @include btn-box-shadow($cor-vivo-1);
         outline: 0;
       }
 
@@ -260,15 +260,23 @@
     ('success', $cor-success, $cor-success-dark),
   ) {
     .pti-calendar-#{$name} {
+      &:hover {
+        border-color: $bg-hover;
+      }
+      
       .pti-calendar-card {
         .pti-calendar-date {
           background-color: $bg;
         }
-
+        
         &:hover {
           .pti-calendar-date {
             background-color: $bg-hover;
           }
+        }
+        
+        &:focus {
+          @include btn-box-shadow($bg-hover);
         }
       }
 
