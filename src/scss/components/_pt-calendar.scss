@@ -99,6 +99,7 @@
 */ 
 
 .pti-calendar-grid {
+  width: 100%;
 
   .pti-calendar-filter {
     margin-bottom: cRem(2rem);
@@ -134,12 +135,17 @@
       color: $cor-black-800;      
       border-radius: cRem(.3rem);
 
-      &:focus, &:hover {
+      &:hover {
         background-color: $cor-black-100;
         
         .pti-calendar-date {
           background-color: $cor-vivo-3;
         }
+      }
+
+      &:focus {
+        @include btn-box-shadow($cor-vivo-2);
+        outline: 0;
       }
 
       .pti-calendar-info {
@@ -149,7 +155,7 @@
         overflow: hidden;
       }
       
-      @media screen and (min-width: $screen-sm-min) and (max-width: $screen-md-max){
+      @include media-breakpoint-down(sm) {
         flex-direction: column;
 
         .pti-calendar-date {
@@ -220,19 +226,58 @@
   .pti-calendar-info {
     .pti-calendar-title {
       font-size: cRem(1.6rem);
-      margin-bottom: cRem(1.5rem);
+      margin-bottom: cRem(.5rem);
+      color: $cor-black-1;
+    }
+
+    .card-text {
+      margin-bottom: cRem(1rem);
     }
   }
 
   .pti-calendar-categoria,
-  .pti-calendar-endereco {
+  .pti-calendar-endereco,
+  .pti-calendar-instrutor {
     font-size: 80%;
+  }
+
+  .pti-calendar-categoria {
+    margin-bottom: cRem(1rem);
   }
 
   .pti-calendar-btn-add {
     display: none;
   }
 
+  .pti-calendar-instrutor {
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  @each $name, $bg, $bg-hover in (
+    ('danger', $cor-danger, $cor-danger-dark),
+    ('success', $cor-success, $cor-success-dark),
+  ) {
+    .pti-calendar-#{$name} {
+      .pti-calendar-card {
+        .pti-calendar-date {
+          background-color: $bg;
+        }
+
+        &:hover {
+          .pti-calendar-date {
+            background-color: $bg-hover;
+          }
+        }
+      }
+
+      .pti-calendar-instrutor .pti-data {
+        color: $bg;
+        font-weight: bold;
+      }
+    }
+  }
 
 
   /* ======================================================
@@ -244,7 +289,7 @@
     max-width: cRem(45rem);
     margin: 0 auto;
     
-    @media screen and (max-width: $screen-sm-max) {
+    @include media-breakpoint-down(sm) {
       max-width: 100%;
     }
 

@@ -1,0 +1,54 @@
+
+/* ======================================================
+    Buttons
+*/
+
+// MIXINS
+@mixin btn-box-shadow($color) {
+    box-shadow: 0 0 0 .2rem rgba($color, .5);
+}
+
+@mixin btn-color($color: $cor-white) {
+    color: $color;
+}
+
+@mixin btn-bg-color($color) {
+    border-color: $color;
+    background-color: $color;
+}
+
+// =============================================================================================
+
+.pti-btn {
+    border-radius: 0;
+    font-size: 90%;
+
+    @each $name, $bg, $bg-hover, $color, $color-hover in (
+        ('primary', $cor-vivo-1, $cor-vivo-3),
+        ('secondary', $cor-black-300, $cor-black-600, $cor-black-900, $cor-white)
+    ) {
+        &.btn-#{$name} {
+            @include btn-bg-color($bg);
+            @include btn-color($color);
+
+            &:hover {
+                @include btn-bg-color($bg-hover);
+                @include btn-color($color-hover);
+            }
+
+            &:focus {
+                @include btn-box-shadow($bg);
+            }
+
+            &:not(:disabled):not(.disabled).active, 
+            &:not(:disabled):not(.disabled):active, 
+            .show>&.dropdown-toggle,
+            &:not(:disabled):not(.disabled).active:focus, 
+            &:not(:disabled):not(.disabled):active:focus, 
+            .show>&.dropdown-toggle:focus {
+                @include btn-bg-color($bg-hover);
+                @include btn-box-shadow($bg-hover);
+            }
+        }
+    }
+}
