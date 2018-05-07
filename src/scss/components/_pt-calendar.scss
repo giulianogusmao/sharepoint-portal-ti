@@ -256,8 +256,10 @@
 
 
   @each $name, $bg, $bg-hover in (
-    ('danger', $cor-danger, $cor-danger-dark),
-    ('success', $cor-success, $cor-success-dark),
+    ('encerrado', $cor-danger, $cor-danger-dark),
+    ('inscrito', $cor-success, $cor-success-dark),
+    ('interessado-aberto', $cor-black-500, $cor-black-700),
+    ('interessado-inscrito', $cor-vivo-5, $cor-vivo-7),
   ) {
     .pti-calendar-#{$name} {
       &:hover {
@@ -280,7 +282,7 @@
         }
       }
 
-      .pti-calendar-instrutor .pti-data {
+      .pti-calendar-instrutor .pti-calendar-status {
         color: $bg;
         font-weight: bold;
       }
