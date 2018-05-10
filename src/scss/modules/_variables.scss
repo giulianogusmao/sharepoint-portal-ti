@@ -111,6 +111,11 @@ $cor-success-dark: darken($cor-success, 10);
 // cores fontes
 $cor-text: $cor-black-800 !default;
 
+$border-color: rgba(0,0,0,.125);
+$border-style: 'solid';
+$border-weight: '1px';
+$border: #{$border-weight} #{$border-style} $border-color;
+
 
 // =============================================================================================
 // screen

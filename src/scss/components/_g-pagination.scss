@@ -1,0 +1,12 @@
+.pagination {
+    .active {
+        .page-link {
+            border-color: $cor-vivo-2;
+            background-color: $cor-vivo-2;
+        }
+    }
+
+    .page-link {
+        color: $cor-vivo-1;
+    }
+}

@@ -1,0 +1,66 @@
+.pti-portfolio-itens-container {
+    margin-bottom: cRem(2rem);
+
+    .pti-portfolio-item {
+        border-width: 0 0 1px 0;
+        border-radius: 0;
+        border: 0;
+
+        &:nth-child(even) {
+            background-color: $cor-black-50;
+        }
+        
+        .card-header {
+            padding: 0;
+            background-color: transparent;
+            
+            .btn {
+                background-color: transparent;
+                padding: cRem(1.2rem) cRem(2rem);
+                width: 100%;
+                text-align: left;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border: 0;
+                border-radius: 0;
+                
+                &:hover {
+                    background-color: $cor-black-100;
+
+                    .badge {
+                        text-decoration: none !important;
+                    }
+                }
+
+                .pti-icon {
+                    position: relative;
+                    font-size: 80%;
+                    color: $cor-black-700;
+                    margin-right: cRem(1rem);
+                    @extend %transition;
+                    padding: cRem(.5rem);
+                    border-radius: 100%;
+                }
+                
+                // &:not(.collapsed) .pti-icon {
+                //     color: $cor-white;
+                //     background-color: $cor-vivo-1;
+                // }
+
+                &.collapsed .pti-icon {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        .card-body {
+            border-bottom: $border;
+
+            .btns {
+                margin: cRem(1.5rem) 0;
+                text-align: right;
+            }
+        }
+    }
+}
