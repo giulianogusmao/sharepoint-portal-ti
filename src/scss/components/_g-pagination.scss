@@ -1,12 +1,15 @@
-.pagination {
-    .active {
-        .page-link {
-            border-color: $cor-vivo-2;
-            background-color: $cor-vivo-2;
+.pti-paginacao {
+    .pagination {
+        .active {
+            .page-link {
+                color: $cor-white;
+                border-color: $cor-vivo-2;
+                background-color: $cor-vivo-2;
+            }
         }
-    }
 
-    .page-link {
-        color: $cor-vivo-1;
+        .page-link {
+            color: $cor-vivo-1;
+        }
     }
 }

@@ -6,7 +6,7 @@
         border-radius: 0;
         border: 0;
 
-        &:nth-child(even) {
+        &:nth-child(even) .card-header {
             background-color: $cor-black-50;
         }
         
