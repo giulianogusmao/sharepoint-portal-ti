@@ -6,13 +6,28 @@
         border-radius: 0;
         border: 0;
 
-        &:nth-child(even) .card-header {
-            background-color: $cor-black-50;
+        // &:nth-child(even) .card-header {            
+        //     background-color: $cor-vivo-3;
+
+        //      * {
+        //         color: $cor-white;
+        //      }
+        // }
+
+        .pti-status-group {
+            .pti-status {
+                display: none;
+            }
         }
-        
+
+        &.pti-interessado .pti-status.pti-interessado {
+            display: inline-block;
+        }
+
         .card-header {
             padding: 0;
-            background-color: transparent;
+            border-radius: 0;
+            background-color: $cor-vivo-1;
             
             .btn {
                 background-color: transparent;
@@ -24,9 +39,10 @@
                 align-items: center;
                 border: 0;
                 border-radius: 0;
+                color: $cor-white;
                 
                 &:hover {
-                    background-color: $cor-black-100;
+                    background-color: $cor-vivo-3;
 
                     .badge {
                         text-decoration: none !important;
@@ -36,17 +52,16 @@
                 .pti-icon {
                     position: relative;
                     font-size: 80%;
-                    color: $cor-black-700;
+                    // color: $cor-black-700;
                     margin-right: cRem(1rem);
                     @extend %transition;
                     padding: cRem(.5rem);
                     border-radius: 100%;
                 }
                 
-                // &:not(.collapsed) .pti-icon {
-                //     color: $cor-white;
-                //     background-color: $cor-vivo-1;
-                // }
+                &:not(.collapsed) {
+                    background-color: $cor-vivo-3;
+                }
 
                 &.collapsed .pti-icon {
                     transform: rotate(180deg);
