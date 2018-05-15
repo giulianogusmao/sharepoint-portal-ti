@@ -4,12 +4,12 @@
 */
 
 // utilizado apenas no prototipo
-.spfx-header {
-  height: 50px;
-  color: $cor-white;
-  padding-top: 12px;
-  background: radial-gradient(circle, $cor-vivo-3, $cor-vivo-9 75%);
-}
+// .spfx-header {
+//   height: 50px;
+//   color: $cor-white;
+//   padding-top: 12px;
+//   background: radial-gradient(circle, $cor-vivo-3, $cor-vivo-9 75%);
+// }
 
 // font-default;
 .#{$project-name} {
@@ -312,3 +312,67 @@ a.pti-title {
 /* ======================================================
   Icon
 */
+
+.pti-icones {
+  // margin-bottom: cRem(2rem);
+
+  [class*="col-"] {    
+    margin-bottom: 2rem;
+  }
+
+  .card {
+    height: 100%;
+    text-align: center;
+    background-color: $cor-vivo-2;
+    color: $cor-white;
+    @extend %transition-fast;
+
+    .pti-img-container {
+      border-radius: .25rem .25rem 0 0;
+
+      .pti-img {
+        position: relative;
+        width: 50%;
+        @extend %transition-fast;
+      }
+    }
+
+    .pti-img-container,
+    .card-body {
+      text-align: center;
+      padding: cRem(1rem);
+    }
+
+    .card-body {
+      display: flex;
+      align-items: center;
+
+      .card-text {
+        width: 100%;
+      }
+    }
+
+    &:hover {
+      background-color: $cor-vivo-4;
+      text-decoration: none;
+    }
+
+    &:active {
+      background-color: $cor-vivo-5;
+    }
+
+    &:focus {
+      @include box-shadow-focus($cor-vivo-2);
+      outline: 0;
+    }
+
+    &:hover, &:focus {
+      .pti-img {
+        margin-top: -2%;
+        margin-bottom: -2%;
+        width: 54%;
+        // transform: scale(1.1);
+      }
+    }
+  }
+}

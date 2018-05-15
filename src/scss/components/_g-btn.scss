@@ -4,10 +4,6 @@
 */
 
 // MIXINS
-@mixin btn-box-shadow($color) {
-    box-shadow: 0 0 0 .2rem rgba($color, .5);
-}
-
 @mixin btn-color($color: $cor-white) {
     color: $color;
 }
@@ -37,7 +33,7 @@
             }
 
             &:focus {
-                @include btn-box-shadow($bg);
+                @include box-shadow-focus($bg);
             }
 
             &:not(:disabled):not(.disabled).active, 
@@ -47,7 +43,7 @@
             &:not(:disabled):not(.disabled):active:focus, 
             .show>&.dropdown-toggle:focus {
                 @include btn-bg-color($bg-hover);
-                @include btn-box-shadow($bg-hover);
+                @include box-shadow-focus($bg-hover);
             }
         }
     }
