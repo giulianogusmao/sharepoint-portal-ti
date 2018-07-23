@@ -55,7 +55,7 @@ gulp.task('sass', function() {
     .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
     .pipe(autoprefixer({
-      browsers: ['last 3 versions']
+      browsers: ['last 1 versions']
     }))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(config.scssout))

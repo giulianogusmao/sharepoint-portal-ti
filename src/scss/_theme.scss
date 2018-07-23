@@ -142,7 +142,7 @@
 // Titulo box
 .pti-title {
   line-height: 1.1;
-  font-size: cRem(2.6rem);
+  font-size: cRem(2.6rem) !important;
   color: $cor-vivo-9;
 
   &.pti-title-line:after {

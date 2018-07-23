@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "engines": {
-    "node": ">=9.6.0"
+    "node": ">=8.11.2"
   },
   "scripts": {
     "start": "gulp",

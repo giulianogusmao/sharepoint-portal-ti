@@ -1,5 +1,36 @@
+
+/* ======================================================
+ * sobrescrever classes sharepoint
+*/
+
 .o365cs-base.o365cs-topnavBGColor-2,
 .o365cs-nav-rightAlign,
 .o365button{
   background-color: transparent !important;
+}
+
+%p-relative {
+  position: relative !important;
+}
+
+.mobile {
+  .sp-placeholder-bottom {
+    @extend %p-relative;
+  }
+
+//   [class*="mainContent"] [class*="pageContainer"] {      
+//     [class*="pageLayout"],
+//     [class*="layoutWrapper"] {
+//       display: block;
+//       height: auto;
+//     }    
+//   }
+}
+
+[class*="mainContent"] {
+  @extend %p-relative;
+  
+  [class*="pageContainer"] {
+    @extend %p-relative;
+  }
 }
