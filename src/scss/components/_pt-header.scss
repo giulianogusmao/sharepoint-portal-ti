@@ -22,11 +22,60 @@
     @extend %transition;
     // background: linear-gradient(rgba($cor-white, 40%), rgba($cor-white, 0%));
 
+    
+    .navbar-toggler {
+      position: relative;
+      width: cRem(2em);
+      height: cRem(1.5em);
+      padding: 0;
+      margin: 5px 0;
+      outline: none;
+
+      &:before,
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+      }
+      
+      &:before {
+        top: 43%;
+        border-top: cRem(.2em) solid #000;
+      }
+
+      &:after {
+        border: cRem(.2em) solid #000;
+        border-left: 0;
+        border-right: 0;
+      }
+
+      .navbar-toggler-icon {
+        display: none;
+      }
+    }
+
     &.pti-menu-show {
       @media screen and (max-width: $screen-menu-mobile) {
         background-color: rgba($cor-vivo-5, .95);
         z-index: 100;
+
+        .pti-logo {
+          color: $cor-white;
+        }
+
+        .navbar-toggler {
+          &:before, &:after {
+            border-color: #fff;
+          }
+        }
+
         .pti-main-menu {
+          padding-bottom: 1rem;
+          
           .nav-link {
             color: $cor-white;
 
@@ -47,7 +96,7 @@
     @extend %font-light;
 
     @media screen and (max-width: $screen-menu-mobile) {
-      margin-left: cRem(4rem);
+      margin-left: cRem(3rem);
     }
   }
 

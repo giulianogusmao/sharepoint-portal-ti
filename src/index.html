@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>Poc - Portal de TI</title>
 
-  <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="./assets/font-awesome/css/font-awesome.min.css">
@@ -25,8 +25,8 @@
   </div>
 
   <!-- header -->
-  <div class="pti-main pti-header pti-header-home">
-
+  <div class="pti-main pti-header">
+    
     <!-- header com logo e campo de busca -->
     <div class="pti-header-group">
       <div class="pti-header-container">
@@ -34,7 +34,7 @@
 
           <div class="row align-items-center">
             <div class="col">
-              <a href="#" class="pti-logo">Portal de TI</a>
+              <a href="/" class="pti-logo">Portal de TI</a>
             </div>
 
             <div class="col-2 text-right">
@@ -93,42 +93,46 @@
   </div>
   <!-- .pti-header -->
 
-  <div class="pti-main pti-section">
-    <!-- noticia principal -->
-    <div class="pti-main-news">
-      <div class="pti-news">
-        <div class="pti-img-back">
-          <img src="./img/banner/img4.jpg" class="img-fluid" alt="Responsive image">
-        </div>
+  <!-- Imagem Principal -->
+  <div class="pti-main pti-img-main">
+    <!-- Imagem em destaque -->
+    <div class="container pti-img-destaque">
+      <div class="pti-img">
+        <img src="/img/banner/img2.jpg" class="img-fluid" alt="Imagem ilustrativa Estratégia de TI">
+      </div>
+    </div>
 
-        <div class="pti-aviso-main">
-          <div class="container">
+    <!-- Aviso -->
+    <div class="pti-aviso-main">
+      <div class="container">
 
-            <div class="row pti-aviso-container">
+        <div class="row no-gutters pti-aviso-container">
 
-              <div class="col pti-avisos-icon">
-                <i class="fa fa-exclamation-circle"></i>
-              </div>
+          <div class="col pti-avisos-icon">
+            <i class="fa fa-exclamation-circle"></i>
+          </div>
 
-              <ul class="col pti-avisos">
-                <li class="pti-aviso">
-                  <a href="#">Será que agora vai?</a>
-                </li>
-                <li class="pti-aviso">
-                  <a href="#">Vasco é vice de novo!</a>
-                </li>
-              </ul>
+          <ul class="col pti-avisos">
+            <li class="pti-aviso">
+              <a href="#">Será que agora vai?</a>
+            </li>
+            <li class="pti-aviso">
+              <a href="#">Vasco é vice de novo!</a>
+            </li>
+          </ul>
 
-              <div class="col-3 col-sm-2 text-right pti-avisos-link-more">
-                <a href="#" title="Ver todos avisos">+ avisos</a>
-              </div>
-            </div>
-
+          <div class="col pti-avisos-link-more">
+            <a href="#" title="Ver todos avisos">+ avisos</a>
           </div>
         </div>
 
       </div>
     </div>
+    <!-- .pti-aviso-main -->
+  </div>
+  <!-- .pti-img-main -->
+
+  <div class="pti-main pti-section">
 
     <div class="container">
       <div class="row">

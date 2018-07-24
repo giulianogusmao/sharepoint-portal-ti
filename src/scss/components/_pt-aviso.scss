@@ -1,14 +1,14 @@
+/* ======================================================
+    Aviso
+*/
 .pti-aviso-main {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    z-index: 10;
+    margin-top: 1%;
 
     .pti-aviso-container {
         margin-left: 0;
         margin-right: 0;
         margin-bottom: cRem(.5rem);
-        padding: cRem(.3rem) cRem(1rem);
+        padding: cRem(.3rem);
         background-color: rgba($cor-vivo-3, .9);
         border-radius: cRem(.2rem);
         color: $cor-white;
@@ -27,17 +27,22 @@
             position: relative;
             animation: linear infinite;
             animation-name: left-to-right;
-            animation-duration: 15s;
+            animation-duration: 17s;
 
             @keyframes left-to-right {
                 0% {
                     left: 100%;
                 }
                 100% {
-                    left: -100%;
+                    left: -110%;
                 }
             }
+
+            @include media-breakpoint-down(sm) {
+                animation-duration: 10s;
+            }
         }
+
     }
 
     [class*="col-"] {
@@ -50,16 +55,18 @@
         }
     }
 
-    .pti-avisos-icon {
-        max-width: cRem(3rem);
-    }
-
     a {
         color: $cor-white;
     }
 
-    
+    .pti-avisos-icon,
+    .pti-avisos-link-more {
+        text-align: center;
+        max-width: cRem(3rem);
+    }
+
     .pti-avisos-link-more {
         white-space: nowrap;
+        max-width: cRem(7rem);
     }
 }
