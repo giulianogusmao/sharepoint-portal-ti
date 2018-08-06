@@ -8,7 +8,10 @@ dist
 
 # plugins
 assets
-css
+
+# css generate by scss
+src/css/style.css
+src/css/style-v2.css
 
 package-lock.json
 

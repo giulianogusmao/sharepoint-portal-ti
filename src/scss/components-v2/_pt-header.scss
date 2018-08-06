@@ -2,9 +2,122 @@
 /* ======================================================
     Header
 */
+
 .#{$project-name}.pti-header {
   position: relative;
-  // background-color: $cor-black-200;
+
+  .container {
+    justify-content: normal;
+  }
+  
+  .pti-logo {
+    font-size: cRem(3rem);
+    color: $cor-black-1;
+    margin: 0;
+    outline: none;
+    @extend %font-light;
+  }
+  
+  // centraliza menu
+  .navbar-nav {
+    margin: 0 auto;
+    
+    // altera cor dos links do menu
+    .nav-link {
+      color: #074d5f;
+      
+      &:hover, &:focus {
+        outline: none;
+        color: rgba(#000, .8);
+      }
+    }
+  }
+  
+  // customiza icone para abrir e fechar o menu no mobile
+  .navbar-toggler {
+    position: relative;
+    width: cRem(2em);
+    height: cRem(1.5em);
+    padding: 0;
+    border: 0;
+    margin-right: cRem(1rem);
+    outline: none;
+    transition: .2s ease-out;
+
+    // cria as 3 linhas do botao do menu mobile
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+    
+    // linha do meio
+    &:before {
+      top: 43%;
+      border-top: cRem(.2em) solid #000;
+    }
+
+    // linha de cima e de baixo
+    &:after {
+      border: cRem(.2em) solid #000;
+      border-left: 0;
+      border-right: 0;
+    }
+
+    // desativa icone do botao mobile do boostrap
+    .navbar-toggler-icon {
+      display: none;
+    }
+
+    // rotaciona o botao e muda as 3 linhas para um x
+    &:not(.collapsed) {
+      transform: rotate(-135deg);
+      
+      &:after {
+        border-top: 0;
+        transform: translate(30%, 0) rotate(90deg);
+      }
+    }
+  }
+
+  // modo expandido
+  @include media-breakpoint-up(lg) {
+    // realiza quebra linha no menu para proxima linha
+    .container {
+      flex-wrap: wrap;
+      
+      .pti-menu {
+        flex: 1 1 100%;
+      }
+    }
+
+    // cria um efeito de ubderline sob o link quando passa o mouse
+    .navbar .nav-link {
+      &:after {
+        content: "";
+        display: block;
+        width: 0%;
+        height: .2ch;
+        margin: 0px auto;
+        transition: .15s ease-out;
+      }
+
+      &:hover:after {
+        width: 100%;
+        background-color: rgb(0, 198, 218);
+      }
+    }
+  }
+}
+
+
+.#{$project-name}-old.pti-header {
+  position: relative;
 
   &.pti-header-home {
     .pti-header-group {
@@ -20,8 +133,6 @@
     width: 100%;
     z-index: 2;
     @extend %transition;
-    // background: linear-gradient(rgba($cor-white, 40%), rgba($cor-white, 0%));
-
     
     .navbar-toggler {
       position: relative;
