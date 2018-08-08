@@ -1,3 +1,6 @@
+/* ======================================================
+    _g-Fonts
+*/
 @each $_fonte in $fontes {
     $diretorio: '#{$url-path-fontes}/#{$_fonte}/';
     $nome: '#{$family}-#{$_fonte}';

@@ -1,14 +1,6 @@
-// .pti-noticias {
-//     display: flex;
-//     flex-wrap: wrap;
-
-//     .pti-noticia {
-//         flex-basis: 0;
-//         flex-grow: 1;
-//         max-width: 100%;
-//     }
-// }
-
+/* ======================================================
+    _pt-Noticias
+*/
 .pti-noticia-thumb {
     display: none;
 
@@ -76,7 +68,7 @@
         color: #FFF;
         margin: 0;
         padding: cRem(.5em) cRem(1em);
-        font-size: cRem(1.8em);
+        font-size: cRem(1.6em);
         @extend %transition;
     }
 }

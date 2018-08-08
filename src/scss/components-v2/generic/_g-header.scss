@@ -1,10 +1,8 @@
 
 /* ======================================================
-    Header
+    _g-Header
 */
-
 .#{$project-name}.pti-header {
-  height: cRem(7em);
   
   .pti-logo {
     font-size: cRem(3em);
@@ -25,8 +23,11 @@
     }
   }
   
-  
+  // mobile
   @include media-breakpoint-down(md) {
+    // define altura do header para que o menu mobile abra sobre o conteudo
+    height: cRem(7em);
+
     // logo centralizado para mobile
     .pti-logo {
       flex-grow: 1;
