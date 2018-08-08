@@ -17,27 +17,23 @@
 
 <body>
 
-  <!-- header sharepoint -->
-  <div class="spfx-header">
-    <div class="container">
-      Office 365 ...
-    </div>
-  </div>
+  <!-- header - cabeçalho principal -->
+  <header class="pti-main pti-header pti-header-group">
 
-  <!-- header -->
-  <header class="pti-main pti-header">
-    <div class="container">
-
-      <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="pti-navbar navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <!-- btn menu mobile -->
         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#menuPrincipal" aria-controls="menuPrincipal"
           aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <h1 class="navbar-brand pti-logo" href="/">
-          Portal de TI
+        <!-- logotipo -->
+        <h1 class="navbar-brand pti-logo">
+          <a href="/">Portal de TI</a>
         </h1>
 
+        <!-- campo buscar -->
         <!-- <div class="pti-search">
           <a href="#" class="pti-btn-search" title="buscar">
             <i class="fa fa-search"></i>
@@ -71,10 +67,11 @@
           </ul>
         </div>
         <!-- .pti-menu -->
-      </nav>
-      
-    </div>
-    <!-- .container -->
+
+      </div>
+      <!-- .container -->
+    </nav>
+
   </header>
   <!-- .pti-header -->
 
@@ -116,36 +113,114 @@
 
   <section class="pti-main pti-section">
     <div class="container">
-      <div class="row">
 
-        <div class="col">
-          <section class="pti-noticias pti-section-container">
-            <!-- titulo principal do box -->
-            <div class="pti-section-title">
-              <h2 class="pti-title">
-                Notícias
-              </h2>
-            
-              <a href="#" class="pti-link btn btn-outline-info border-0 btn-sm" title="Ver todas notícias"  data-toggle="tooltip" data-placement="top">
-                <span class="pti-icon">
-                  <i class="fa fa-chevron-left"></i>
-                </span>
-                <span class="pti-link-text">Ver todas</span>
-              </a>
-            </div>
+      <!-- Noticias -->
+      <article class="pti-section-item pti-noticias">
+        <!-- titulo article -->
+        <header class="pti-section-title">
+          <h2 class="pti-title">
+            Notícias
+          </h2>
 
-            
+          <a href="#" class="pti-link btn btn-outline-info border-0 btn-sm" title="Ver todas notícias">
+            <span class="pti-icon">
+              <i class="fa fa-chevron-left"></i>
+            </span>
+            <span class="pti-link-text">Ver todas</span>
+          </a>
+        </header>
+
+        <!-- conteudo -->
+        <section class="row pti-noticias-list">
+
+          <section class="col pti-noticia-item pti-noticia-thumb">
+            <a href="#" title="Ver notícia completa">
+              <div class="pti-img-container">
+                <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5GXmBDXIRULVOsB2BU2QVtHTJJICU2rSjtADCwf88em9qVEja"
+                  alt="">
+              </div>
+              <h3 class="pti-title">Lorem ipsum.</h3>
+            </a>
           </section>
-        </div>
+          <!-- .pti-noticia -->
 
-      </div>
+          <section class="col pti-noticia-item pti-noticia-thumb">
+            <a href="#" title="Ver notícia completa">
+              <div class="pti-img-container">
+                <img class="figure-img img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3iTm4pVs1QrbHyCQILaGPOr5cZ-o0JRpZ4hOPUWiHkD_XeTm3"
+                  alt="">
+              </div>
+              <h3 class="pti-title">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3>
+            </a>
+          </section>
+          <!-- .pti-noticia -->
+
+          <section class="col pti-noticia-item pti-noticia-thumb">
+            <a href="#" title="Ver notícia completa">
+              <div class="pti-img-container">
+                <img class="figure-img img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr54qezt06WUhsfflwTTl-MLbJh4TJ4JfVl0rZwNw3kpkInUOwRg"
+                  alt="">
+              </div>
+              <h3 class="pti-title">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3>
+            </a>
+          </section>
+          <!-- .pti-noticia -->
+
+        </section>
+        <!-- .pti-noticias-list -->
+      </article>
+      <!-- .pti-noticias -->
+
+      <article class="pti-section-item pti-treinamentos">
+        <!-- titulo article -->
+        <header class="pti-section-title">
+          <h2 class="pti-title">
+            Treinamentos
+          </h2>
+
+          <a href="#" class="pti-link btn btn-outline-info border-0 btn-sm" title="Ver todos treinamentos">
+            <span class="pti-icon">
+              <i class="fa fa-chevron-left"></i>
+            </span>
+            <span class="pti-link-text">Ver todas</span>
+          </a>
+        </header>
+
+        <section>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure cum itaque beatae? A harum voluptatibus aspernatur repellendus
+          sequi aperiam minima repudiandae necessitatibus autem labore? Deleniti amet aliquam earum ullam minus?
+        </section>
+      </article>
+
+      <section class="pti-section-item pti-avisos">
+        <!-- titulo article -->
+        <header class="pti-section-title">
+          <h2 class="pti-title">
+            Pergunte-se
+          </h2>
+
+          <!-- <a href="#" class="pti-link btn btn-outline-info border-0 btn-sm" title="Ver todos treinamentos">
+            <span class="pti-icon">
+              <i class="fa fa-chevron-left"></i>
+            </span>
+            <span class="pti-link-text">Ver todas</span>
+          </a> -->
+        </header>
+
+        <section>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. At fugiat nobis, animi deleniti voluptate expedita sunt officiis
+          aspernatur ipsa ea asperiores recusandae natus sapiente earum ad odio, possimus facere minima!
+        </section>
+      </section>
+
     </div>
   </section>
 
+
   <script src="./assets/jquery/dist/jquery.slim.min.js"></script>
   <script src="./assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <!-- build:js -->
   <script src="./js/main.js"></script>
+  <!-- build:js -->
   <!-- endbuild  -->
 </body>
 

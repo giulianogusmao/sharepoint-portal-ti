@@ -1,20 +1,26 @@
 .#{$project-name}.pti-section {
     
+    // Estiliza texto de destaque com linha inferior e btn ver todos
     .pti-section-title {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        border-bottom: cRem(.15rem) solid $cor-vivo-1;
+        border-bottom: cRem(.15em) solid $cor-vivo-1;
         min-height: cRem(5rem);
+        margin-bottom: 1em;
+     
+        & > .pti-title {
+            line-height: 1.1;
+            font-size: cRem(2.6em);
+            color: $cor-vivo-9;
+        }
+
+        & > .pti-link {
+            font-size: cRem(1.4em);
+        }
     }
 
-    .pti-title {
-        line-height: 1.1;
-        font-size: cRem(2.6rem);
-        color: $cor-vivo-9;
-    }
-
-    .pti-link {
-        font-size: cRem(1.4rem);
+    .pti-section-item {
+        margin-bottom: 1em;
     }
 }

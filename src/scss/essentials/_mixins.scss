@@ -1,10 +1,5 @@
 ﻿
 // =============================================================================================
-%vertical-center {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
 
 %nowrap {
   white-space: nowrap;
@@ -38,30 +33,14 @@
     transition: all .1s ease-in-out;
 }
 
-%transition-fast-linear {
-    transition: all .1s linear;
-}
-
 %transition-slow {
     transition: all .6s ease-in-out;
 }
 
 // =============================================================================================
-@mixin setImageHeight($image, $width, $height, $proporcao: 1) {
-    width: $width * $proporcao;
-    height: $height * $proporcao;
-    background-image: url($image);
-    padding: $height * $proporcao 0 0 0; /* padding-top=altura imagem */
-    height /**/:$height * $proporcao; /* height=altura imagem - hack IE5's */
-}
-
-// =============================================================================================
 
 @mixin media-breakpoint-up($media) {
-  @if $media == xs {
-    @media (min-width: $screen-xs-min) { @content; }
-  } 
-  @else if $media == sm {
+  @if $media == sm {
     @media (min-width: $screen-sm-min) { @content; }
   } 
   @else if $media == md {
@@ -112,7 +91,6 @@
 }
 
 // shadow
-
-@mixin box-shadow-focus($color) {
+@mixin box-shadow-focus($color: $cor-vivo-1) {
     box-shadow: 0 0 0 .2rem rgba($color, .5);
 }

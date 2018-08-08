@@ -4,18 +4,79 @@
 */
 
 .#{$project-name}.pti-header {
-  
-  .navbar {
-    padding: .5rem 0;
-    justify-content: normal;
-  }
+  height: cRem(7em);
   
   .pti-logo {
-    font-size: cRem(3rem);
+    font-size: cRem(3em);
     color: $cor-black-1;
     margin: 0;
     outline: none;
     @extend %font-light;
+
+    a {
+      @extend %transition-fast;
+      color: $cor-black-1;
+
+      &:hover, &:focus {
+        color: $cor-vivo-3;
+        text-decoration: none;
+        outline: none;
+      }
+    }
+  }
+  
+  
+  @include media-breakpoint-down(md) {
+    // logo centralizado para mobile
+    .pti-logo {
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    // border nos links para mobile
+    .nav-item {
+      border-bottom: .1em solid $cor-black-200;
+  
+      &:last-child {
+        border: 0;
+      }
+    }
+
+    // aplica mascara de fundo quando menu mobile estiver aberto
+    &.pti-menu-show:after {
+      content: "";
+      display: block;
+      position: fixed;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;  
+      z-index: 1;
+      animation: show-mask-menu .6s ease;
+      animation-fill-mode: forwards;
+      background: $cor-vivo-10;
+    }
+
+    @keyframes show-mask-menu {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: .7;
+      }
+    }
+  
+  }
+}
+
+.pti-navbar {
+  padding: .5em 0;
+  z-index: 10;    
+  background-color: $cor-white;
+
+  & > .container {
+    padding: 0 15px;
+    justify-content: normal;
   }
   
   // centraliza menu
@@ -24,7 +85,7 @@
     
     // altera cor dos links do menu
     .nav-link {
-      font-size: 1rem;
+      font-size: cRem(1.6em);
       color: #074d5f;
       
       &:hover, &:focus {
@@ -41,7 +102,7 @@
     height: cRem(1.5em);
     padding: 0;
     border: 0;
-    margin-right: cRem(1rem);
+    margin-right: cRem(1em);
     outline: none;
     transition: .2s ease-out;
 
@@ -89,7 +150,7 @@
   // modo expandido - desktop
   @include media-breakpoint-up(lg) {    
     // realiza quebra linha no menu para proxima linha
-    .navbar {
+    & > .container {
       flex-wrap: wrap;
       
       .pti-menu {
@@ -98,7 +159,7 @@
     }
 
     // cria um efeito de ubderline sob o link quando passa o mouse
-    .navbar .nav-link {
+    .nav-link {
       &:after {
         content: "";
         display: block;
