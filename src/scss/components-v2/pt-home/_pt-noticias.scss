@@ -2,20 +2,21 @@
     _pt-Noticias
 */
 .pti-noticia-thumb {
-    display: none;
+    // mobile noticias sendo 1 por linha
+    @include media-breakpoint-down(xs) {
+        flex: 0 0 100%;
+        margin-bottom: 1em;
 
-    &:first-child {
-        display: flex;
-    }
-
-    @include media-breakpoint-up(sm) {
-        &:nth-child(2) {
-            display: flex;
+        &:last-child {
+            margin-bottom: 0;
         }
     }
 
-    @include media-breakpoint-up(xl) {
-        display: flex;
+    // mobile exibe apenas 2 noiticias
+    @include media-breakpoint-down(lg) {
+        &:nth-child(n+3) {
+            display: none;
+        }
     }
     
     > a {
