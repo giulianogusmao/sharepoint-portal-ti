@@ -79,8 +79,6 @@
         border-radius: $br $br 0 0;
         
         color: $cor-white;
-        // background-color: $cor-vivo-2;
-        // border-color: $cor-vivo-2;
 
         .pti-data {
             margin: 0 cRem(1em);
@@ -181,7 +179,7 @@
 
 /* define as cores dos cards de acordo com cada tipo */
 @each $name, $bg, $bg-hover in (
-    ('card', $cor-vivo-2, $cor-vivo-3),
+    ('card', $cor-vivo-2, $cor-vivo-1),
     ('card-encerrado', $cor-danger, $cor-danger-dark),
     ('card-inscrito', $cor-success, $cor-success-dark),
     ('card-interessado-aberto', $cor-black-500, $cor-black-700),

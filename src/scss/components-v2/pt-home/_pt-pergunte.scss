@@ -3,7 +3,6 @@
 */
 .pti-pergunte-container {
     position: relative;
-    padding: cRem(.5em);
     border: cRem(.1em) solid $cor-vivo-1;
 
     $distance: cRem(2em);
@@ -33,9 +32,17 @@
     .pti-link, .pti-img {
         position: relative;
         z-index: 2;
+        @extend %transition;
     }
 
     .pti-link { 
         display: block;
+        padding: cRem(.5em);
+        @extend %transition;
+        
+        &:hover, &:focus {
+            outline: none;
+            background-color: rgba($cor-vivo-3, .3);
+        }
     }
 }

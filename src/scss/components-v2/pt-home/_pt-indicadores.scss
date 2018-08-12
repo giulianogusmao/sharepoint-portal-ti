@@ -1,0 +1,47 @@
+/* ======================================================
+    _pt-indicadores
+*/
+.pti-indicadores-list {
+
+    .pti-link {
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        align-items: center;
+        padding: cRem(1em);
+        border-radius: .2em;
+
+        &:hover, &:focus {
+            .pti-img-container {
+                background-color: $cor-vivo-1;
+            }
+
+            .pti-img {
+                transform: scale(1.1);
+            }
+        }
+
+        &:focus {
+            outline: none;
+            @include box-shadow-focus();
+        }
+
+        .pti-img-container,
+        .pti-img {
+            @extend %transition;
+        }
+
+        .pti-img-container {
+            background-color: $cor-vivo-2;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .pti-titulo {
+            flex-grow: 1;
+            text-align: center;
+            font-size: cRem(1.6em);
+            margin: cRem(1em) 0; 
+        }
+    }
+}

@@ -21,15 +21,10 @@
         }
     }
     
-    > a {
-        flex-grow: 1;
-        width: 100%;
-        display: block;
-        position: relative;
-
+    a.pti-link {
         &:hover, &:focus {
-            img {
-                transform: scale(1.1);
+            .pti-img {
+                transform: scale(1.05);
             }
 
             .pti-title {
@@ -44,21 +39,9 @@
     }
 
     .pti-img-container {
-        text-align: center;
-        overflow: hidden;
-        max-height: cRem(35em);
-
-        img {
+        .pti-img {
             width: 100%;
             @extend %transition;
-        }
-
-        @include media-breakpoint-up(sm) {
-            max-height: cRem(19em);
-        }
-
-        @include media-breakpoint-only(md) {
-            max-height: cRem(16em);
         }
     }
 
