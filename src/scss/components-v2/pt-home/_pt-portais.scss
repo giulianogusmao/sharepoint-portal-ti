@@ -1,0 +1,33 @@
+/* ======================================================
+    _pt-portais
+*/
+.pti-portais-list {
+    margin: 0;
+    padding: 0;
+
+    .pti-portal {
+        list-style: none;
+    }
+
+    .pti-link {
+        display: flex;
+        align-items: center;
+        margin-bottom: cRem(.5em);
+
+        &:focus {
+            outline: none;
+        }
+        
+        .pti-img {
+            flex: 0 0 cRem(2.8em);
+            background-color: $cor-vivo-2;
+            border-radius: 50%;
+            padding: cRem(.2em);
+            margin-right: cRem(.5em);
+        }
+
+        &:hover .pti-img {
+            background-color: $cor-vivo-1;
+        }
+    }
+}

@@ -52,7 +52,8 @@
         display: flex;
         flex-grow: 1;
         flex-direction: column;
-        border-radius: $br;
+        border-radius: $br;        
+        word-wrap: break-word;
     }
     
     & > a {
@@ -109,7 +110,7 @@
 
     .pti-card-body {
         display: flex;
-        flex-grow: 1;
+        flex: 1 1 100%;
         flex-direction: column;
 
         color: $cor-text;
@@ -118,6 +119,7 @@
         border: $border;
         border-top: 0;
         border-radius: 0 0 $br $br;
+
 
         .pti-categoria {
             font-size: cRem(1.2em);

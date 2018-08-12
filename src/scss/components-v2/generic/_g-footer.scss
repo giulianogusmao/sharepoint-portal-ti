@@ -1,0 +1,102 @@
+/* ======================================================
+    _g-footer
+*/
+.#{$project-name}.pti-footer {    
+    background-color: $cor-vivo-9;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    color: $cor-white;
+
+    .pti-footer-text {
+        margin-top: 1em;
+        text-align: center;
+        font-size: cRem(1.2em);
+    }
+}
+
+.pti-footer-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+
+    .pti-item {
+        flex: 0 0 50%;
+        -ms-flex: 0 0 49% !important;
+        list-style: none;
+        // padding: 0 cRem(.2em) cRem(.2em) 0;
+        border: cRem(.2em) solid transparent;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    .pti-text {
+        font-size: cRem(1em);
+        text-transform: uppercase;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    
+    .pti-img {
+        flex: 0 0 cRem(2.8em);
+        margin-right: cRem(.5em);
+    }
+
+    .pti-link {
+        display: flex;
+        color: $cor-white;
+        align-items: center;
+        justify-content: flex-start;
+        padding: cRem(.2em) cRem(.5em);
+        background-color: $cor-vivo-3;
+
+        &:hover, &:focus {
+            background-color: $cor-vivo-1;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    @include media-breakpoint-only(sm) {
+        .pti-item {
+            flex: 0 0 33.3%;
+            -ms-flex: 0 0 32.5% !important;
+        }
+    }
+
+    @include media-breakpoint-up(md) {       
+        .pti-item {
+            flex: 0 0 10%;
+            -ms-flex: 0 0 9.4% !important;
+        }
+        
+        .pti-link {
+            justify-content: center;            
+        }
+
+        .pti-text {
+            display: none;
+        }
+        
+        .pti-img {
+            margin: 0;
+        }
+    }
+
+    @include media-breakpoint-only(lg) {
+        .pti-item {
+            flex: 0 0 7.69%;
+            -ms-flex: 0 0 7.2% !important;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        .pti-item {
+            flex: 0 0 6.25%;
+            -ms-flex: 0 0 5.9% !important;
+        }
+    }
+}
