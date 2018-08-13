@@ -6,6 +6,7 @@
     .pti-indicador {
         display: flex;
         flex-direction: column;
+        word-wrap: break-word;
     }
 
     .pti-link {
@@ -22,6 +23,9 @@
             background-color: $cor-black-50;
 
             .pti-img-container {
+                $tam: cRem(10em);
+                width: $tam;
+                height: $tam;
                 background-color: $cor-vivo-1;
             }
 
@@ -50,7 +54,8 @@
             flex-grow: 1;
             text-align: center;
             font-size: cRem(1.6em);
-            margin: cRem(1em) 0; 
+            margin: cRem(1em) 0;
+            width: 100%;
         }
     }
 }
