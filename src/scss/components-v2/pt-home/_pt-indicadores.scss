@@ -3,6 +3,11 @@
 */
 .pti-indicadores-list {
 
+    .pti-indicador {
+        display: flex;
+        flex-direction: column;
+    }
+
     .pti-link {
         display: flex;
         flex-grow: 1;
@@ -10,8 +15,12 @@
         align-items: center;
         padding: cRem(1em);
         border-radius: .2em;
+        border: cRem(.1em) solid transparent;
 
         &:hover, &:focus {
+            border-color: $cor-vivo-1;
+            background-color: $cor-black-50;
+
             .pti-img-container {
                 background-color: $cor-vivo-1;
             }
