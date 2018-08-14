@@ -105,45 +105,51 @@
     border: 0;
     margin-right: cRem(1em);
     outline: none;
-    transition: .2s ease-out;
 
-    // cria as 3 linhas do botao do menu mobile
-    &:before,
-    &:after {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-    }
-    
-    // linha do meio
-    &:before {
-      top: 43%;
-      border-top: cRem(.2em) solid #000;
-    }
-
-    // linha de cima e de baixo
-    &:after {
-      border: cRem(.2em) solid #000;
-      border-left: 0;
-      border-right: 0;
-    }
-
-    // desativa icone do botao mobile do boostrap
+    // oculta img do bootstrap e cria as 3 linhas do botao do menu mobile
     .navbar-toggler-icon {
-      display: none;
+      background-image: none;
+      position: relative;
+      display: block;
+      height: cRem(.2em);
+      
+      &, &:before, &:after {
+        width: 100%;
+        background-color: $cor-black-1;
+        transition: all .2s ease-in-out;
+      }
+
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        height: 100%;
+      }
+
+      $distance: 8px;
+      
+      &:before {
+        top: $distance;
+      }
+
+      &:after {
+        bottom: $distance;
+      }
     }
 
     // rotaciona o botao e muda as 3 linhas para um x
-    &:not(.collapsed) {
-      transform: rotate(-135deg);
+    &:not(.collapsed) .navbar-toggler-icon {
+      transform: rotate(-45deg);
       
+      &:before {
+        top: 0;
+        // opacity: 0;
+        transform: rotate(-90deg);
+      }
+
       &:after {
-        border-top: 0;
-        transform: translate(30%, 0) rotate(90deg);
+        bottom: 0;
+        transform: rotate(90deg);
       }
     }
   }
