@@ -1,48 +1,6 @@
 /* ======================================================
     _g-Card
 */
-// .pti-cards-list.pti-list-auto {
-//     display: flex;
-//     flex-flow: row wrap;
-    
-//     .pti-card {
-//          flex: 0 0 100%;
-//          max-width: 100%;
-    
-//         @include media-breakpoint-only(sm) {
-//             flex: 0 0 50%;
-//             max-width: 50%;
-//         }
-                
-//         @include media-breakpoint-up(md) {
-//             flex: 0 0 33.33%;
-//             max-width: 33.33%;
-//         }
-
-//         @include media-breakpoint-up(lg) {
-//             flex: 0 0 25%;
-//             max-width: 25%;
-//         }
-
-//         &.pti-card-horizontal {
-//             @include media-breakpoint-only(sm) {            
-//                 flex: 0 0 100%;
-//                 max-width: 100%;
-//             }
-
-//             @include media-breakpoint-up(md) {
-//                 flex: 0 0 50%;
-//                 max-width: 50%;
-//             }
-                
-//             @include media-breakpoint-up(xl) {
-//                 flex: 0 0 33.33%;
-//                 max-width: 33.33%;
-//             }
-//         }
-//     }
-// }
-
 .pti-card {
     $br: .2em; // border-radius
     $border: cRem(.1em) solid $cor-black-300;
@@ -79,31 +37,6 @@
         border-radius: $br $br 0 0;
         
         color: $cor-white;
-
-        .pti-data {
-            margin: 0 cRem(1em);
-        }
-
-        .pti-label-mes {
-            text-transform: uppercase;
-            font-size: cRem(1.4em);
-            letter-spacing: .1ch;
-            line-height: 1;
-        }
-        
-        .pti-label-dia {
-            font-size: cRem(3em);
-            line-height: 1;
-        }
-        
-        .pti-info {
-            font-size: cRem(1.2em);
-            line-height: 1.3;
-
-            .pti-data {
-                display: block;
-            }
-        }
     }
 
     .pti-card-body {
@@ -118,21 +51,11 @@
         border-top: 0;
         border-radius: 0 0 $br $br;
 
-
-        .pti-categoria {
-            font-size: cRem(1.2em);
-            margin-bottom: cRem(1em);
-        }
-
         .pti-titulo {
             font-size: cRem(1.6em);
             color: $cor-black-1;
         }
 
-        .pti-subtitulo {
-            font-size: cRem(1.4em);
-        }
-        
         .pti-info {
             display: flex;
             width: 100%;

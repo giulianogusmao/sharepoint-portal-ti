@@ -1,0 +1,39 @@
+.pti-treinamento {
+    .pti-card-header {            
+        .pti-data {
+            margin: 0 cRem(1em);
+        }
+
+        .pti-label-mes {
+            text-transform: uppercase;
+            font-size: cRem(1.4em);
+            letter-spacing: .1ch;
+            line-height: 1;
+        }
+        
+        .pti-label-dia {
+            font-size: cRem(3em);
+            line-height: 1;
+        }
+        
+        .pti-info {
+            font-size: cRem(1.2em);
+            line-height: 1.3;
+
+            .pti-data {
+                display: block;
+            }
+        }
+    }
+
+    .pti-card-body {            
+        .pti-categoria {
+            font-size: cRem(1.2em);
+            margin-bottom: cRem(1em);
+        }
+
+        .pti-subtitulo {
+            font-size: cRem(1.4em);
+        }
+    }
+}

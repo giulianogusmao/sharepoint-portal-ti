@@ -1,15 +1,17 @@
 /* ======================================================
-    _pt-indicadores
+    _g-box-icone
 */
-.pti-indicadores-list {
+.pti-box-icone {
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    margin-bottom: 1em;
 
-    .pti-indicador {
-        display: flex;
-        flex-direction: column;
-        word-wrap: break-word;
-        margin-bottom: 1em;
+    @media all and (max-width: 319px) {
+        flex: 0 0 100%;
+        max-width: 100%;
     }
-
+    
     .pti-link {
         display: flex;
         flex-grow: 1;
@@ -24,9 +26,6 @@
             background-color: $cor-black-50;
 
             .pti-img-container {
-                $tam: cRem(10em);
-                width: $tam;
-                height: $tam;
                 background-color: $cor-vivo-1;
             }
 
@@ -46,9 +45,15 @@
         }
 
         .pti-img-container {
+            $tam: cRem(10em);
+            width: $tam;
+            height: $tam;
             background-color: $cor-vivo-2;
             border-radius: 50%;
             overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .pti-titulo {

@@ -1,12 +1,14 @@
 $(function () {
     // adiciona/remove class ao header quando abre menu mobile
-    const toogleMenu = () => $('.pti-header-group').toggleClass('pti-menu-show');
+    const toogleMenu = function() { 
+        $('.pti-header-group').toggleClass('pti-menu-show');
+    };
 
     // abre/fecha menu mobile
     $('button.navbar-toggler').on('click', toogleMenu);
 
     // fecha menu mobile quando clicar fora
-    $(document).on('click', '.pti-menu-show', (event) => {
+    $(document).on('click', '.pti-menu-show', function(event) {
         if ($(event.target).hasClass('pti-menu-show')) {
             $('button.navbar-toggler').trigger('click');
         }

@@ -55,7 +55,7 @@
       z-index: 99;
       animation: show-mask-menu .6s ease;
       animation-fill-mode: forwards;
-      background: $cor-vivo-10;
+      background: rgba($cor-vivo-10, .7);
     }
 
     @keyframes show-mask-menu {
@@ -63,7 +63,7 @@
         opacity: 0;
       }
       to {
-        opacity: .7;
+        opacity: 1;
       }
     }
   

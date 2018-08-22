@@ -1,0 +1,21 @@
+/* ======================================================
+    _pt-turmas
+*/
+.pti-turma {
+    .pti-card-header {            
+        .pti-titulo {
+            font-size: 1em;
+        }
+    }
+
+    .pti-card-body {            
+        .pti-categoria {
+            font-size: cRem(1.2em);
+            margin-bottom: cRem(1em);
+        }
+
+        .pti-subtitulo {
+            font-size: cRem(1.4em);
+        }
+    }
+}

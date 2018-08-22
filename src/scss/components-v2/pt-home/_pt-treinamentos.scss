@@ -1,10 +1,13 @@
 .pti-treinamentos {
     .pti-card {
-
         // exibe apenas os 2 primeiros treinamentos em telas menores que 1200
-        @include media-breakpoint-down(lg) {
-            &:nth-child(n+3) {
-                display: none
+        &:nth-child(n+3) {
+            @include media-breakpoint-down(sm) {
+                display: none;
+            }
+
+            @include media-breakpoint-only(lg) {
+                display: none;
             }
         }
     }
