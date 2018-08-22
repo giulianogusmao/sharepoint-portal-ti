@@ -113,6 +113,10 @@
     }
 
     @include media-breakpoint-down(sm) {
+        & > .container {
+            padding: 0;
+        }
+        
         a.carousel-control-prev {
             justify-content: flex-start;
 
