@@ -4,6 +4,15 @@
 .pti-carousel {
     margin-bottom: 1em;
 
+    @include media-breakpoint-down(sm) {        
+        & > .container {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+
     .carousel-indicators {
         bottom: 0;
 
@@ -40,27 +49,6 @@
         $height-default: cRem(35em);
         height: auto;
 
-        // @include media-breakpoint-down(xs) {
-        //     height: 0.463 * $height-default;
-        //     min-height: 0.263 * $height-default;
-        //     max-height: 0.463 * $height-default;
-        // }
-        
-        // @media all and (max-width: 320px) {
-        //     height: 0.263 * $height-default;
-        // }
-        
-        // @media all and (min-width: 321px) and (max-width: 453px) {
-        //     height: 0.366 * $height-default;
-        // }
-        
-        // @include media-breakpoint-only(sm) {
-        //     height: 0.463 * $height-default;
-        // }
-
-        // @include media-breakpoint-only(md) {  
-        //     height: 0.627 * $height-default;
-        // }
         @media all and (min-width: 453px) and (max-width: $screen-md-max) {
             height: 0.627 * $height-default;
         }
@@ -80,15 +68,6 @@
             display: flex;
         }
     }
-
-    // .carousel-caption {
-    //     display: flex;
-    //     height: 100%;
-    //     flex-direction: column;
-    //     justify-content: center;
-    //     align-items: flex-start;
-    //     bottom: 0;
-    // }
 
     a.carousel-control-prev,
     a.carousel-control-next {
@@ -112,11 +91,7 @@
         }
     }
 
-    @include media-breakpoint-down(sm) {
-        & > .container {
-            padding: 0;
-        }
-        
+    @include media-breakpoint-down(sm) {        
         a.carousel-control-prev {
             justify-content: flex-start;
 
