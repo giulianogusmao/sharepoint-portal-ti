@@ -7,7 +7,7 @@ node_modules
 dist
 
 # plugins
-assets
+# assets
 
 # css generate by scss
 src/css/style.css
