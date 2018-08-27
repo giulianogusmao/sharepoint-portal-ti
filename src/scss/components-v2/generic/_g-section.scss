@@ -8,14 +8,15 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        border-bottom: cRem(.15em) solid $cor-vivo-1;
-        min-height: cRem(5rem);
+        border-bottom: cRem(.25em) solid $cor-vivo-1;
+        min-height: cRem(4rem);
         margin-bottom: 1em;
      
         & > .pti-title {
             line-height: 1.1;
             font-size: cRem(2.6em);
             color: $cor-vivo-9;
+            margin: 0;
         }
 
         & > .pti-link {
@@ -23,7 +24,16 @@
         }
     }
 
+    .pti-title > .pti-link {
+        color: inherit;
+        @extend %font-regular;
+        
+        &:hover, &:focus {
+            color: $cor-vivo-1;
+        }
+    }
+
     .pti-section-item {
-        margin-bottom: 1em;
+        margin-bottom: 2em;
     }
 }

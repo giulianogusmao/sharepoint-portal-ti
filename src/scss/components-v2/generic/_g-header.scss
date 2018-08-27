@@ -80,14 +80,20 @@
     justify-content: space-between;
   }
   
-  // centraliza menu
   .navbar-nav {
+    // centraliza menu
     margin: 0 auto;
     
     // altera cor dos links do menu
     .nav-link {
       font-size: cRem(1.6em);
       color: #074d5f;
+
+      @include media-breakpoint-up(md) {
+        $pd: cRem(1.2em);
+        padding-left: $pd;
+        padding-right: $pd;
+      }
       
       &:hover, &:focus {
         outline: none;
