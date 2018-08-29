@@ -1,5 +1,6 @@
+@import './essentials/_all.scss';
 /* ======================================================
-    _g-Fonts
+    _Fonts
 */
 @each $_fonte in $fontes {
     $diretorio: '#{$url-path-fontes}/#{$_fonte}/';

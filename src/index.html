@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 
 <head>
   <meta charset="utf-8">
@@ -11,620 +11,723 @@
   <link rel="stylesheet" href="./assets/font-awesome/css/font-awesome.min.css">
 
   <!-- build:css -->
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/fonts.css">
+  <link rel="stylesheet" href="./css/style-v2.css">
   <!-- endbuild -->
 </head>
 
 <body>
 
-  <!-- header sharepoint -->
-  <div class="spfx-header">
-    <div class="container">
-      Office 365 ...
-    </div>
-  </div>
+  <!-- header - cabeçalho principal -->
+  <header class="pti-main pti-header pti-header-group">
 
-  <!-- header -->
-  <div class="pti-main pti-header">
-    
-    <!-- header com logo e campo de busca -->
-    <div class="pti-header-group">
-      <div class="pti-header-container">
-        <div class="container">
-
-          <div class="row align-items-center">
-            <div class="col">
-              <a href="/" class="pti-logo">Portal de TI</a>
-            </div>
-
-            <div class="col-2 text-right">
-              <div class="pti-search">
-                <a href="#" class="pti-btn-search" title="buscar">
-                  <i class="fa fa-search"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-
-      <div class="pti-main-menu">
-        <div class="container">
-
-          <nav class="navbar navbar-expand-lg navbar-light">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01"
-              aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-              <ul class="navbar-nav d-flex justify-content-center w-100">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">A Telefônica</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Notícias</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Vídeos</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Documentos</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Programas</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Áreas da Empresa</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-
-        </div>
-      </div>
-
-    </div>
-  </div>
-  <!-- .pti-header -->
-
-  <!-- Imagem Principal -->
-  <div class="pti-main pti-img-main">
-    <!-- Imagem em destaque -->
-    <div class="container pti-img-destaque">
-      <div class="pti-img">
-        <img src="/img/banner/img2.jpg" class="img-fluid" alt="Imagem ilustrativa Estratégia de TI">
-      </div>
-    </div>
-
-    <!-- Aviso -->
-    <div class="pti-aviso-main">
+    <nav class="pti-navbar navbar navbar-expand-lg navbar-light">
       <div class="container">
+        <!-- btn menu mobile -->
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#menuPrincipal" aria-controls="menuPrincipal"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-        <div class="row no-gutters pti-aviso-container">
+        <!-- logotipo -->
+        <h1 class="navbar-brand pti-logo">
+          <a href="/">Portal de TI</a>
+        </h1>
 
-          <div class="col pti-avisos-icon">
-            <i class="fa fa-exclamation-circle"></i>
-          </div>
+        <!-- campo buscar -->
+        <div class="pti-search">
+          <a href="#" class="pti-btn-search" title="buscar">
+            <i class="fa fa-search"></i>
+          </a>
+        </div>
 
-          <ul class="col pti-avisos">
-            <li class="pti-aviso">
-              <a href="#">Será que agora vai?</a>
+        <!-- Links menu principal -->
+        <div class="collapse navbar-collapse pti-menu" id="menuPrincipal">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
             </li>
-            <li class="pti-aviso">
-              <a href="#">Vasco é vice de novo!</a>
+            <li class="nav-item">
+              <a class="nav-link" href="#">A Telefônica</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Notícias</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Vídeos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Documentos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Programas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Áreas da Empresa</a>
             </li>
           </ul>
-
-          <div class="col pti-avisos-link-more">
-            <a href="#" title="Ver todos avisos">+ avisos</a>
-          </div>
         </div>
+        <!-- .pti-menu -->
 
       </div>
-    </div>
-    <!-- .pti-aviso-main -->
-  </div>
-  <!-- .pti-img-main -->
+      <!-- .container -->
+    </nav>
 
-  <div class="pti-main pti-section">
+  </header>
+  <!-- .pti-header -->
 
+  <!-- imagens Carousel -->
+  <section class="pti-main pti-carousel">
     <div class="container">
+
+      <div id="carouselHome" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselHome" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselHome" data-slide-to="1"></li>
+        </ol>
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <!-- exemplo de banner com link -->
+            <a href="https://teste.com" title="Projeto TI2X" target="_blank">
+              <img class="d-block w-100 img-fluid" src="./img/home/banner2.jpg" alt="Projeto TI2X">
+            </a>
+          </div>
+
+          <div class="carousel-item">
+            <img class="d-block w-100 img-fluid" src="./img/home/banner3.jpg" alt="Os pilares de TI">
+          </div>
+
+        </div>
+
+        <a class="carousel-control-prev" href="#carouselHome" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselHome" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Próximo</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+  <!-- .pti-carousel -->
+
+  <section class="pti-main pti-section">
+    <div class="container">
+
+      <!-- grupo 1 -->
       <div class="row">
+        <div class="col">
+          <!-- Noticias -->
+          <article class="pti-section-item pti-noticias">
+            <!-- titulo article -->
+            <header class="pti-section-title">
+              <h2 class="pti-title">
+                <a href="#" class="pti-link">
+                  Notícias
+                </a>
+              </h2>
 
-        <!-- Noticias -->
-        <div class="col-md pti-box-separate">
-          <div class="pti-news">
-
-            <!-- titulo principal -->
-            <div class="d-flex justify-content-between align-items-start flex-wrap">
-              <a href="#" class="pti-title pti-title-line" title="Notícias">
-                Notícias
-              </a>
-
-              <a href="#" class="pti-link-all" title="Ver todas notícias">
-                <span>ver todas</span>
-                <span class="icon">
-                  <i class="fa fa-chevron-right"></i>
+              <a href="#" class="pti-link btn btn-outline-info border-0 btn-sm" title="Ver todas notícias">
+                <span class="pti-icon">
+                  <i class="fa fa-chevron-left"></i>
                 </span>
+                <span class="pti-link-text">Ver todas</span>
               </a>
-            </div>
+            </header>
 
-            <!-- noticias thumbnail -->
-            <div class="pti-container pti-news-container">
-              <div class="row">
+            <!-- conteudo -->
+            <section class="row pti-noticias-list">
 
-                <div class="col-sm">
-                  <div class="pti-news">
-
-                    <div class="pti-img-back">
-                      <a href="#" title="Ver notícia completa">
-                        <!-- <img src="./img/banner/img3.jpg" class="img-fluid" alt="Responsive image"> -->
-                        <img src="./img/noticias/bean.jpg" class="img-fluid" alt="Responsive image">
-                      </a>
+              <section class="col-sm-6 col-md-6 col-xl-4 pti-noticia-item pti-noticia-thumb">
+                <div class="embed-responsive embed-responsive-16by9">
+                  <a class="pti-link embed-responsive-item" href="#" title="Ver notícia completa">
+                    <div class="pti-img-container">
+                      <img class="pti-img img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5GXmBDXIRULVOsB2BU2QVtHTJJICU2rSjtADCwf88em9qVEja"
+                        alt="">
                     </div>
-
-                    <div class="pti-news-group-text">
-                      <a href="#" title="Ver notícia completa">
-                        <h2 class="pti-news-title">Lorem ipsum</h2>
-                        <h4 class="pti-news-subtitle">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos</h4>
-                      </a>
-                      <!-- <a href="#" class="pti-link-more" title="ver mais">
-                        <i class="pti-icon fa fa-plus"></i>
-                      </a> -->
-                    </div>
-                  </div>
+                    <h3 class="pti-title">Lorem ipsum.</h3>
+                  </a>
                 </div>
+              </section>
+              <!-- .pti-noticia -->
 
-              </div>
-            </div>
-
-          </div>
-          <!-- fim noticias -->
-
-        </div>
-        <!-- fim Noticias -->
-
-        <!-- Treinamento -->
-        <div class="col-md pti-box-separate">
-          <div class="pti-calendar">
-
-            <!-- titulo principal -->
-            <div class="d-flex justify-content-between align-items-start flex-wrap">
-              <a href="/treinamentos.html" class="pti-title pti-title-line" title="Ver todos os treinamentos">
-                Treinamento
-              </a>
-
-              <a href="/treinamentos.html" class="pti-link-all" title="Ver todos os treinamentos">
-                <span>ver todos</span>
-                <span class="icon">
-                  <i class="fa fa-chevron-right"></i>
-                </span>
-              </a>
-            </div>
-
-            <!-- eventos calendario -->
-            <div class="pti-container pti-calendar-container">
-              <ul class="pti-list pti-calendar-days">
-                <li class="pti-calendar-day">
-                  <div class="pti-calendar-date">
-                    <span class="pti-calendar-label-day">25</span>
-                    <sup class="pti-calendar-label-month">jun</sup>
-                  </div>
-
-                  <ul class="pti-list pti-calendar-events">
-                    <li class="pti-calendar-event">
-                      <a href="/treinamento-evento.html" class="pti-calendar-title">
-                        Lorem ipsum dolor sit am pq cuando zno nest msm doquesta
-                      </a>
-
-                      <!-- <a href="#" class="pti-link-more" title="ver mais">
-                        <i class="pti-icon fa fa-plus"></i>
-                      </a> -->
-                    </li>
-                    <li class="pti-calendar-event">
-                      <a href="/treinamento-evento.html" class="pti-calendar-title">
-                        Lorem ipsum dolor sit am pq cuando zno nest msm doquesta
-                      </a>
-
-                      <!-- <a href="#" class="pti-link-more" title="ver mais">
-                        <i class="pti-icon fa fa-plus"></i>
-                      </a> -->
-                    </li>
-                  </ul>
-                </li>
-
-                <li class="pti-calendar-day">
-                  <div class="pti-calendar-date">
-                    <span class="pti-calendar-label-day">27</span>
-                    <sup class="pti-calendar-label-month">jun</sup>
-                  </div>
-
-                  <ul class="pti-list pti-calendar-events">
-                    <li class="pti-calendar-event">
-                      <a href="#" class="pti-calendar-title">
-                        Lorem ipsum dolor sit am pq cuando zno nest msm doquesta
-                      </a>
-
-                      <!-- <a href="#" class="pti-link-more" title="ver mais">
-                        <i class="pti-icon fa fa-plus"></i>
-                      </a> -->
-                    </li>
-                  </ul>
-                </li>
-
-                <li class="pti-calendar-day">
-                  <div class="pti-calendar-date">
-                    <span class="pti-calendar-label-day">27</span>
-                    <sup class="pti-calendar-label-month">jun</sup>
-                  </div>
-
-                  <ul class="pti-list pti-calendar-events">
-                    <li class="pti-calendar-event">
-                      <a href="#" class="pti-calendar-title">
-                        Lorem ipsum dolor sit am pq cuando zno nest msm doquesta
-                      </a>
-
-                      <!-- <a href="#" class="pti-link-more" title="ver mais">
-                        <i class="pti-icon fa fa-plus"></i>
-                      </a> -->
-                    </li>
-                  </ul>
-                </li>
-
-              </ul>
-            </div>
-
-          </div>
-        </div>
-        <!-- fim Treinamento -->
-
-        <!-- Calendário -->
-        <div class="col-md pti-box-separate">
-          <div class="pti-calendar">
-
-            <!-- titulo principal -->
-            <div class="d-flex justify-content-between align-items-start flex-wrap">
-              <a href="/calendario.html" class="pti-title pti-title-line" title="Ver todos os eventos do calendário">
-                Calendário de TI
-              </a>
-
-              <a href="/calendario.html" class="pti-link-all" title="Ver todos os eventos do calendário">
-                <span>ver todos</span>
-                <span class="icon">
-                  <i class="fa fa-chevron-right"></i>
-                </span>
-              </a>
-            </div>
-
-            <!-- eventos calendario -->
-            <div class="pti-container pti-calendar-container">
-              <ul class="pti-list pti-calendar-days">
-                <li class="pti-calendar-day">
-                  <div class="pti-calendar-date">
-                    <span class="pti-calendar-label-day">25</span>
-                    <sup class="pti-calendar-label-month">jun</sup>
-                  </div>
-
-                  <ul class="pti-list pti-calendar-events">
-                    <li class="pti-calendar-event">
-                      <a href="/calendario-evento.html" class="pti-calendar-title">
-                        Lorem ipsum dolor sit am pq cuando zno nest msm doquesta
-                      </a>
-
-                      <!-- <a href="#" class="pti-link-more" title="ver mais">
-                        <i class="pti-icon fa fa-plus"></i>
-                      </a> -->
-                    </li>
-                    <li class="pti-calendar-event">
-                      <a href="/calendario-evento.html" class="pti-calendar-title">
-                        Lorem ipsum dolor sit am pq cuando zno nest msm doquesta
-                      </a>
-
-                      <!-- <a href="#" class="pti-link-more" title="ver mais">
-                        <i class="pti-icon fa fa-plus"></i>
-                      </a> -->
-                    </li>
-                  </ul>
-                </li>
-
-                <li class="pti-calendar-day">
-                  <div class="pti-calendar-date">
-                    <span class="pti-calendar-label-day">27</span>
-                    <sup class="pti-calendar-label-month">jun</sup>
-                  </div>
-
-                  <ul class="pti-list pti-calendar-events">
-                    <li class="pti-calendar-event">
-                      <a href="/calendario-evento.html" class="pti-calendar-title">
-                        Lorem ipsum dolor sit am pq cuando zno nest msm doquesta
-                      </a>
-
-                      <!-- <a href="#" class="pti-link-more" title="ver mais">
-                        <i class="pti-icon fa fa-plus"></i>
-                      </a> -->
-                    </li>
-                  </ul>
-                </li>
-
-                <li class="pti-calendar-day">
-                  <div class="pti-calendar-date">
-                    <span class="pti-calendar-label-day">27</span>
-                    <sup class="pti-calendar-label-month">jun</sup>
-                  </div>
-
-                  <ul class="pti-list pti-calendar-events">
-                    <li class="pti-calendar-event">
-                      <a href="/calendario-evento.html" class="pti-calendar-title">
-                        Lorem ipsum dolor sit am pq cuando zno nest msm doquesta
-                      </a>
-
-                      <!-- <a href="#" class="pti-link-more" title="ver mais">
-                        <i class="pti-icon fa fa-plus"></i>
-                      </a> -->
-                    </li>
-                  </ul>
-                </li>
-
-              </ul>
-            </div>
-
-          </div>
-        </div>
-        <!-- fim Calendário -->
-
-        <div class="w-100"></div>
-
-        <!-- Indicadores -->
-        <div class="col-md pti-box-separate">
-          <div class="pti-indicadores">
-
-            <!-- titulo principal -->
-            <div class="d-flex justify-content-between align-items-start flex-wrap">
-              <h3 class="pti-title pti-title-line">
-                Indicadores
-              </h3>
-            </div>
-
-            <!-- gráficos do indicadores -->
-            <div class="pti-container pti-indicadores-container">
-              <div class="row">
-
-                <div class="col-md">
-                  <div class="pti-indicadores-chart">
-
-                    <a href="#" title="Ir para o Dashboard de TI" class="pti-indicadores-title">
-                      <h5>Dashboard de TI</h5>
-                    </a>
-
-                    <div class="pti-img pti-indicadores-img">
-                      <img src="./img/portais/grafico-1.jpg" class="img-fluid" alt="Gráfico Time to Market">
+              <section class="col-sm-6 col-md-6 col-xl-4 pti-noticia-item pti-noticia-thumb">
+                <div class="embed-responsive embed-responsive-16by9">
+                  <a class="pti-link embed-responsive-item" href="#" title="Ver notícia completa">
+                    <div class="pti-img-container">
+                      <img class="pti-img img-fluid" src="./img/noticias/banner-desenvolvimento-thumb.jpg" alt="">
                     </div>
-                  </div>
+                    <h3 class="pti-title">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3>
+                  </a>
                 </div>
+              </section>
+              <!-- .pti-noticia -->
 
-                <div class="col-md">
-                  <div class="row">
-                    <div class="col-md">
-                      <div class="pti-indicadores-chart">
+              <section class="col-sm-6 col-md-6 col-xl-4 pti-noticia-item pti-noticia-thumb">
+                <div class="embed-responsive embed-responsive-16by9">
+                  <a class="pti-link embed-responsive-item" href="#" title="Ver notícia completa">
+                    <div class="pti-img-container">
+                      <img class="pti-img img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr54qezt06WUhsfflwTTl-MLbJh4TJ4JfVl0rZwNw3kpkInUOwRg"
+                        alt="">
+                    </div>
+                    <h3 class="pti-title">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3>
+                  </a>
+                </div>
+              </section>
+              <!-- .pti-noticia -->
 
-                        <a href="#" title="Ir para o Portal de Desempenho" class="pti-indicadores-title">
-                          <h5>Portal de Desempenho</h5>
-                        </a>
+            </section>
+            <!-- .pti-noticias-list -->
+          </article>
+          <!-- .pti-noticias -->
 
-                        <div class="row">
-                          <div class="pti-img pti-indicadores-img col-sm-6 col-md-12">
-                            <img src="./img/portais/grafico-2.jpg" class="img-fluid" alt="Gráfico Time to Market">
-                          </div>
+          <!-- Treinamentos -->
+          <article class="pti-section-item pti-treinamentos">
+            <!-- titulo article -->
+            <header class="pti-section-title">
+              <h2 class="pti-title">
+                <a href="#" class="pti-link">
+                  Treinamentos
+                </a>
+              </h2>
 
-                          <div class="pti-img pti-indicadores-img col-sm-6 col-md-12">
-                            <img src="./img/portais/grafico-2.jpg" class="img-fluid" alt="Gráfico Time to Market">
-                          </div>
-                        </div>
+              <a href="#" class="pti-link btn btn-outline-info border-0 btn-sm" title="Ver todos treinamentos">
+                <span class="pti-icon">
+                  <i class="fa fa-chevron-left"></i>
+                </span>
+                <span class="pti-link-text">Ver todas</span>
+              </a>
+            </header>
+
+            <section class="row pti-cards-list pti-treinamentos-list">
+
+              <article class="col-md-6 pti-card pti-card-horizontal pti-treinamento">
+                <a href="#" title="Visualizar detalhe do treinamento...">
+                  <header class="pti-card-header">
+                    <div class="pti-data">
+                      <div class="pti-label-mes">abr</div>
+                      <div class="pti-label-dia">19</div>
+                    </div>
+
+                    <div class="pti-info">
+                      <span>Inscrições até</span>
+                      <span class="pti-data">25 de abr de 2018</span>
+                    </div>
+                  </header>
+
+                  <section class="pti-card-body">
+                    <div class="pti-categoria">
+                      Treinamento interno
+                    </div>
+
+                    <h4 class="pti-titulo">
+                      1 Lit amet adipisicing elit.
+                    </h4>
+
+                    <!-- <h5 class="pti-subtitulo">
+                      Modi magni, perspiciatis dolorum animi, cumque.
+                    </h5> -->
+
+                    <div class="pti-info">
+                      <div class="pti-instrutor">
+                        Júlio Abreu
+                      </div>
+
+                      <div class="pti-data">
+                        qui, 19 de abr, 15:30
                       </div>
                     </div>
+                  </section>
+                </a>
+              </article>
 
-                    <div class="col-md">
-                      <div class="pti-indicadores-chart">
+              <article class="col-md-6 pti-card pti-card-horizontal pti-treinamento">
+                <a href="#" title="Visualizar detalhe do treinamento...">
+                  <header class="pti-card-header">
+                    <div class="pti-data">
+                      <div class="pti-label-mes">abr</div>
+                      <div class="pti-label-dia">19</div>
+                    </div>
 
-                        <a href="#" title="Ir para o Portal de Lorem Ipsum" class="pti-indicadores-title">
-                          <h5>Portal de Lorem Ipsum</h5>
-                        </a>
+                    <div class="pti-info">
+                      <span>Inscrições até</span>
+                      <span class="pti-data">25 de abr de 2018</span>
+                    </div>
+                  </header>
 
-                        <div class="row">
-                          <div class="pti-img pti-indicadores-img col-sm-6 col-md-12">
-                            <img src="./img/portais/grafico-2.jpg" class="img-fluid" alt="Gráfico Time to Market">
-                          </div>
+                  <section class="pti-card-body">
+                    <div class="pti-categoria">
+                      Treinamento interno
+                    </div>
 
-                          <div class="pti-img pti-indicadores-img col-sm-6 col-md-12">
-                            <img src="./img/portais/grafico-2.jpg" class="img-fluid" alt="Gráfico Time to Market">
-                          </div>
-                        </div>
+                    <h4 class="pti-titulo">
+                      2 Lit amet adipisicing elit.
+                    </h4>
 
+                    <div class="pti-info">
+                      <div class="pti-instrutor">
+                        Júlio Abreu
+                      </div>
+
+                      <div class="pti-data">
+                        qui, 19 de abr, 15:30
                       </div>
                     </div>
+                  </section>
+                </a>
+              </article>
+
+              <article class="col-md-6 pti-card pti-card-horizontal pti-treinamento">
+                <a href="#" title="Visualizar detalhe do treinamento...">
+                  <header class="pti-card-header">
+                    <div class="pti-data">
+                      <div class="pti-label-mes">abr</div>
+                      <div class="pti-label-dia">19</div>
+                    </div>
+
+                    <div class="pti-info">
+                      <span>Inscrições até</span>
+                      <span class="pti-data">25 de abr de 2018</span>
+                    </div>
+                  </header>
+
+                  <section class="pti-card-body">
+                    <div class="pti-categoria">
+                      Treinamento interno
+                    </div>
+
+                    <h4 class="pti-titulo">
+                      3 Lorem ipsum dolor, sit amet adipisicing elit.
+                    </h4>
+
+                    <div class="pti-info">
+                      <div class="pti-instrutor">
+                        Júlio Abreu
+                      </div>
+
+                      <div class="pti-data">
+                        qui, 19 de abr, 15:30
+                      </div>
+                    </div>
+                  </section>
+                </a>
+              </article>
+
+              <article class="col-md-6 pti-card pti-card-horizontal pti-treinamento">
+                <header class="pti-card-header">
+                  <div class="pti-data">
+                    <div class="pti-label-mes">abr</div>
+                    <div class="pti-label-dia">19</div>
                   </div>
-                </div>
-              </div>
-            </div>
 
-          </div>
+                  <div class="pti-info">
+                    <span>Inscrições até</span>
+                    <span class="pti-data">25 de abr de 2018</span>
+                  </div>
+                </header>
+
+                <section class="pti-card-body">
+                  <div class="pti-categoria">
+                    Treinamento interno
+                  </div>
+
+                  <h4 class="pti-titulo">
+                    4 Lorem ipsum dolor adipisicing elit.
+                  </h4>
+
+                  <div class="pti-info">
+                    <div class="pti-instrutor">
+                      Júlio Abreu
+                    </div>
+
+                    <div class="pti-data">
+                      qui, 19 de abr, 15:30
+                    </div>
+                  </div>
+                </section>
+              </article>
+
+            </section>
+          </article>
+          <!-- .pti-treinamentos -->
         </div>
-        <!-- fim Indicadores -->
 
-        <div class="w-100"></div>
+        <div class="col-lg-4">
+          <!-- pergunte -->
+          <article class="pti-section-item pti-pergunte">
+            <!-- titulo article -->
+            <header class="pti-section-title">
+              <h2 class="pti-title">
+                <a href="#" class="pti-link">
+                  Pergunte-se
+                </a>
+              </h2>
+            </header>
+
+            <section>
+              <div class="pti-pergunte-container">
+                <a class="pti-link" href="./img/banner/2018.07_Pertunte-se.png" target="_blank" title="Abrir em alta resolução" data-toggle="tooltip">
+                  <img class="pti-img img-fluid" src="./img/banner/2018.07_Pertunte-se-thumb.jpg" alt="Banner pergunte-se todos os dias">
+                </a>
+              </div>
+            </section>
+          </article>
+          <!-- .pti-pergunte-se -->
+        </div>
+      </div>
+
+      <!-- grupo 2 -->
+      <div class="row">
+        <div class="col">
+          <article class="pti-section-item pti-indicadores">
+            <!-- titulo article -->
+            <header class="pti-section-title">
+              <h2 class="pti-title">
+                <a href="#" class="pti-link">
+                  Indicadores
+                </a>
+              </h2>
+
+              <a href="#" class="pti-link btn btn-outline-info border-0 btn-sm" title="Ver todos indicadores">
+                <span class="pti-icon">
+                  <i class="fa fa-chevron-left"></i>
+                </span>
+                <span class="pti-link-text">Ver todas</span>
+              </a>
+            </header>
+
+            <section class="row pti-indicadores-list">
+              <div class="col-6 col-md-3 pti-box-icone pti-indicador">
+                <a class="pti-link" href="#" target="_blank">
+                  <div class="pti-img-container">
+                    <img src="./img/home/icones-home-contratacoes.png" alt="capex" class="pti-img img-fluid">
+                  </div>
+                  <h3 class="pti-titulo">Contratções em andamento</h3>
+                </a>
+              </div>
+
+              <div class="col-6 col-md-3 pti-box-icone pti-indicador">
+                <a class="pti-link" href="#" target="_blank">
+                  <div class="pti-img-container">
+                    <img src="./img/home/icones-home-capex.png" alt="capex" class="pti-img img-fluid">
+                  </div>
+                  <h3 class="pti-titulo">Capex</h3>
+                </a>
+              </div>
+
+              <div class="col-6 col-md-3 pti-box-icone pti-indicador">
+                <a class="pti-link" href="#" target="_blank">
+                  <div class="pti-img-container">
+                    <img src="./img/home/icones-home-capex.png" alt="capex" class="pti-img img-fluid">
+                  </div>
+                  <h3 class="pti-titulo">Capex</h3>
+                </a>
+              </div>
+
+              <div class="col-6 col-md-3 pti-box-icone pti-indicador">
+                <a class="pti-link" href="#" target="_blank">
+                  <div class="pti-img-container">
+                    <img src="./img/home/icones-home-capex.png" alt="capex" class="pti-img img-fluid">
+                  </div>
+                  <h3 class="pti-titulo">Capex</h3>
+                </a>
+              </div>
+            </section>
+          </article>
+        </div>
+
+        <div class="col-lg-4">
+          <!-- Links Nossos portais -->
+          <article class="pti-section-item pti-portais">
+            <!-- titulo article -->
+            <header class="pti-section-title">
+              <h2 class="pti-title">
+                <a href="#" class="pti-link">
+                  Nossos Portais
+                </a>
+              </h2>
+            </header>
+
+            <section>
+              <ul class="pti-portais-list">
+                <li class="pti-portal">
+                  <a class="pti-link" href="http://ppm.telefonica.br/sites/processosti/Paginas/Home.aspx">
+                    <div class="pti-img">
+                      <img class="pti-img img-fluid" src="./img/vivo/icones/portais/icones_portal_de_processos.png" alt="PORTAL DE PROCESSOS">
+                    </div>
+                    <span class="pti-text">Portal de Processos de TI</span>
+                  </a>
+                </li>
+                <li class="pti-portal">
+                  <a class="pti-link" href="http://ppm.telefonica.br/sites/processosti/Paginas/Home.aspx">
+                    <div class="pti-img">
+                      <img class="pti-img img-fluid" src="./img/vivo/icones/portais/icones_portal_de_processos.png" alt="PORTAL DE PROCESSOS">
+                    </div>
+                    <span class="pti-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                  </a>
+                </li>
+                <li class="pti-portal">
+                  <a class="pti-link" href="http://ppm.telefonica.br/sites/processosti/Paginas/Home.aspx">
+                    <span class="pti-text">Lorem ipsum lorem</span>
+                  </a>
+                </li>
+                <li class="pti-portal">
+                  <a class="pti-link" href="http://ppm.telefonica.br/sites/processosti/Paginas/Home.aspx">
+                    <div class="pti-img">
+                      <img class="pti-img img-fluid" src="./img/vivo/icones/portais/icones_portal_de_processos.png" alt="PORTAL DE PROCESSOS">
+                    </div>
+                    <span class="pti-text">Lorem ipsum lorem</span>
+                  </a>
+                </li>
+                <li class="pti-portal">
+                  <a class="pti-link" href="http://ppm.telefonica.br/sites/processosti/Paginas/Home.aspx">
+                    <div class="pti-img">
+                      <img class="pti-img img-fluid" src="./img/vivo/icones/portais/icones_portal_de_processos.png" alt="PORTAL DE PROCESSOS">
+                    </div>
+                    <span class="pti-text">Lorem ipsum lorem</span>
+                  </a>
+                </li>
+                <li class="pti-portal">
+                  <a class="pti-link" href="http://ppm.telefonica.br/sites/processosti/Paginas/Home.aspx">
+                    <div class="pti-img">
+                      <img class="pti-img img-fluid" src="./img/vivo/icones/portais/icones_portal_de_processos.png" alt="PORTAL DE PROCESSOS">
+                    </div>
+                    <span class="pti-text">Lorem ipsum lorem</span>
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </article>
+          <!-- .pti-portais -->
+        </div>
       </div>
 
     </div>
-    <!-- .container -->
-  </div>
-  <!-- .pti-section -->
+  </section>
 
-  <!-- Footer -->
-  <div class="pti-main pti-footer">
-    <div class="container">
-
-      <div class="pti-links">
-        <div class="row">
-
-          <div class="col-sm-12 pti-box-separate">
-            <div class="pti-link-group pti-links-uteis">
-
-              <div class="row">
-                <div class="col-md">
-                  <!-- <h4 class="pti-link-title">Portais</h4> -->
-                  <div class="pti-wrapper">
-                    <!-- portais -->
-                    <a href="http://dashboardti.redecorp.br/Home" class="pti-box" data-toggle="tooltip" data-placement="top"
-                      title="DASHBOARD DE TI">
-                      <img class="pti-img img-fluid" src="./img/vivo/icones/icones_dashboard_de_ti.png" alt="DASHBOARD DE TI">
-                      <span class="pti-text">DASHBOARD DE TI</span>
-                    </a>
-                    <a href="https://portaldegovernanca.telefonica.com.br/governanca/pages/portal/home.jsf" class="pti-box" data-toggle="tooltip"
-                      data-placement="top" title="PORTAL DE TI">
-                      <img class="pti-img img-fluid" src="./img/vivo/icones/icones_portal_de_ti.png" alt="PORTAL DE TI">
-                      <span class="pti-text">PORTAL DE TI</span>
-                    </a>
-                    <a href="http://ppm.telefonica.br/sites/processosti/Paginas/Home.aspx" class="pti-box" data-toggle="tooltip" data-placement="top"
-                      title="PORTAL DE PROCESSOS">
-                      <img class="pti-img img-fluid" src="./img/vivo/icones/icones_portal_de_processos.png" alt="PORTAL DE PROCESSOS">
-                      <span class="pti-text">PORTAL DE PROCESSOS</span>
-                    </a>
-                    <a href="https://beneficios.telefonica.com.br/Signin.aspx?ReturnUrl=%2f" class="pti-box" data-toggle="tooltip"
-                      data-placement="top" data-html="true" title="PORTAL DE BENEFÍCIOS <span class='text-nowrap'>(BE FLEX)</span>">
-                      <img class="pti-img img-fluid" src="./img/vivo/icones/icones_portal_de_beneficios.png" alt="PORTAL DE BENEFÍCIOS (BE FLEX)">
-                      <span class="pti-text">PORTAL DE BENEFÍCIOS (BE FLEX)</span>
-                    </a>
-                    <a href="http://brtlvbgs0020pl.redecorp.br/CMApplicationCatalog/#/SoftwareCatalog" class="pti-box" data-toggle="tooltip"
-                      data-placement="top" title="PORTAL DE SOFTWARES">
-                      <img class="pti-img img-fluid" src="./img/vivo/icones/icones_portal_de_softwares.png" alt="PORTAL DE SOFTWARES">
-                      <span class="pti-text">PORTAL DE SOFTWARES</span>
-                    </a>
-                    <a href="http://portalsan.gvt.net.br/PortalSAN/" class="pti-box" data-toggle="tooltip" data-placement="top" title="PORTAL SAN (ATENDIMENTO)">
-                      <img class="pti-img img-fluid" src="./img/vivo/icones/icones_portal_atendimento.png" alt="PORTAL SAN (ATENDIMENTO)">
-                      <span class="pti-text">PORTAL SAN (ATENDIMENTO)</span>
-                    </a>
-
-                    <a href="https://www.telefonica-prisma3.com.br/Prisma3/" class="pti-box" data-toggle="tooltip" data-placement="top"
-                      title="PRISMA">
-                      <img class="pti-img img-fluid" src="./img/vivo/icones/icones_prisma.png" alt="PRISMA">
-                      <span class="pti-text">PRISMA</span>
-                    </a>
-                    <a href="http://corp.vivo.com.br/sites/IIOT/centraldeservicos/index.aspx" class="pti-box" data-toggle="tooltip"
-                      data-placement="top" title="CENTRAL DE SERVIÇOS">
-                      <img class="pti-img img-fluid" src="./img/vivo/icones/icones_central_de_servicos.png" alt="CENTRAL DE SERVIÇOS">
-                      <span class="pti-text">CENTRAL DE SERVIÇOS</span>
-                    </a>
-                    <a href="http://oim.vivo.com.br/identity/faces/signin?_afrLoop=2609114234252694&_afrWindowMode=0&_adf.ctrl-state=hlq1ne2x0_4"
-                      class="pti-box" data-toggle="tooltip" data-placement="top" title="IDM">
-                      <img class="pti-img img-fluid" src="./img/vivo/icones/icones_idm.png" alt="IDM">
-                      <span class="pti-text">IDM</span>
-                    </a>
-                    <a href="http://10.41.26.42:8080/secure/Dashboard.jspa" class="pti-box" data-toggle="tooltip" data-placement="top"
-                      title="JIRA">
-                      <img class="pti-img img-fluid" src="./img/vivo/icones/icones_jira.png" alt="JIRA">
-                      <span class="pti-text">JIRA</span>
-                    </a>
-                    <a href="http://ppm.telefonica.br/sites/pwa/default.aspx" class="pti-box" data-toggle="tooltip" data-placement="top"
-                      title="PPM">
-                      <img class="pti-img img-fluid" src="./img/vivo/icones/icones_ppm.png" alt="PPM">
-                      <span class="pti-text">PPM</span>
-                    </a>
-                    <a href="http://alm.vivo.com.br/qcbin/" class="pti-box" data-toggle="tooltip" data-placement="top" title="QUALITY CENTER">
-                      <img class="pti-img img-fluid" src="./img/vivo/icones/icones_quality_center.png" alt="QUALITY CENTER">
-                      <span class="pti-text">QUALITY CENTER</span>
-                    </a>
-                    <a href="http://gestaoservicosti.redecorp.br:7001/arsys/shared/login.jsp" class="pti-box" data-toggle="tooltip"
-                      data-placement="top" title="REMEDY">
-                      <img class="pti-img img-fluid" src="./img/vivo/icones/icones_remedy.png" alt="REMEDY">
-                      <span class="pti-text">REMEDY</span>
-                    </a>
-                    <a href="https://svuxprtc1.gvt.net.br:9443/ccm/web/projects/Pequenos%20Projetos#action=com.ibm.team.dashboard.viewDashboard"
-                      class="pti-box" data-toggle="tooltip" data-placement="top" title="RTC">
-                      <img class="pti-img img-fluid" src="./img/vivo/icones/icones_rtc.png" alt="RTC">
-                      <span class="pti-text">RTC</span>
-                    </a>
-                    
-                    <a href="http://gpo.vivo.com.br/request/seguranca/IdentificarAutenticacao" class="pti-box" data-toggle="tooltip"
-                      data-placement="top" title="REQUEST GPO">
-                      <img class="pti-img img-fluid" src="./img/vivo/icones/icones_request_gpo.png" alt="REQUEST GPO">
-                      <span class="pti-text">REQUEST GPO</span>
-                    </a>
-                    <a href="https://sdm.gvt.com.br/CAisd/pdmweb.exe" class="pti-box" data-toggle="tooltip" data-placement="top" title="SDM (Vivo 2)">
-                      <img class="pti-img img-fluid" src="./img/vivo/icones/icones_sdm.png" alt="SDM (Vivo 2)">
-                      <span class="pti-text">SDM (Vivo 2)</span>
-                    </a>
-                    <a href="http://intranet.telefonica.com.br/sitearea-seguranca-ti" class="pti-box" data-toggle="tooltip" data-placement="top"
-                      title="SEGURANÇA DE TI">
-                      <img class="pti-img img-fluid" src="./img/vivo/icones/icones_seguranca_de_ti.png" alt="SEGURANÇA DE TI">
-                      <span class="pti-text">SEGURANÇA DE TI</span>
-                    </a>
-                    <a href="http://sigma.redecorp.br/" class="pti-box" data-toggle="tooltip" data-placement="top" title="SIGMA">
-                      <img class="pti-img img-fluid" src="./img/vivo/icones/icones_sigma.png" alt="SIGMA">
-                      <span class="pti-text">SIGMA</span>
-                    </a>
-                    <a href="http://10.41.26.42:9090/login.action?os_destination=/dashboard.action" class="pti-box" data-toggle="tooltip"
-                      data-placement="top" title="WIKI">
-                      <img class="pti-img img-fluid" src="./img/vivo/icones/icones_wiki.png" alt="WIKI">
-                      <span class="pti-text">WIKI</span>
-                    </a>
-                    <a href="http://corp.vivo.com.br/sites/IIOT/gestaodeconfiguracao/Documentos%20Compartilhados/index.aspx" class="pti-box"
-                      data-toggle="tooltip" data-placement="top" title="GESTÃO DE CONFIGURAÇÃO DE ATIVOS">
-                      <img class="pti-img img-fluid" src="./img/vivo/icones/icones_gestao_de_configuracao_de_ativos.png" alt="GESTÃO DE CONFIGURAÇÃO DE ATIVOS">
-                      <span class="pti-text">GESTÃO DE CONFIGURAÇÃO DE ATIVOS</span>
-                    </a>
-                    <a href="http://corp.vivo.com.br/sites/IIOT/gestaodesolucoes/Portal%20de%20Solu%C3%A7%C3%B5es/Index.aspx" class="pti-box"
-                      data-toggle="tooltip" data-placement="top" title="GESTÃO DE INCIDENTES E SOLUÇÕES">
-                      <img class="pti-img img-fluid" src="./img/vivo/icones/icones_gestao_de_incidentes_e_solucoes.png" alt="GESTÃO DE INCIDENTES E SOLUÇÕES">
-                      <span class="pti-text">GESTÃO DE INCIDENTES E SOLUÇÕES</span>
-                    </a>
-                    <a href="http://corp.vivo.com.br/sites/IIOT/GMUD/Portal%202015/Index.asp" class="pti-box" data-toggle="tooltip"
-                      data-placement="top" title="GESTÃO DE MUDANÇA (GMUD)">
-                      <img class="pti-img img-fluid" src="./img/vivo/icones/icones_gmud.png" alt="GESTÃO DE MUDANÇA (GMUD)">
-                      <span class="pti-text">GESTÃO DE MUDANÇA (GMUD)</span>
-                    </a>
-
-                    <a href="http://brtlvbgs0020pl.redecorp.br/CMApplicationCatalog/#/SoftwareCatalog" class="pti-box" data-toggle="tooltip"
-                      data-placement="top" title="WORKPLACE BRASIL">
-                      <img class="pti-img img-fluid" src="./img/vivo/icones/icones_workplace_brasil.png" alt="WORKPLACE BRASIL">
-                      <span class="pti-text">WORKPLACE BRASIL</span>
-                    </a>
-                    <a href="http://intranet.telefonica.com.br/vans---sao-paulo" class="pti-box" data-toggle="tooltip" data-placement="top"
-                      title="VANS">
-                      <img class="pti-img img-fluid" src="./img/vivo/icones/icones_vans.png" alt="VANS">
-                      <span class="pti-text">VANS</span>
-                    </a>
-                    <!-- <a href="aaaaaaaaaaaa" class="pti-box" data-toggle="tooltip" data-placement="top" title="bbbbbbbbbbbb">
-                      <img class="pti-img img-fluid" src="./img/vivo/icones/icones_cccccccccccc.png" alt="bbbbbbbbbbbb">
-                    </a> -->
-                  </div>
-                </div>
-              </div>
-
+  <footer class="pti-main pti-footer">
+    <section class="container">
+      <ul class="pti-footer-list">
+        <li class="pti-item">
+          <a class="pti-link" href="http://dashboardti.redecorp.br/Home" title="DASHBOARD DE TI" data-toggle="tooltip" data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_dashboard_de_ti.png" alt="DASHBOARD DE TI">
             </div>
-          </div>
-
-          <div class="w-100 d-md-none d-lg-none"></div>
-
-        </div>
-      </div>
+            <span class="pti-text">DASHBOARD DE TI</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="https://portaldegovernanca.telefonica.com.br/governanca/pages/portal/home.jsf" title="PORTAL DE TI"
+            data-toggle="tooltip" data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_portal_de_ti.png" alt="PORTAL DE TI">
+            </div>
+            <span class="pti-text">PORTAL DE TI</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="http://ppm.telefonica.br/sites/processosti/Paginas/Home.aspx" title="PORTAL DE PROCESSOS" data-toggle="tooltip"
+            data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_portal_de_processos.png" alt="PORTAL DE PROCESSOS">
+            </div>
+            <span class="pti-text">PORTAL DE PROCESSOS</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="https://beneficios.telefonica.com.br/Signin.aspx?ReturnUrl=%2f" title="PORTAL DE BENEFÍCIOS (BE FLEX)"
+            data-toggle="tooltip" data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_portal_de_beneficios.png" alt="PORTAL DE BENEFÍCIOS (BE FLEX)">
+            </div>
+            <span class="pti-text">PORTAL DE BENEFÍCIOS (BE FLEX)</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="http://brtlvbgs0020pl.redecorp.br/CMApplicationCatalog/#/SoftwareCatalog" title="PORTAL DE SOFTWARES"
+            data-toggle="tooltip" data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_portal_de_softwares.png" alt="PORTAL DE SOFTWARES">
+            </div>
+            <span class="pti-text">PORTAL DE SOFTWARES</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="http://portalsan.gvt.net.br/PortalSAN/" title="PORTAL SAN (ATENDIMENTO)" data-toggle="tooltip"
+            data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_portal_atendimento.png" alt="PORTAL SAN (ATENDIMENTO)">
+            </div>
+            <span class="pti-text">PORTAL SAN (ATENDIMENTO)</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="https://www.telefonica-prisma3.com.br/Prisma3/" title="PRISMA" data-toggle="tooltip" data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_prisma.png" alt="PRISMA">
+            </div>
+            <span class="pti-text">PRISMA</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="http://corp.vivo.com.br/sites/IIOT/centraldeservicos/index.aspx" title="CENTRAL DE SERVIÇOS" data-toggle="tooltip"
+            data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_central_de_servicos.png" alt="CENTRAL DE SERVIÇOS">
+            </div>
+            <span class="pti-text">CENTRAL DE SERVIÇOS</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="http://oim.vivo.com.br/identity/faces/signin?_afrLoop=2609114234252694&_afrWindowMode=0&_adf.ctrl-state=hlq1ne2x0_4"
+            title="IDM" data-toggle="tooltip" data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_idm.png" alt="IDM">
+            </div>
+            <span class="pti-text">IDM</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="http://10.41.26.42:8080/secure/Dashboard.jspa" title="JIRA" data-toggle="tooltip" data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_jira.png" alt="JIRA">
+            </div>
+            <span class="pti-text">JIRA</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="http://ppm.telefonica.br/sites/pwa/default.aspx" title="PPM" data-toggle="tooltip" data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_ppm.png" alt="PPM">
+            </div>
+            <span class="pti-text">PPM</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="http://alm.vivo.com.br/qcbin/" title="QUALITY CENTER" data-toggle="tooltip" data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_quality_center.png" alt="QUALITY CENTER">
+            </div>
+            <span class="pti-text">QUALITY CENTER</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="http://gestaoservicosti.redecorp.br:7001/arsys/shared/login.jsp" title="REMEDY" data-toggle="tooltip"
+            data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_remedy.png" alt="REMEDY">
+            </div>
+            <span class="pti-text">REMEDY</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="https://svuxprtc1.gvt.net.br:9443/ccm/web/projects/Pequenos%20Projetos#action=com.ibm.team.dashboard.viewDashboard"
+            title="RTC" data-toggle="tooltip" data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_rtc.png" alt="RTC">
+            </div>
+            <span class="pti-text">RTC</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="http://gpo.vivo.com.br/request/seguranca/IdentificarAutenticacao" title="REQUEST GPO" data-toggle="tooltip"
+            data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_request_gpo.png" alt="REQUEST GPO">
+            </div>
+            <span class="pti-text">REQUEST GPO</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="https://sdm.gvt.com.br/CAisd/pdmweb.exe" title="SDM (Vivo 2)" data-toggle="tooltip" data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_sdm.png" alt="SDM (Vivo 2)">
+            </div>
+            <span class="pti-text">SDM (Vivo 2)</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="http://intranet.telefonica.com.br/sitearea-seguranca-ti" title="SEGURANÇA DE TI" data-toggle="tooltip"
+            data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_seguranca_de_ti.png" alt="SEGURANÇA DE TI">
+            </div>
+            <span class="pti-text">SEGURANÇA DE TI</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="http://sigma.redecorp.br/" title="SIGMA" data-toggle="tooltip" data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_sigma.png" alt="SIGMA">
+            </div>
+            <span class="pti-text">SIGMA</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="http://10.41.26.42:9090/login.action?os_destination=/dashboard.action" title="WIKI" data-toggle="tooltip"
+            data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_wiki.png" alt="WIKI">
+            </div>
+            <span class="pti-text">WIKI</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="http://corp.vivo.com.br/sites/IIOT/gestaodeconfiguracao/Documentos%20Compartilhados/index.aspx"
+            title="GESTÃO DE CONFIGURAÇÃO DE ATIVOS" data-toggle="tooltip" data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_gestao_de_configuracao_de_ativos.png" alt="GESTÃO DE CONFIGURAÇÃO DE ATIVOS">
+            </div>
+            <span class="pti-text">GESTÃO DE CONFIGURAÇÃO DE ATIVOS</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="http://corp.vivo.com.br/sites/IIOT/gestaodesolucoes/Portal%20de%20Solu%C3%A7%C3%B5es/Index.aspx"
+            title="GESTÃO DE INCIDENTES E SOLUÇÕES" data-toggle="tooltip" data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_gestao_de_incidentes_e_solucoes.png" alt="GESTÃO DE INCIDENTES E SOLUÇÕES">
+            </div>
+            <span class="pti-text">GESTÃO DE INCIDENTES E SOLUÇÕES</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="http://corp.vivo.com.br/sites/IIOT/GMUD/Portal%202015/Index.asp" title="GESTÃO DE MUDANÇA (GMUD)"
+            data-toggle="tooltip" data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_gmud.png" alt="GESTÃO DE MUDANÇA (GMUD)">
+            </div>
+            <span class="pti-text">GESTÃO DE MUDANÇA (GMUD)</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="http://brtlvbgs0020pl.redecorp.br/CMApplicationCatalog/#/SoftwareCatalog" title="WORKPLACE BRASIL"
+            data-toggle="tooltip" data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_workplace_brasil.png" alt="WORKPLACE BRASIL">
+            </div>
+            <span class="pti-text">WORKPLACE BRASIL</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="http://intranet.telefonica.com.br/vans---sao-paulo" title="VANS" data-toggle="tooltip" data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_vans.png" alt="VANS">
+            </div>
+            <span class="pti-text">VANS</span>
+          </a>
+        </li>
+      </ul>
 
       <!-- footer telefonica .pti-footer-text -->
       <div class="pti-footer-text">
-        <div class="text-center">
-          <div class="pti-footer-name">©&nbsp;Telefônica Brasil S.A.</div>
-        </div>
+        <div class="pti-telefonica">©&nbsp;Telefônica Brasil S.A.</div>
       </div>
       <!-- footer telefonica .pti-footer-text -->
-
-    </div>
-  </div>
-  <!-- .pti-footer -->
+    </section>
+  </footer>
 
 
   <script src="./assets/jquery/dist/jquery.slim.min.js"></script>
