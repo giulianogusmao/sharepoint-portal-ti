@@ -16,37 +16,3 @@
              url('#{$diretorio}#{$nome}.svg') format('svg');
     }
 }
-
-.#{$project-name} {
-  @extend %font-regular;
-  color: $cor-text;
-
-  strong, b {
-    font-style: normal;
-    font-weight: bold;
-  }
-
-  em, i:not(.fa) {
-    @extend %font-italic; // fonte-italic
-    font-style: normal;
-    font-weight: normal;
-
-    & b, & strong, b &, strong & {
-      @extend %font-italic; // fonte-bold-italic
-      font-style: normal;
-      font-weight: bold;
-    }
-  }
-
-  @for $i from 0 through 5 {
-    h#{$i} {
-      font-weight: normal;
-    }
-  }
-}
-
-@each $name in ('light', 'regular') {
-  .#{$project-name} .font-#{$name} {
-    @extend %font-#{$name};
-  }
-}

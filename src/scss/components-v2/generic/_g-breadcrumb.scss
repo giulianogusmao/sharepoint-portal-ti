@@ -1,0 +1,28 @@
+/* ======================================================
+    _g-breadcrumb
+*/
+.pti-breadcrumb {
+  .breadcrumb {
+    margin: 1em 0;
+    padding: 0;
+    font-size: 0.75em;
+    background-color: transparent;
+  }
+
+  .breadcrumb-item {
+    display: flex;
+    align-items: center;
+
+    + .breadcrumb-item:before {
+      padding: 0;
+    }
+
+    &.active:before {
+      padding-right: 0.5em;
+    }
+
+    a {
+        @extend %font-bold;
+    }
+  }
+}

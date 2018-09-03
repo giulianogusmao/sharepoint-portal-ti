@@ -2,9 +2,24 @@
 /* ======================================================
     _g-Header
 */
+// @mixin linha {
+//   content: '';
+  
+//   position: absolute;
+//   left: 0;
+//   top: 100%;
+//   z-index: 1;
+  
+//   display: block;
+//   height: .1em;
+//   width: 100%; 
+
+//   background: linear-gradient(to right, rgba($cor-vivo-1, 0), $cor-vivo-1, $cor-vivo-1, rgba($cor-vivo-1, 0));
+// }
+
 .#{$project-name}.pti-header {
   
-  .pti-logo {
+  .pti-logo {    
     font-size: cRem(3em);
     color: $cor-black-1;
     margin: 0;
@@ -20,6 +35,11 @@
         text-decoration: none;
         outline: none;
       }
+    }
+
+    .icone-logo {
+      width: cRem(.75em);
+      margin-right: -3px;
     }
   }
   
@@ -68,6 +88,11 @@
     }
   
   }
+
+  // desktop 
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 1em;
+  }
 }
 
 .pti-navbar {
@@ -79,6 +104,17 @@
     padding: 0 15px;
     justify-content: space-between;
   }
+
+  // .pti-menu {
+  //   position: relative;
+  //   &:after, &:before {
+  //     @include linha;
+  //   }
+
+  //   &:before {
+  //     top: 0;
+  //   }
+  // }
   
   .navbar-nav {
     // centraliza menu
