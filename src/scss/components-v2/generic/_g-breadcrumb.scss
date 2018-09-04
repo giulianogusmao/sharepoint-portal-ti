@@ -3,26 +3,47 @@
 */
 .pti-breadcrumb {
   .breadcrumb {
-    margin: 1em 0;
+    align-items: center;
+    margin: cRem(-2em) 0 cRem(2em);
     padding: 0;
-    font-size: 0.75em;
+    font-size: cRem(1.2em);
     background-color: transparent;
   }
 
+  .breadcrumb-divider {
+    padding: 0 cRem(.2em);
+    color: $cor-vivo-3;
+    opacity: .6;
+  }
+
   .breadcrumb-item {
-    display: flex;
-    align-items: center;
+    $pd: cRem(.8em);
 
+    // removendo divisor bootstrap
     + .breadcrumb-item:before {
-      padding: 0;
+      display: none;
     }
 
-    &.active:before {
-      padding-right: 0.5em;
+    .pti-link {
+      border-radius: .2em;
+      padding: $pd;
+      color: $cor-vivo-6;
+      transition: box-shadow .2s linear;  
+      @extend %font-bold;
+
+      &:hover, &:focus {
+        color: $cor-vivo-1;
+        text-decoration: underline;
+      }
+
+      &:focus {
+        outline: none;
+        @include box-shadow-focus();
+      }
     }
 
-    a {
-        @extend %font-bold;
+    &.active {
+      padding-left: $pd;
     }
   }
 }
