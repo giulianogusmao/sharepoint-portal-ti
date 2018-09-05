@@ -1,18 +1,26 @@
 /* ======================================================
     _g-Header
 */
+@font-face {
+  font-family: "Jura-Regular";
+  src: url("../fonts/Jura/Regular/Jura-Regular.ttf");
+}
+
 .#{$project-name}.pti-header {
-  
-  .pti-logo {    
-    font-size: cRem(3em);
+  .pti-logo {
+    font-size: cRem(3.6em);
     color: $cor-black-1;
     margin: 0;
     outline: none;
-    @extend %font-light;
+    // @extend %font-light;
+    font-family: "Jura-Regular", $font-outras;
 
-    a {
-      @extend %transition-fast;
+    & > a {
+      display: flex;
+      align-items: center;
+
       color: $cor-black-1;
+      @extend %transition-fast;
 
       &:hover,
       &:focus {
@@ -23,8 +31,9 @@
     }
 
     .icone-logo {
-      width: cRem(.75em);
-      margin-right: -3px;
+      width: 17px;
+      height: 24px;
+      margin: 0 cRem(0.2em);
     }
   }
 
@@ -35,8 +44,18 @@
 
     // logo centralizado para mobile
     .pti-logo {
+      font-size: cRem(3em);
       flex-grow: 1;
       text-align: center;
+      
+      > a {
+        justify-content: center;
+      }
+
+      .icone-logo {
+        width: 14px;
+        height: 20px;
+      }
     }
 
     // border nos links para mobile
@@ -73,12 +92,12 @@
     }
   }
 
-  // desktop 
+  // desktop
   @include media-breakpoint-up(lg) {
     margin-bottom: 1em;
   }
 
-  // desktop 
+  // desktop
   @include media-breakpoint-up(lg) {
     margin-bottom: 1em;
   }
@@ -100,7 +119,8 @@
 
     // altera cor dos links do menu
     .nav-link {
-      font-size: cRem(1.6em);
+      font-size: cRem(1.8em);
+      @extend %font-light;
       color: #074d5f;
 
       @include media-breakpoint-up(md) {
