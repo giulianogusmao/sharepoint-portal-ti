@@ -1,22 +1,6 @@
-
 /* ======================================================
     _g-Header
 */
-// @mixin linha {
-//   content: '';
-  
-//   position: absolute;
-//   left: 0;
-//   top: 100%;
-//   z-index: 1;
-  
-//   display: block;
-//   height: .1em;
-//   width: 100%; 
-
-//   background: linear-gradient(to right, rgba($cor-vivo-1, 0), $cor-vivo-1, $cor-vivo-1, rgba($cor-vivo-1, 0));
-// }
-
 .#{$project-name}.pti-header {
   
   .pti-logo {    
@@ -30,7 +14,8 @@
       @extend %transition-fast;
       color: $cor-black-1;
 
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         color: $cor-vivo-3;
         text-decoration: none;
         outline: none;
@@ -42,7 +27,7 @@
       margin-right: -3px;
     }
   }
-  
+
   // mobile
   @include media-breakpoint-down(md) {
     // define altura do header para que o menu mobile abra sobre o conteudo
@@ -56,8 +41,8 @@
 
     // border nos links para mobile
     .nav-item {
-      border-bottom: .1em solid $cor-black-200;
-  
+      border-bottom: 0.1em solid $cor-black-200;
+
       &:last-child {
         border: 0;
       }
@@ -71,11 +56,11 @@
       left: 0;
       top: 0;
       right: 0;
-      bottom: 0;  
+      bottom: 0;
       z-index: 99;
-      animation: show-mask-menu .6s ease;
+      animation: show-mask-menu 0.6s ease;
       animation-fill-mode: forwards;
-      background: rgba($cor-vivo-10, .7);
+      background: rgba($cor-vivo-10, 0.7);
     }
 
     @keyframes show-mask-menu {
@@ -86,7 +71,11 @@
         opacity: 1;
       }
     }
-  
+  }
+
+  // desktop 
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 1em;
   }
 
   // desktop 
@@ -96,7 +85,7 @@
 }
 
 .pti-navbar {
-  padding: .5em 0;
+  padding: 0.5em 0;
   z-index: 100;
   background-color: $cor-white;
 
@@ -105,21 +94,10 @@
     justify-content: space-between;
   }
 
-  // .pti-menu {
-  //   position: relative;
-  //   &:after, &:before {
-  //     @include linha;
-  //   }
-
-  //   &:before {
-  //     top: 0;
-  //   }
-  // }
-  
   .navbar-nav {
     // centraliza menu
     margin: 0 auto;
-    
+
     // altera cor dos links do menu
     .nav-link {
       font-size: cRem(1.6em);
@@ -130,14 +108,15 @@
         padding-left: $pd;
         padding-right: $pd;
       }
-      
-      &:hover, &:focus {
+
+      &:hover,
+      &:focus {
         outline: none;
-        color: rgba(#000, .8);
+        color: rgba(#000, 0.8);
       }
     }
   }
-  
+
   // customiza icone para abrir e fechar o menu no mobile
   .navbar-toggler {
     position: relative;
@@ -153,23 +132,26 @@
       background-image: none;
       position: relative;
       display: block;
-      height: cRem(.2em);
-      
-      &, &:before, &:after {
+      height: cRem(0.2em);
+
+      &,
+      &:before,
+      &:after {
         width: 100%;
         background-color: $cor-black-1;
-        transition: all .2s ease-in-out;
+        transition: all 0.2s ease-in-out;
       }
 
-      &:before, &:after {
-        content: '';
+      &:before,
+      &:after {
+        content: "";
         position: absolute;
         left: 0;
         height: 100%;
       }
 
       $distance: 8px;
-      
+
       &:before {
         top: $distance;
       }
@@ -182,7 +164,7 @@
     // rotaciona o botao e muda as 3 linhas para um x
     &:not(.collapsed) .navbar-toggler-icon {
       transform: rotate(-45deg);
-      
+
       &:before {
         top: 0;
         // opacity: 0;
@@ -197,13 +179,36 @@
   }
 
   // modo expandido - desktop
-  @include media-breakpoint-up(lg) {    
+  @include media-breakpoint-up(lg) {
     // realiza quebra linha no menu para proxima linha
     & > .container {
       flex-wrap: wrap;
-      
+
       .pti-menu {
         flex: 1 1 100%;
+      }
+    }
+
+    // cria bolinhas entre os links
+    .nav-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &:after {
+        $tam: 4px;
+
+        content: "";
+        display: block;
+        width: $tam;
+        height: $tam;
+        // background-color: $cor-vivo-1;
+        border: 1px solid $cor-vivo-1;
+        border-radius: 50%;
+      }
+
+      &:last-child:after {
+        display: none;
       }
     }
 
@@ -213,12 +218,13 @@
         content: "";
         display: block;
         width: 0%;
-        height: .2ch;
+        height: 0.2ch;
         margin: 0px auto;
-        transition: .15s ease-out;
+        transition: 0.15s ease-out;
       }
 
-      &:hover:after, &:focus:after {
+      &:hover:after,
+      &:focus:after {
         width: 100%;
         background-color: rgb(0, 198, 218);
       }
