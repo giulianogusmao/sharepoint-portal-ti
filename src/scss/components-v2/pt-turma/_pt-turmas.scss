@@ -2,20 +2,50 @@
     _pt-turmas
 */
 .pti-turma {
-    .pti-card-header {            
-        .pti-titulo {
-            font-size: 1em;
-        }
+  .pti-card-header {
+    flex-direction: row;
+
+    .pti-titulo {
+      flex-basis: 100%;
+      font-size: cRem(1.6em);
+      margin: 0;
+    }
+  }
+
+  .pti-card-body {
+    .pti-label {
+      color: $cor-black-1;
     }
 
-    .pti-card-body {            
-        .pti-categoria {
-            font-size: cRem(1.2em);
-            margin-bottom: cRem(1em);
+    .pti-item {
+      display: flex;
+      flex-direction: column;      
+      margin-bottom: 1em;
+      font-size: cRem($font-size);
+
+      .pti-label {
+        margin-bottom: .5em;
+      }
+      
+      @include media-breakpoint-up(md) {
+        flex-direction: row;
+
+        .pti-label {
+          $tm: 33%;
+          flex: 0 0 $tm;
+          max-width: $tm;
         }
 
-        .pti-subtitulo {
-            font-size: cRem(1.4em);
+        .pti-valor {
+          flex: 1 1 auto;
         }
+      }
     }
+
+    .pti-info {
+      .pti-status * {
+        font-size: inherit;
+      }
+    }
+  }
 }
