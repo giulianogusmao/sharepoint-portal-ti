@@ -1,11 +1,6 @@
 /* ======================================================
     _g-Header
 */
-@font-face {
-  font-family: "Jura-Regular";
-  src: url("../fonts/Jura/Regular/Jura-Regular.ttf");
-}
-
 .#{$project-name}.pti-header {
   .pti-logo {
     font-size: cRem(3.6em);

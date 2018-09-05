@@ -17,3 +17,21 @@
   padding: 0.2em 0.5em;
   border-radius: 0.2em;
 }
+
+.pti-img-text {
+  position: relative;
+
+  .pti-text-hide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    // right: 0;
+    // bottom: 0;
+
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+  }
+}

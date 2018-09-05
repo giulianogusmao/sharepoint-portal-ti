@@ -2,31 +2,33 @@
     _g-Links
 */
 .pti-link {
-    color: $cor-vivo-6;
+  color: $cor-vivo-6;
+  text-decoration: none;
+  @extend %font-light;
+
+  .pti-icon {
+    font-size: 80%;
+    margin: 0 1ch;
+  }
+
+  &:hover,
+  &:focus {
+    color: $cor-vivo-1;
     text-decoration: none;
-    @extend %font-light;
+    outline: none;
+  }
 
-    .pti-icon {
-        font-size: 80%;
-        margin: 0 1ch;
-    }
-    
-    &:hover, &:focus {
-        color: $cor-vivo-1;
-        text-decoration: none;
-        outline: none;
-    }
+  &[class*="-info"]:hover {
+    color: $cor-white;
+  }
 
-    &[class*="-info"]:hover {
-        color: $cor-white;
+  // efeito underline
+  &.pti-link-underline {
+    &:hover,
+    &:focus {
+      .pti-link-text {
+        text-decoration: underline;
+      }
     }
-
-    // efeito underline
-    &.pti-link-underline {
-        &:hover, &:focus {
-            .pti-link-text {
-                text-decoration: underline;
-            }
-        }
-    }
+  }
 }

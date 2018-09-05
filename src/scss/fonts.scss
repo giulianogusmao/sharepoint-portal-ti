@@ -1,18 +1,23 @@
-@import './essentials/_all.scss';
+@import "./essentials/_all.scss";
 /* ======================================================
     _Fonts
 */
 @each $_fonte in $fontes {
-    $diretorio: '#{$url-path-fontes}/#{$_fonte}/';
-    $nome: '#{$family}-#{$_fonte}';
+  $diretorio: "#{$url-path-fontes}/#{$_fonte}/";
+  $nome: "#{$family}-#{$_fonte}";
 
-    @font-face {
-        font-family: '#{$nome}';
-        src: url('#{$diretorio}#{$nome}.eot');
-        src: url('#{$diretorio}#{$nome}.eot?#iefix') format('embedded-opentype'),
-             url('#{$diretorio}#{$nome}.woff2') format('woff2'),
-             url('#{$diretorio}#{$nome}.woff') format('woff'),
-             url('#{$diretorio}#{$nome}.otf') format('truetype'),
-             url('#{$diretorio}#{$nome}.svg') format('svg');
-    }
+  @font-face {
+    font-family: "#{$nome}";
+    src: url("#{$diretorio}#{$nome}.eot");
+    src: url("#{$diretorio}#{$nome}.eot?#iefix") format("embedded-opentype"),
+      url("#{$diretorio}#{$nome}.woff2") format("woff2"),
+      url("#{$diretorio}#{$nome}.woff") format("woff"),
+      url("#{$diretorio}#{$nome}.otf") format("truetype"),
+      url("#{$diretorio}#{$nome}.svg") format("svg");
+  }
+}
+
+@font-face {
+  font-family: "Jura-Regular";
+  src: url("../fonts/Jura/Regular/Jura-Regular.ttf");
 }
