@@ -1,0 +1,58 @@
+/* ======================================================
+    _pt-portais
+*/
+.pti-portais-list {
+    $img-width: cRem(3em);
+    $img-pd: cRem(.2em);
+    $img-margin: cRem(.5em);
+
+    margin: 0;
+    padding: 0;
+
+    @media all and (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+        display: flex;
+        flex-wrap: wrap;
+
+        .pti-portal {
+            flex: 0 0 50%;
+            max-width: 50%;
+            word-break: break-all;
+        }
+    }
+
+    .pti-portal {
+        list-style: none;
+    }
+
+    .pti-link {
+        display: flex;
+        align-items: center;
+        margin-bottom: cRem(.5em);
+
+        &:focus {
+            outline: none;
+        }
+        
+        .pti-img {
+            flex: 0 0 cRem(3em);
+            background-color: $cor-vivo-2;
+            border-radius: 50%;
+            padding: $img-pd;
+            margin-right: $img-margin;
+            width: $img-width;
+            height: $img-width;
+        }
+
+        &:hover .pti-img {
+            background-color: $cor-vivo-1;
+        }
+    }
+
+    .pti-text {
+        padding-left: $img-width + $img-pd + $img-margin;
+    }
+
+    .pti-img + .pti-text {
+        padding-left: 0;
+    }
+}

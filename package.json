@@ -1,5 +1,5 @@
 {
-  "name": "gulp-starter-kit",
+  "name": "portal_de_ti",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -15,7 +15,7 @@
   "keywords": [
     "gulp"
   ],
-  "author": "Marcin Krzemiński",
+  "author": "Giuliano Gusmao",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.17.5",

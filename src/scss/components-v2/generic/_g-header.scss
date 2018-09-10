@@ -1,0 +1,248 @@
+/* ======================================================
+    _g-Header
+*/
+.#{$project-name}.pti-header {
+  .pti-logo {
+    font-size: cRem(3.6em);
+    color: $cor-black-1;
+    margin: 0;
+    outline: none;
+    // @extend %font-light;
+    font-family: "Jura-Regular", $font-outras;
+
+    & > a {
+      display: flex;
+      align-items: center;
+
+      color: $cor-black-1;
+      @extend %transition-fast;
+
+      &:hover,
+      &:focus {
+        color: $cor-vivo-3;
+        text-decoration: none;
+        outline: none;
+      }
+    }
+
+    .icone-logo {
+      width: 17px;
+      height: 24px;
+      margin: 0 cRem(0.2em);
+    }
+  }
+
+  // mobile
+  @include media-breakpoint-down(md) {
+    // define altura do header para que o menu mobile abra sobre o conteudo
+    height: cRem(7em);
+
+    // logo centralizado para mobile
+    .pti-logo {
+      font-size: cRem(3em);
+      flex-grow: 1;
+      text-align: center;
+      
+      > a {
+        justify-content: center;
+      }
+
+      .icone-logo {
+        width: 14px;
+        height: 20px;
+      }
+    }
+
+    // border nos links para mobile
+    .nav-item {
+      border-bottom: 0.1em solid $cor-black-200;
+
+      &:last-child {
+        border: 0;
+      }
+    }
+
+    // aplica mascara de fundo quando menu mobile estiver aberto
+    &.pti-menu-show:after {
+      content: "";
+      display: block;
+      position: fixed;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 99;
+      animation: show-mask-menu 0.6s ease;
+      animation-fill-mode: forwards;
+      background: rgba($cor-vivo-10, 0.7);
+    }
+
+    @keyframes show-mask-menu {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  }
+
+  // desktop
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 1em;
+  }
+
+  // desktop
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 1em;
+  }
+}
+
+.pti-navbar {
+  padding: 0.5em 0;
+  z-index: 100;
+  background-color: $cor-white;
+
+  & > .container {
+    padding: 0 15px;
+    justify-content: space-between;
+  }
+
+  .navbar-nav {
+    // centraliza menu
+    margin: 0 auto;
+
+    // altera cor dos links do menu
+    .nav-link {
+      font-size: cRem(1.8em);
+      @extend %font-light;
+      color: #074d5f;
+
+      @include media-breakpoint-up(md) {
+        $pd: cRem(1.2em);
+        padding-left: $pd;
+        padding-right: $pd;
+      }
+
+      &:hover,
+      &:focus {
+        outline: none;
+        color: rgba(#000, 0.8);
+      }
+    }
+  }
+
+  // customiza icone para abrir e fechar o menu no mobile
+  .navbar-toggler {
+    position: relative;
+    width: cRem(2em);
+    height: cRem(1.5em);
+    padding: 0;
+    border: 0;
+    margin-right: cRem(1em);
+    outline: none;
+
+    // oculta img do bootstrap e cria as 3 linhas do botao do menu mobile
+    .navbar-toggler-icon {
+      background-image: none;
+      position: relative;
+      display: block;
+      height: cRem(0.2em);
+
+      &,
+      &:before,
+      &:after {
+        width: 100%;
+        background-color: $cor-black-1;
+        transition: all 0.2s ease-in-out;
+      }
+
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        height: 100%;
+      }
+
+      $distance: 8px;
+
+      &:before {
+        top: $distance;
+      }
+
+      &:after {
+        bottom: $distance;
+      }
+    }
+
+    // rotaciona o botao e muda as 3 linhas para um x
+    &:not(.collapsed) .navbar-toggler-icon {
+      transform: rotate(-45deg);
+
+      &:before {
+        top: 0;
+        // opacity: 0;
+        transform: rotate(-90deg);
+      }
+
+      &:after {
+        bottom: 0;
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  // modo expandido - desktop
+  @include media-breakpoint-up(lg) {
+    // realiza quebra linha no menu para proxima linha
+    & > .container {
+      flex-wrap: wrap;
+
+      .pti-menu {
+        flex: 1 1 100%;
+      }
+    }
+
+    // cria bolinhas entre os links
+    .nav-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &:after {
+        $tam: 4px;
+
+        content: "";
+        display: block;
+        width: $tam;
+        height: $tam;
+        // background-color: $cor-vivo-1;
+        border: 1px solid $cor-vivo-1;
+        border-radius: 50%;
+      }
+
+      &:last-child:after {
+        display: none;
+      }
+    }
+
+    // cria um efeito de ubderline sob o link quando passa o mouse
+    .nav-link {
+      &:after {
+        content: "";
+        display: block;
+        width: 0%;
+        height: 0.2ch;
+        margin: 0px auto;
+        transition: 0.15s ease-out;
+      }
+
+      &:hover:after,
+      &:focus:after {
+        width: 100%;
+        background-color: rgb(0, 198, 218);
+      }
+    }
+  }
+}

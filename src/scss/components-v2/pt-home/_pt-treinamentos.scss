@@ -1,0 +1,14 @@
+.pti-treinamentos {
+    .pti-card {
+        // exibe apenas os 2 primeiros treinamentos em telas menores que 1200
+        &:nth-child(n+3) {
+            @include media-breakpoint-down(sm) {
+                display: none;
+            }
+
+            @include media-breakpoint-only(lg) {
+                display: none;
+            }
+        }
+    }
+}

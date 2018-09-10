@@ -1,7 +1,6 @@
 ﻿// =============================================================================================
 // Imports
 
-// @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
-@import './modules/_essentials.scss';
-@import './_theme.scss';
+@import './essentials/_all.scss';
 @import './components/_all.scss';
+@import './_theme.scss';

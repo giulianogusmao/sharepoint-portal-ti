@@ -1,312 +1,414 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 
 <head>
-    <meta charset="utf-8">
-    <title>Poc - Portal de TI</title>
+  <meta charset="utf-8">
+  <title>Portal de TI</title>
 
-    <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/font-awesome/css/font-awesome.min.css">
 
-    <!-- build:css -->
-    <link rel="stylesheet" href="./css/style.css">
-    <!-- endbuild -->
+  <!-- build:css -->
+  <link rel="stylesheet" href="./css/fonts.css">
+  <link rel="stylesheet" href="./css/style-v2.css">
+  <!-- endbuild -->
 </head>
 
 <body>
 
-    <!-- header sharepoint -->
-    <div class="spfx-header">
-        <div class="container">
-            Office 365 ...
+  <!-- header - cabeçalho principal -->
+  <header class="pti-main pti-header pti-header-group">
+
+    <nav class="pti-navbar navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <!-- btn menu mobile -->
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#menuPrincipal" aria-controls="menuPrincipal"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- logotipo -->
+        <h1 class="navbar-brand pti-logo">
+          <a href="/">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43 63.1" class="icone-logo">
+              <style>
+                .st0 {
+                  fill: #1a8b9c
+                }
+              </style>
+              <path class="st0" d="M22.6 14.7h4.1V32h-4.1zM30.5 21h4.1v11h-4.1zM38.4 18.3h4.1v13.6h-4.1z" id="grafico" />
+              <path d="M5 17.8c0-4.7.9-7.9 2.8-9.8 1.8-1.9 5.1-2.8 9.9-2.8H43V0H17.7C11.5 0 7 1.4 4.2 4.3 1.3 7.2-.1 11.7-.1 17.8v11c0 6.1 1.4 10.6 4.3 13.5 2.9 2.9 7.4 4.3 13.5 4.3h20.1v1.6c0 3.2-.6 5.4-1.8 6.6-1.2 1.2-3.4 1.7-6.6 1.7-1.8 0-2.7.9-2.7 2.6 0 .9.2 1.5.7 1.9.5.4 1.1.6 1.9.6 4.7 0 8.1-1.1 10.3-3.3.3-.3.5-.5.7-.8 1.7-2.2 2.6-5.3 2.6-9.3V41.5H17.7c-4.7 0-8-.9-9.9-2.8C5.9 36.8 5 33.5 5 28.8v-11z"
+                fill="#cecece" id="monitor" />
+            </svg>
+
+            <span>Portal de TI</span>
+          </a>
+        </h1>
+
+        <!-- campo buscar -->
+        <div class="pti-search">
+          <a href="#" class="pti-btn-search" title="buscar">
+            <i class="fa fa-search"></i>
+          </a>
         </div>
+
+        <!-- Links menu principal -->
+        <div class="collapse navbar-collapse pti-menu" id="menuPrincipal">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">A Telefônica</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Notícias</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Vídeos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Documentos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Programas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Áreas da Empresa</a>
+            </li>
+          </ul>
+        </div>
+        <!-- .pti-menu -->
+
+      </div>
+      <!-- .container -->
+    </nav>
+
+  </header>
+  <!-- .pti-header -->
+
+  <!-- imagens Carousel -->
+  <section class="pti-main pti-carousel">
+    <div class="container">
+
+      <div class="carousel" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100 img-fluid" src="./img/banner/banner-estrategia-ti.jpg" alt="Banner Estratégia de TI com os pilares transformação, acelerar TTM e excelência operacional">
+          </div>
+        </div>
+      </div>
+
     </div>
-
-    <!-- header -->
-    <div class="pti-main pti-header">
-        <!-- header com logo e campo de busca -->
-        <div class="pti-header-group">
-            <div class="pti-header-container">
-                <div class="container">
-
-                    <div class="row align-items-center">
-                        <div class="col">
-                            <a href="/" class="pti-logo">Portal de TI</a>
-                        </div>
-
-                        <div class="col-2 text-right">
-                            <div class="pti-search">
-                                <a href="#" class="pti-btn-search" title="buscar">
-                                    <i class="fa fa-search"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+  </section>
+  <!-- .pti-carousel -->
 
 
-            <div class="pti-main-menu">
-                <div class="container">
+  <!-- migalha de pão - caminhho -->
+  <section class="pti-main pti-breadcrumb">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="/" class="pti-link">Portal de TI</a>
+          </li>
 
-                    <nav class="navbar navbar-expand-lg navbar-light">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
+          <li class="breadcrumb-divider">
+            <i class="fa fa-chevron-right"></i>
+          </li>
 
-                        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                            <ul class="navbar-nav d-flex justify-content-center w-100">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="#">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">A Telefônica</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Notícias</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Vídeos</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Documentos</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Programas</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Áreas da Empresa</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
+          <li class="breadcrumb-item active" aria-current="page">
+            Estratégia de TI
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </section>
 
-                </div>
-            </div>
+  <section class="pti-main pti-section">
+    <div class="container">
 
-        </div>
+      <!-- estrategia -->
+      <article class="pti-section-item pti-estrategia">
+        <!-- titulo article -->
+        <header class="pti-section-title">
+          <h2 class="pti-title">
+            Estratégia de TI
+          </h2>
+        </header>
+
+        <!-- conteudo -->
+        <section class="pti-body">
+          <div class="pti-text-container text-justify">
 
 
-        <!-- Imagem em destaque -->
-        <div class="container pti-img-destaque">
+            <h3 class="text-center">Você conhece a <span class="pti-color-vivo-3 text-uppercase">estratégia 2018 de TI</span>?</h3>
+            <br>
+
+            <p>
+                Movidos pelo único propósito da Telefônica | Vivo de sermos uma Telco Digital, desdobramos o Estratégia da companhia em 3 objetivos estratégicos para TI
+            </p>
+
+            <ol class="pti-list" type="1">
+              <li class="pti-item">
+                <p>
+                  <strong class="pti-color-vivo-3">TRANSFORMAÇÃO</strong> através da atualização do parque tecnológico dos nossos sistemas core, com os projetos estruturantes
+                </p>
+              </li>
+
+              <li class="pti-item">
+                <p>
+                  <strong class="pti-color-vivo-3">ACELERAR O TTM </strong> (Time-to-Market) através do foco e eficiência nas entregas, com técnicas Ágeis e Lean na cadeia
+                </p>
+              </li>
+
+              <li class="pti-item">
+                <p>
+                  <strong class="pti-color-vivo-3">EXCELÊNCIA OPERACIONAL</strong>, garantindo a estabilidade dos nossos sistemas e a aplicação eficiente dos recursos
+                </p>
+              </li>
+            </ol>
+            <br>
+
+            <img src="./img/vivo/estrategia-ti-estrutura.png" class="img-fluid" alt="Os pilares de TI: Transformação, Acelerar TTM e Excelência operacional">
+          </div>
+        </section>
+        <!-- .pti-estrategia-list -->
+      </article>
+      <!-- .pti-estrategia -->
+
+    </div>
+  </section>
+
+  <footer class="pti-main pti-footer">
+    <section class="container">
+      <ul class="pti-footer-list">
+        <li class="pti-item">
+          <a class="pti-link" href="http://dashboardti.redecorp.br/Home" title="DASHBOARD DE TI" data-toggle="tooltip" data-placement="top">
             <div class="pti-img">
-                <img src="/img/banner/img2.jpg" class="img-fluid" alt="Imagem ilustrativa Estratégia de TI">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_dashboard_de_ti.png" alt="DASHBOARD DE TI">
             </div>
-        </div>
-
-
-        <!-- migalha de pão - bread crumb -->
-        <div class="pti-bread-crumb ">
-            <div class="container">
-                <ul class="pti-list pti-link-show-line">
-                    <li class="pti-list-item">
-                        <a href="/" title="Ir para home">Portal de TI</a>
-                    </li>
-                    <li class="pti-list-item pti-list-item-divider">
-                        <i class="fa fa-chevron-right"></i>
-                    </li>
-                    <li class="pti-list-item pti-item-active">
-                        Estratégia de TI
-                    </li>
-                </ul>
+            <span class="pti-text">DASHBOARD DE TI</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="https://portaldegovernanca.telefonica.com.br/governanca/pages/portal/home.jsf" title="PORTAL DE TI"
+            data-toggle="tooltip" data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_portal_de_ti.png" alt="PORTAL DE TI">
             </div>
-        </div>
-        <!-- .pti-bread-crumb -->
-
-    </div>
-    <!-- .pti-header -->
-
-    <!-- body masterpage -->
-    <div class="pti-main pti-section">
-
-        <!-- corpo da página que será variável -->
-        <div class="pti-body-model-1 pti-page-estrategia">
-
-            <!-- Titulo página -->
-            <div class="container">
-
-                <div class="pti-box-separate">
-                    <div class="pti-estrategia">
-
-                        <!-- titulo principal -->
-                        <div class="pti-title-container">
-                            <h3 class="pti-title pti-title-line">
-                                Estratégia de TI
-                            </h3>
-                        </div>
-
-                        <div class="pti-section-body">
-                            <div class="pti-text-container text-justify">
-                                <h3 class="text-center">Você conhece a
-                                    <span class="pti-color-vivo-3">estratégia 2018 de TI</span>?</h3>
-                                <br>
-
-                                <p>
-                                    Movidos pelo <strong class="pti-color-vivo-3">único propósito</strong> da
-                                    <strong class="text-hide" style="background: url('/img/vivo/logo-telefonica-vivo.png') center center no-repeat; font: initial;">Telefonica|Vivo</strong> 
-                                    de sermos uma <strong class="pti-color-vivo-3">Telco Digital</strong>, desdobramos o Mapa Estratégico da companhia em 5 eixos estratégicos para TI:
-                                </p>
-
-                                <ol class="pti-list-ol pti-list-circle" type="1">
-                                    <li class="pti-list-item">
-                                        <strong class="pti-color-vivo-3">TRANSFORMAÇÃO DO NEGÓCIO</strong> Habilitar uma digitalização end-to-end através da TRANSFORMAÇÃO
-                                        COMPLETA de processos e sistemas;</li>
-                                    <li class="pti-list-item">
-                                        <strong class="pti-color-vivo-3">ENTREGAS DE VALOR</strong> TI no core-business, com ENTREGA MAXÍMA DE VALOR, o mais cedo possível
-                                        COM QUALIDADE e soluções sustentáveis;
-                                    </li>
-                                    <li class="pti-list-item">
-                                        <strong class="pti-color-vivo-3">EXCELÊNCIA OPERACIONAL</strong> com o uso de novas tecnologias, melhores práticas e alocação eficiente
-                                        de recursos;</li>
-                                    <li class="pti-list-item">
-                                        <strong class="pti-color-vivo-3">EVOLUÇÃO DO MODELO OPERACIONAL</strong> Novo modelo de trabalho baseado em ÁGIL, com EQUIPES MULTIDISCIPLINARES
-                                        executando ciclos de entrega mais curtos;</li>
-                                    <li class="pti-list-item">
-                                        <strong class="pti-color-vivo-3">RECURSOS</strong> ALOCAÇÃO EFICIENTE de recursos financeiros e equipes multifuncionais trabalhando
-                                        JUNTAS EM COLABORAÇÃO;</li>
-                                </ol>
-                                <br>
-                                <br>
-
-                                <div class="text-center">
-                                    <h5>A <span class="pti-color-vivo-3">Estratégia de TI é orientada pelo Cubo</span> e está estruturada em 5 eixos:</h5>
-
-                                    <div class="pti-img">
-                                        <img src="/img/vivo/estrategia-ti-estrutura.jpg" class="img-fluid" alt="Estrutura da estratégia de TI">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
+            <span class="pti-text">PORTAL DE TI</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="http://ppm.telefonica.br/sites/processosti/Paginas/Home.aspx" title="PORTAL DE PROCESSOS" data-toggle="tooltip"
+            data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_portal_de_processos.png" alt="PORTAL DE PROCESSOS">
             </div>
-        </div>
-
-        <!-- fim do corpo da páagina -->
-    </div>
-    <!-- .pti-section -->
-
-    <!-- Footer -->
-    <div class="pti-main pti-footer">
-        <div class="container">
-
-            <div class="pti-box-separate">
-                <div class="pti-link-group pti-links-uteis">
-                    <h4 class="pti-link-title">Links Úteis</h4>
-
-                    <div class="row">
-                        <div class="pti-wrapper col-md">
-                            <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
-                            <a href="#" class="pti-box pti-box2" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
-                            <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
-                            <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
-                            <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
-                            <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
-                            <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
-                            <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
-                            <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
-                        </div>
-
-                        <div class="pti-wrapper col-md">
-                            <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
-                            <a href="#" class="pti-box pti-box2" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
-                            <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
-                            <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
-                            <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
-                            <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
-                            <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
-                            <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
-                            <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
-                        </div>
-
-                        <div class="pti-wrapper col-md">
-                            <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
-                            <a href="#" class="pti-box pti-box2" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
-                            <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
-                            <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
-                            <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
-                            <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
-                            <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
-                            <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
-                            <a href="#" class="pti-box pti-box1" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">link</a>
-                        </div>
-                    </div>
-
-                </div>
+            <span class="pti-text">PORTAL DE PROCESSOS</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="https://beneficios.telefonica.com.br/Signin.aspx?ReturnUrl=%2f" title="PORTAL DE BENEFÍCIOS (BE FLEX)"
+            data-toggle="tooltip" data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_portal_de_beneficios.png" alt="PORTAL DE BENEFÍCIOS (BE FLEX)">
             </div>
-
-            <!-- footer telefonica .pti-footer-text -->
-            <div class="pti-footer-text">
-                <div class="d-flex align-items-center justify-content-between">
-                    <div class="pti-footer-name">©&nbsp;Telefônica Brasil S.A.</div>
-
-                    <div class="pti-social-midias">
-                        <ul class="pti-list list-inline">
-                            <li>Vivo</li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-facebook-square"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-linkedin"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-twitter"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-google-plus"></i>
-                                </a>
-                            </li>
-                        </ul>
-                        <ul class="pti-list list-inline">
-                            <li>Telefônica</li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-facebook-square"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-linkedin"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-twitter"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-google-plus"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+            <span class="pti-text">PORTAL DE BENEFÍCIOS (BE FLEX)</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="http://brtlvbgs0020pl.redecorp.br/CMApplicationCatalog/#/SoftwareCatalog" title="PORTAL DE SOFTWARES"
+            data-toggle="tooltip" data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_portal_de_softwares.png" alt="PORTAL DE SOFTWARES">
             </div>
-            <!-- footer telefonica .pti-footer-text -->
+            <span class="pti-text">PORTAL DE SOFTWARES</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="http://portalsan.gvt.net.br/PortalSAN/" title="PORTAL SAN (ATENDIMENTO)" data-toggle="tooltip"
+            data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_portal_atendimento.png" alt="PORTAL SAN (ATENDIMENTO)">
+            </div>
+            <span class="pti-text">PORTAL SAN (ATENDIMENTO)</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="https://www.telefonica-prisma3.com.br/Prisma3/" title="PRISMA" data-toggle="tooltip" data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_prisma.png" alt="PRISMA">
+            </div>
+            <span class="pti-text">PRISMA</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="http://corp.vivo.com.br/sites/IIOT/centraldeservicos/index.aspx" title="CENTRAL DE SERVIÇOS" data-toggle="tooltip"
+            data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_central_de_servicos.png" alt="CENTRAL DE SERVIÇOS">
+            </div>
+            <span class="pti-text">CENTRAL DE SERVIÇOS</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="http://oim.vivo.com.br/identity/faces/signin?_afrLoop=2609114234252694&_afrWindowMode=0&_adf.ctrl-state=hlq1ne2x0_4"
+            title="IDM" data-toggle="tooltip" data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_idm.png" alt="IDM">
+            </div>
+            <span class="pti-text">IDM</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="http://10.41.26.42:8080/secure/Dashboard.jspa" title="JIRA" data-toggle="tooltip" data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_jira.png" alt="JIRA">
+            </div>
+            <span class="pti-text">JIRA</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="http://ppm.telefonica.br/sites/pwa/default.aspx" title="PPM" data-toggle="tooltip" data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_ppm.png" alt="PPM">
+            </div>
+            <span class="pti-text">PPM</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="http://alm.vivo.com.br/qcbin/" title="QUALITY CENTER" data-toggle="tooltip" data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_quality_center.png" alt="QUALITY CENTER">
+            </div>
+            <span class="pti-text">QUALITY CENTER</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="http://gestaoservicosti.redecorp.br:7001/arsys/shared/login.jsp" title="REMEDY" data-toggle="tooltip"
+            data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_remedy.png" alt="REMEDY">
+            </div>
+            <span class="pti-text">REMEDY</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="https://svuxprtc1.gvt.net.br:9443/ccm/web/projects/Pequenos%20Projetos#action=com.ibm.team.dashboard.viewDashboard"
+            title="RTC" data-toggle="tooltip" data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_rtc.png" alt="RTC">
+            </div>
+            <span class="pti-text">RTC</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="http://gpo.vivo.com.br/request/seguranca/IdentificarAutenticacao" title="REQUEST GPO" data-toggle="tooltip"
+            data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_request_gpo.png" alt="REQUEST GPO">
+            </div>
+            <span class="pti-text">REQUEST GPO</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="https://sdm.gvt.com.br/CAisd/pdmweb.exe" title="SDM (Vivo 2)" data-toggle="tooltip" data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_sdm.png" alt="SDM (Vivo 2)">
+            </div>
+            <span class="pti-text">SDM (Vivo 2)</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="http://intranet.telefonica.com.br/sitearea-seguranca-ti" title="SEGURANÇA DE TI" data-toggle="tooltip"
+            data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_seguranca_de_ti.png" alt="SEGURANÇA DE TI">
+            </div>
+            <span class="pti-text">SEGURANÇA DE TI</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="http://sigma.redecorp.br/" title="SIGMA" data-toggle="tooltip" data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_sigma.png" alt="SIGMA">
+            </div>
+            <span class="pti-text">SIGMA</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="http://10.41.26.42:9090/login.action?os_destination=/dashboard.action" title="WIKI" data-toggle="tooltip"
+            data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_wiki.png" alt="WIKI">
+            </div>
+            <span class="pti-text">WIKI</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="http://corp.vivo.com.br/sites/IIOT/gestaodeconfiguracao/Documentos%20Compartilhados/index.aspx"
+            title="GESTÃO DE CONFIGURAÇÃO DE ATIVOS" data-toggle="tooltip" data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_gestao_de_configuracao_de_ativos.png" alt="GESTÃO DE CONFIGURAÇÃO DE ATIVOS">
+            </div>
+            <span class="pti-text">GESTÃO DE CONFIGURAÇÃO DE ATIVOS</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="http://corp.vivo.com.br/sites/IIOT/gestaodesolucoes/Portal%20de%20Solu%C3%A7%C3%B5es/Index.aspx"
+            title="GESTÃO DE INCIDENTES E SOLUÇÕES" data-toggle="tooltip" data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_gestao_de_incidentes_e_solucoes.png" alt="GESTÃO DE INCIDENTES E SOLUÇÕES">
+            </div>
+            <span class="pti-text">GESTÃO DE INCIDENTES E SOLUÇÕES</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="http://corp.vivo.com.br/sites/IIOT/GMUD/Portal%202015/Index.asp" title="GESTÃO DE MUDANÇA (GMUD)"
+            data-toggle="tooltip" data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_gmud.png" alt="GESTÃO DE MUDANÇA (GMUD)">
+            </div>
+            <span class="pti-text">GESTÃO DE MUDANÇA (GMUD)</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="http://brtlvbgs0020pl.redecorp.br/CMApplicationCatalog/#/SoftwareCatalog" title="WORKPLACE BRASIL"
+            data-toggle="tooltip" data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_workplace_brasil.png" alt="WORKPLACE BRASIL">
+            </div>
+            <span class="pti-text">WORKPLACE BRASIL</span>
+          </a>
+        </li>
+        <li class="pti-item">
+          <a class="pti-link" href="http://intranet.telefonica.com.br/vans---sao-paulo" title="VANS" data-toggle="tooltip" data-placement="top">
+            <div class="pti-img">
+              <img class="pti-img img-fluid" src="./img/vivo/icones/footer/icones_vans.png" alt="VANS">
+            </div>
+            <span class="pti-text">VANS</span>
+          </a>
+        </li>
+      </ul>
 
-        </div>
-    </div>
-    <!-- .pti-footer -->
+      <!-- footer telefonica .pti-footer-text -->
+      <div class="pti-footer-text">
+        <div class="pti-telefonica">©&nbsp;Telefônica Brasil S.A.</div>
+      </div>
+      <!-- footer telefonica .pti-footer-text -->
+    </section>
+  </footer>
 
 
-    <script src="./assets/jquery/dist/jquery.slim.min.js"></script>
-    <script src="./assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- build:js -->
-    <script src="./js/main.js"></script>
-    <!-- endbuild  -->
+  <script src="./assets/jquery/dist/jquery.slim.min.js"></script>
+  <script src="./assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- build:js -->
+  <script src="./js/main.js"></script>
+  <!-- endbuild  -->
 </body>
 
 </html>

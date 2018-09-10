@@ -1,0 +1,157 @@
+/* ======================================================
+    _g-Card
+*/
+.pti-card {
+  $br: 0.2em; // border-radius
+  $border: cRem(0.1em) solid $cor-black-300;
+  margin-bottom: cRem(1.5em);
+
+  &,
+  & > a {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    border-radius: $br;
+    word-wrap: break-word;
+  }
+
+  & > a {
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+
+    &:focus {
+      outline: none;
+      @include box-shadow-focus();
+    }
+  }
+
+  .pti-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    min-height: cRem(9em);
+    padding: cRem(1.5em) cRem(0.8em);
+    border: $border;
+    border-bottom: 0;
+    border-radius: $br $br 0 0;
+
+    color: $cor-white;
+  }
+
+  .pti-card-body {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+
+    color: $cor-text;
+    padding: cRem(1.5em);
+
+    border: $border;
+    border-top: 0;
+    border-radius: 0 0 $br $br;
+
+    .pti-titulo {
+      font-size: cRem(1.6em);
+      color: $cor-black-1;
+    }
+
+    .pti-info {
+      display: flex;
+      width: 100%;
+      flex-grow: 1;
+      font-size: cRem(1.2em);
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-top: cRem(1em);
+    }
+  }
+
+  // ajusta header e card-horizontal
+  @media all and (min-width: 400px) {
+    .pti-card-header {
+      flex-direction: column;
+
+      .pti-info {
+        margin-top: cRem(1.5rem);
+      }
+    }
+
+    &.pti-card-horizontal {
+      &,
+      & > a {
+        flex-direction: row;
+      }
+
+      .pti-card-header {
+        border: $border;
+        border-right: 0;
+        border-radius: $br 0 0 $br;
+        flex: 0 0 cRem(12.5em);
+      }
+
+      .pti-card-body {
+        flex: 1 1 100%;
+        border: $border;
+        border-left: 0;
+        border-radius: 0 $br $br 0;
+      }
+    }
+  }
+}
+
+/* define as cores dos cards de acordo com cada tipo */
+@each $name, $bg,
+  $bg-hover
+    in (
+      ("card", $cor-vivo-2, $cor-vivo-1),
+      ("card-danger", $cor-danger, $cor-danger-dark),
+      ("card-success", $cor-success, $cor-success-dark),
+      ("card-light", $cor-black-500, $cor-black-700),
+      ("card-info", $cor-vivo-5, $cor-vivo-7)
+    )
+{
+  .pti-#{$name} {
+    .pti-card-header {
+      background-color: $bg;
+      border-color: $bg;
+    }
+
+    .pti-info {
+      .pti-status {
+        color: $bg;
+      }
+
+      .pti-badge {
+        color: $cor-white;
+        background-color: $bg-hover;
+      }
+    }
+
+    & > a {
+      &:focus {
+        @include box-shadow-focus($bg);
+      }
+
+      &:hover,
+      &:focus {
+        .pti-card-header {
+          background-color: $bg-hover;
+        }
+
+        .pti-card-body {
+          color: $cor-black-1;
+          background-color: $cor-black-50;
+        }
+
+        .pti-card-header,
+        .pti-card-body {
+          border-color: $bg-hover;
+        }
+      }
+    }
+  }
+}
