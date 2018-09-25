@@ -42,7 +42,7 @@
       font-size: cRem(3em);
       flex-grow: 1;
       text-align: center;
-      
+
       > a {
         justify-content: center;
       }
@@ -89,12 +89,7 @@
 
   // desktop
   @include media-breakpoint-up(lg) {
-    margin-bottom: 1em;
-  }
-
-  // desktop
-  @include media-breakpoint-up(lg) {
-    margin-bottom: 1em;
+    margin-bottom: 0;
   }
 }
 
@@ -115,8 +110,9 @@
     // altera cor dos links do menu
     .nav-link {
       font-size: cRem(1.8em);
-      @extend %font-light;
       color: #074d5f;
+      white-space: nowrap;
+      @extend %font-light;
 
       @include media-breakpoint-up(md) {
         $pd: cRem(1.2em);
@@ -199,9 +195,18 @@
     & > .container {
       flex-wrap: wrap;
 
-      .pti-menu {
-        flex: 1 1 100%;
-      }
+      // .pti-menu {
+      //   flex: 1 1 100%;
+      // }
+    }
+
+    & > .container {
+      margin: 0 40px;
+      max-width: 100%;
+    }
+
+    .pti-search {
+      order: 1;
     }
 
     // cria bolinhas entre os links
