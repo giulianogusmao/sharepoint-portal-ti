@@ -3,14 +3,35 @@
 */
 .#{$project-name}.pti-footer {
   background-color: $cor-vivo-9;
-  padding: 1rem 0;
-  margin-top: 2rem;
+  padding: .5rem 0;
   color: $cor-white;
 
   .pti-footer-text {
-    margin-top: 1em;
     text-align: center;
     font-size: cRem(1.2em);
+  }
+
+  .btn-links-uteis {
+    position: absolute;
+    right: 15px;
+    bottom: 0;
+  }
+
+  & > .container {
+    position: relative;
+  }
+
+  .pti-links-uteis {
+    overflow: hidden;
+    margin-bottom: .5em;
+    transition: all .3s ease-in-out;
+  }
+
+  &:not(.show-links-uteis) {
+    .pti-links-uteis {
+      height: 0 !important;
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -19,6 +40,7 @@
   padding: 0;
   display: flex;
   flex-flow: row wrap;
+  margin-bottom: 1em;
 
   .pti-item {
     list-style: none;

@@ -16,4 +16,15 @@ $(function () {
 
     // ativa tooltips
     $('[data-toggle="tooltip"]').tooltip();
+
+
+    // Exibir/Ocultar links úteis
+    $('.btn-links-uteis').on('click', function(event) {
+        event.preventDefault();
+
+        $('.pti-main.pti-footer')
+            .toggleClass('show-links-uteis')
+            .find('.pti-links-uteis')
+            .css({ 'height': $('.pti-footer-list').outerHeight() });
+    });
 });
