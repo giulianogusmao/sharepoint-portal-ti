@@ -1,0 +1,17 @@
+/* ======================================================
+    _g-sharepoint
+*/
+
+/* 
+    impede que o sharepoint fixe o tamanho maximo do conteudo, desta forma o body terá 
+    tamanho minimo do navegador e tamanho maximo do seu conteudo;
+*/
+.sp-pageLayout-sideNav[class*="belowHeader"] {
+    &, [class*="pageLayout"] {
+        flex: 1 0 auto;
+    }
+
+    [class*="pageLayout"] > div {
+        overflow-y: auto;
+    }
+}

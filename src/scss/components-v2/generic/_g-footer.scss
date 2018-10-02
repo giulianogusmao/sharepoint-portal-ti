@@ -12,41 +12,7 @@
   }
 
   .pti-btn-links-uteis {
-    position: absolute;
-    right: 15px;
-    bottom: 0;
-    cursor: pointer;
-
-    .pti-span-hide {
       display: none;
-    }
-  }
-
-  & > .container {
-    position: relative;
-  }
-
-  .pti-links-uteis {
-    overflow: hidden;
-    margin-bottom: .5em;
-    transition: all .2s ease-in-out;
-  }
-
-  &:not(.pti-show-links-uteis) {
-    .pti-links-uteis {
-      height: 0 !important;
-      margin-bottom: 0;
-    }
-  }
-
-  &.pti-show-links-uteis {
-    .pti-span-hide {
-      display: inline;
-    }
-
-    .pti-span-show {
-      display: none;
-    }
   }
 }
 
