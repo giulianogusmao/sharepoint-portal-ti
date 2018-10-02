@@ -16,38 +16,6 @@
   <!-- endbuild -->
 </head>
 
-<style>
-    body {
-      overflow: hidden;
-    }
-  
-    .pti-overlay-loading .pti-waiting:after {
-      content: '.';
-      opacity: 0;
-      display: inline-block;
-      width: 20px;
-      animation: 2s loadingwaiting infinite;
-    }
-    
-    @keyframes loadingwaiting {
-      0% {
-        opacity: 0;
-      }
-      25% {
-        content: '.';
-        opacity: 1;
-      }
-      50% {
-        content: '..';
-        opacity: 1;
-      }
-      75% {
-        content: '...';
-        opacity: 1;
-      }
-    }
-  </style>
-
 <body>
   <div class="pti-overlay-loading" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 9999; background: #FFF; color: #0f5c6f; display: flex; align-items: center; justify-content: center;">
     <span class="pti-msg">Carregando</span>
@@ -794,13 +762,6 @@
   <!-- build:js -->
   <script src="./js/main.js"></script>
   <!-- endbuild  -->
-
-  <!-- <script>
-    $(function () {
-      // esconde overlay carregando...
-      $('.pti-overlay-loading').css('display','none');
-    });
-  </script> -->
 </body>
 
 </html>

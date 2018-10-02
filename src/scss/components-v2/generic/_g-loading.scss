@@ -1,0 +1,36 @@
+.pti-overlay-loading {
+    opacity: 1;
+    visibility: visible;
+
+    &.pti-ocultar-loading {
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s linear;
+    }
+
+    .pti-waiting:after {
+        content: '.';
+        opacity: 0;
+        display: inline-block;
+        width: 20px;
+        animation: 2s loadingwaiting infinite;
+    }
+}
+
+@keyframes loadingwaiting {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        content: '.';
+        opacity: 1;
+    }
+    50% {
+        content: '..';
+        opacity: 1;
+    }
+    75% {
+        content: '...';
+        opacity: 1;
+    }
+}

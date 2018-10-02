@@ -71,4 +71,11 @@ $(function () {
             }, 200);
         });
     })();
+
+    // esconde overlay carregando...
+    (function() {
+        setTimeout(() => {
+            $('.pti-overlay-loading').addClass('pti-ocultar-loading');
+        }, 1000);
+    })();
 });
