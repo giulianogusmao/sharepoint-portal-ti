@@ -18,9 +18,32 @@ $(function () {
     $('[data-toggle="tooltip"]').tooltip();
 
     // esconde overlay carregando...
-    (function () {
-        setTimeout(() => {
-            $('.pti-overlay-loading').addClass('pti-ocultar-loading');
-        }, 1000);
+    (async function () {
+        console.log('start');
+        
+        var loadingResolve, loadingRejected;
+        var loadingPromise = new Promise(function(res, rej) {
+            loadingResolve = res;
+            loadingRejected = rej;
+        });
+
+        loadingPromise.then(
+            function () {
+                $('.pti-overlay-loading').addClass('pti-ocultar-loading');
+                console.log('promise resolved');
+            },
+            function () {
+                console.log('promise rejected');
+            }
+        );
+
+        setTimeout(function() {
+            console.log('call promise');
+            try {
+                loadingResolve('teste');                
+            } catch(e) {
+                console.error('error resolve')
+            }
+        }, 2000);
     })();
 });
