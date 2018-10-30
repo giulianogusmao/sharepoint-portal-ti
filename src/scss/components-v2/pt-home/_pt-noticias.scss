@@ -1,8 +1,10 @@
 /* ======================================================
-    _pt-Noticias
+    _pt-comunicacao-home
 */
-.pti-noticia-thumb {
-    display: flex;
+.pti-comunicacao-home {
+    a.pti-link {
+        margin-bottom: 0;
+    }
     
     // mobile noticias sendo 1 por linha
     @include media-breakpoint-down(xs) {
@@ -19,43 +21,5 @@
         &:nth-child(n+3) {
             display: none;
         }
-    }
-    
-    a.pti-link {
-        &:hover, &:focus {
-            .pti-img {
-                transform: scale(1.05);
-            }
-
-            .pti-title {
-                background-color: rgba($cor-vivo-1, .9);
-            }
-        }
-
-        &:focus {
-            outline: none;
-            @include box-shadow-focus();
-        }
-    }
-
-    .pti-img-container {
-        .pti-img {
-            width: 100%;
-            @extend %transition;
-        }
-    }
-
-    .pti-title {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        background-color: rgba($cor-vivo-2, .8);
-        text-shadow: 0 0 .1em $cor-vivo-3;
-        color: #FFF;
-        margin: 0;
-        padding: cRem(.5em) cRem(1em);
-        font-size: cRem(1.6em);
-        @extend %transition;
     }
 }

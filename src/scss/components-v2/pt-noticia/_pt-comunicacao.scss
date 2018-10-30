@@ -1,0 +1,58 @@
+/* ======================================================
+    _pt-comunicacao
+*/
+.pti-noticia-thumb {
+  display: flex;
+
+  .pti-img {
+    width: 100%;
+    @extend %transition;
+  }
+
+  .pti-title {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba($cor-vivo-2, 0.8);
+    text-shadow: 0 0 0.1em $cor-vivo-3;
+    color: #fff;
+    margin: 0;
+    padding: cRem(0.5em) cRem(1em);
+    font-size: cRem(1.6em);
+    @extend %transition;
+  }
+
+  .pti-subtitle {
+    margin-top: 0.5em;
+    color: $cor-vivo-9;
+    font-size: cRem(1.3em);
+  }
+
+  a.pti-link {
+    width: 100%;
+    margin-bottom: 0.5em;
+
+    &:hover,
+    &:focus {
+      .pti-img {
+        transform: scale(1.05);
+      }
+
+      .pti-title {
+        background-color: rgba($cor-vivo-1, 0.9);
+      }
+
+      .pti-subtitle {
+        color: $cor-vivo-2;
+      }
+    }
+
+    &:focus {
+      outline: none;
+      & > div {
+        @include box-shadow-focus();
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Portal de TI - icones treinamentos</title>
+
+    <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no">
+
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/font-awesome/css/font-awesome.min.css">
+
+    <!-- build:css -->
+    <link rel="stylesheet" href="./css/style-v2.css">
+    <!-- endbuild -->
+</head>
+
+<body>
+
+    <!-- body masterpage -->
+    <div class="pti-main pti-section">
+        <div class="container">
+            <article class="pti-section-item pti-treinamentos-icones">
+                <br>
+
+                <!-- titulo article -->
+                <header class="pti-section-title">
+                    <h2 class="pti-title">
+                        Formulário
+                    </h2>
+                </header>
+                <br>
+
+                <section>
+                    <form>
+                        <div class="form-group">
+                            <label for="nome">Nome:</label>
+                            <input type="text" class="form-control" id="nome" placeholder="Nome completo">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="select">Select:</label>
+                            <select class="form-control" id="select">
+                                <option>Selecione</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="multiselect">Multi select:</label>
+                            <select multiple class="form-control" id="multiselect">
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="textarea">Textarea:</label>
+                            <textarea class="form-control" id="textarea" rows="3"></textarea>
+                        </div>
+
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="check">
+                            <label class="form-check-label:" for="check">Checkbox</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-info">Enviar</button>
+                        <button type="reset" class="btn btn-danger">Cancelar</button>
+                    </form>
+                </section>
+                <!-- .pti-treinamentos-icones-list -->
+            </article>
+            <!-- .pti-treinamentos-icones -->
+        </div>
+        <!-- .container -->
+    </div>
+    <!-- .pti-section -->
+
+
+    <script src="./assets/jquery/dist/jquery.slim.min.js"></script>
+    <script src="./assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- build:js -->
+    <script src="./js/main.js"></script>
+    <!-- endbuild  -->
+</body>
+
+</html>

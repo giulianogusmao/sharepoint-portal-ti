@@ -1,0 +1,35 @@
+/* ======================================================
+    _pt-noticia
+*/
+.pti-noticia {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+
+  &-100 {
+    max-width: 100%;
+  }
+
+  .pti-title {
+    font-size: cRem(2.6em);
+    padding-bottom: 0.2em;
+    border-bottom: 2px solid $cor-vivo-1;
+    color: $cor-vivo-9;
+  }
+
+  .pti-subtitle {
+    margin-top: .5em;
+    margin-bottom: 0.2em;
+    font-size: cRem(2em);
+    color: $cor-vivo-6;
+  }
+
+  &-body {
+    margin: 1em 0;
+  }
+
+  .pti-data-publicacao {
+    @extend %font-light;
+    color: #444444;
+  }
+}
