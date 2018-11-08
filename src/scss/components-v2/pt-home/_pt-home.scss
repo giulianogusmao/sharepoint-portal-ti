@@ -1,0 +1,17 @@
+/* ======================================================
+    _pt-home
+*/
+$wd: percentage(0.28);
+
+.pti-col-pergunte {
+  @include media-breakpoint-up("lg") {
+    flex: 0 0 $wd;
+    max-width: $wd;
+  }
+}
+.pti-col-treinamentos {
+  @include media-breakpoint-up("lg") {
+    flex: 0 0 100% - $wd;
+    max-width: 100% - $wd;
+  }
+}
