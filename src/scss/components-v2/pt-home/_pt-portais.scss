@@ -9,19 +9,23 @@
     margin: 0;
     padding: 0;
 
-    // @media all and (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
-    //     display: flex;
-    //     flex-wrap: wrap;
-
-    //     .pti-portal {
-    //         flex: 0 0 50%;
-    //         max-width: 50%;
-    //         word-break: break-all;
-    //     }
-    // }
-
+    display: flex;
+    flex-wrap: wrap;
+    
     .pti-portal {
         list-style: none;
+        flex-basis: 100%;
+
+        @media all and (min-width: $screen-lg-min) {
+            flex: 0 0 33%;
+            max-width: 33%;
+            word-break: break-all;
+            padding-right: 15px;
+
+            &:nth-child(3n) {
+                padding-right: 0;
+            }
+        }
     }
 
     .pti-link {
