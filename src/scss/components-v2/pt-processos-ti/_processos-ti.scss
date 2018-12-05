@@ -1,0 +1,95 @@
+.pti-processos-ti {
+  $space: 10px;
+  $color-1: $cor-vivo-5;
+  $color-2: $cor-vivo-3;
+  $color-3: $cor-vivo-2;
+
+  // todos os niveis
+  ul {
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex: 1 0 auto;
+
+    > li {
+      list-style: none;
+      border: 1px solid #000;
+      text-align: center;
+
+      &,
+      > a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-grow: 1;
+      }
+
+      // titulo
+      span {
+        padding: 5px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  & > ul {
+    // nivel 1
+    flex-direction: row;
+
+    > li {
+      display: flex;
+      flex-direction: column;
+      flex: 1 0 auto;
+      margin: 0 $space $space 0;
+
+      &:nth-child(n + 4) {
+        margin-right: 0;
+      }
+    }
+
+    // grupo 1 -
+    > li:first-child {
+      // apartir do gestão de portfolio apenas 50%
+      li:nth-child(n + 2) {
+        flex-basis: 45%;
+        max-width: 45%;
+      }
+    }
+
+    // grupo 5 - governança de ti abaixo de todos
+    > li:last-child {
+      flex: 1 1 100%;
+
+      > ul {
+        flex-direction: row;
+      }
+    }
+
+    // grupo 2 - gestão de projetos preenche a linha
+    > li:nth-child(2) {
+      flex: 1 0 auto;
+    }
+  }
+
+  .pti-nivel-1 > li {
+    background-color: $color-1;
+    color: $cor-white;
+  }
+
+  .pti-nivel-2 > li {
+    > a {
+      &:focus,
+      &:hover {
+        color: $cor-vivo-1;
+        background-color: rgba($cor-vivo-8, .3);
+      }
+    }
+  }
+
+  .pti-area-3 {
+    align-self: flex-end;
+  }
+}
