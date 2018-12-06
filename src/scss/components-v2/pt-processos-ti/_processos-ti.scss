@@ -1,95 +1,361 @@
+%dflex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .pti-processos-ti {
   $space: 10px;
-  $color-1: $cor-vivo-5;
+  $br: 0.2em;
+  $mHeight: 30px;
+  $titlemHeight: 40px;
+  $wdMark: 15px;
+
+  $color-1: $cor-vivo-7;
+  $bg-1: $cor-vivo-5;
   $color-2: $cor-vivo-3;
+  $bg-2: rgb(208, 225, 229);
   $color-3: $cor-vivo-2;
+  $bg-3: rgb(152, 199, 206);
+
+  width: 100%;
+  overflow-x: auto;
+
+  .pti-framework {
+    min-width: 1000px;
+  }
+
+  // links
+  // -------------------------------------------------------------------
+  .pti-link {
+    padding: 4px $wdMark;
+    @extend %transition;
+
+    &,
+    &:visited {
+      color: $cor-black-800;
+    }
+
+    &:focus,
+    &:hover {
+      color: $cor-white;
+    }
+
+    span {
+      z-index: 1;
+    }
+
+    &:before {
+      content: "\003E";
+      display: flex;
+      align-items: center;
+
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: $wdMark;
+
+      font-weight: bold;
+      color: $cor-white;
+      padding: 0 3px;
+      border-radius: $br;
+      z-index: 0;
+
+      @extend %transition-fast;
+    }
+
+    &:not(.pti-link-2):before {
+      left: 0;
+    }
+
+    &:focus:before,
+    &:hover:before {
+      justify-content: flex-end;
+      width: 100%;
+    }
+  }
 
   // todos os niveis
+  // -------------------------------------------------------------------
   ul {
     padding: 0;
     margin: 0;
+    flex-grow: 1;
+    font-size: 14px;
+    @extend %dflex;
 
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    flex: 1 0 auto;
+    .pti-group {
+      flex-grow: 1;
+      @extend %dflex;
+    }
 
-    > li {
+    .pti-item {
+      position: relative;
       list-style: none;
-      border: 1px solid #000;
       text-align: center;
+      // border: 1px solid #000;
 
       &,
       > a {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        min-height: $mHeight;
+        border-radius: $br;
+        word-break: break-word;
         flex-grow: 1;
+        @extend %dflex;
+      }
+
+      ul {
+        border-radius: 0 0 $br $br;
       }
 
       // titulo
-      span {
+      > .pti-title {
+        min-height: $titlemHeight;
         padding: 5px;
+        @extend %dflex;
+      }
+
+      .pti-title {
+        text-transform: uppercase;
         font-weight: bold;
+        font-size: 85%;
       }
     }
   }
 
-  & > ul {
+  // estilizando por nivel
+  // -------------------------------------------------------------------
+  .pti-nivel-1 {
     // nivel 1
     flex-direction: row;
 
-    > li {
-      display: flex;
-      flex-direction: column;
-      flex: 1 0 auto;
-      margin: 0 $space $space 0;
+    > .pti-item {
+      margin-bottom: $space;
+      background-color: $bg-1;
+      color: $cor-white;
 
-      &:nth-child(n + 4) {
-        margin-right: 0;
+      &:nth-child(n + 2) {
+        margin-left: $space;
       }
-    }
 
-    // grupo 1 -
-    > li:first-child {
-      // apartir do gestão de portfolio apenas 50%
-      li:nth-child(n + 2) {
-        flex-basis: 45%;
-        max-width: 45%;
-      }
-    }
+      > .pti-link {
+        &:before {
+          background-color: $color-1;
+        }
 
-    // grupo 5 - governança de ti abaixo de todos
-    > li:last-child {
-      flex: 1 1 100%;
-
-      > ul {
-        flex-direction: row;
-      }
-    }
-
-    // grupo 2 - gestão de projetos preenche a linha
-    > li:nth-child(2) {
-      flex: 1 0 auto;
-    }
-  }
-
-  .pti-nivel-1 > li {
-    background-color: $color-1;
-    color: $cor-white;
-  }
-
-  .pti-nivel-2 > li {
-    > a {
-      &:focus,
-      &:hover {
-        color: $cor-vivo-1;
-        background-color: rgba($cor-vivo-8, .3);
+        &,
+        &:visited {
+          color: $cor-white;
+        }
       }
     }
   }
 
-  .pti-area-3 {
-    align-self: flex-end;
+  .pti-nivel-2 {
+    padding: $space;
+    background-color: $bg-2;
+
+    > .pti-item {
+      background-color: $cor-white;
+      margin-top: $space;
+
+      .pti-link:before {
+        background-color: $color-2;
+      }
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      // > .pti-link {
+      // }
+    }
+  }
+
+  .pti-nivel-3 {
+    .pti-item {
+      color: #000;
+      background-color: $cor-white;
+
+      > .pti-link {
+        &:before {
+          background-color: $color-3 !important;
+        }
+      }
+    }
+  }
+
+  // estilizando por area
+  // -------------------------------------------------------------------
+  // grupo 1 - planejamento estrategico
+  .pti-area-1 {
+    min-width: 300px;
+    max-width: 340px;
+    background-color: transparent !important;
+
+    .pti-area-1bc {
+      flex-direction: row;
+      $width1: 45%;
+
+      .pti-group li:last-child {
+        margin-bottom: 0;
+      }
+
+      .pti-area-1c {
+        flex-basis: $width1;
+        max-width: $width1;
+        margin-left: $space;
+      }
+
+      .pti-area-1b {
+        flex-basis: 100% - $width1;
+        max-width: 100% - $width1;
+
+        li {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  .pti-area-2 {
+    max-width: 380px;
+    min-width: 300px;
+  }
+
+  // tabela Projetos e PPs
+  .pti-area-2a {
+
+    .pti-th {
+      border-radius: $br $br 0 0;
+      color: $cor-white;
+      background-color: $color-2;
+    }
+
+    .pti-td {
+      border: 0;
+      white-space: initial;
+    }
+
+    .pti-tr {
+      flex: 1 1 auto;
+
+      &:not(.pti-th) {
+        .pti-td {
+          padding: $space $space 0 $space;
+          align-items: stretch;
+          background-color: $bg-3;
+        }
+
+        &:last-child .pti-td {
+          padding-bottom: $space;
+          border-radius: 0 0 $br $br;
+        }
+      }
+    }
+
+    // posicao dos itens
+    .pti-ps .pti-item {
+      flex-basis: 100%;
+
+      .pti-link {
+        max-width: 50%;
+      }
+
+      .pti-link-2 {
+        left: 50%;
+      }
+    }
+
+    .pti-item {
+      position: relative;
+      padding: 0 $wdMark;
+
+      &:hover span {
+        z-index: 2;
+        color: $cor-white;
+      }
+
+      .pti-link {
+        position: absolute;
+        top: 0;
+      }
+
+      
+      // efeito slider mouseover
+      a.pti-link {
+        z-index: 3;
+
+        &:before {
+          content: none;
+        }
+        
+        &:focus + .pti-link:before,
+        &:hover + .pti-link:before {
+          justify-content: flex-end;
+          width: 100%;
+        }
+      }
+
+      a.pti-link-2 {
+        &:focus + .pti-link:before,
+        &:hover + .pti-link:before {
+          justify-content: flex-start;
+        }
+      }
+    }
+
+    .pti-ps .pti-item a.pti-link {
+      &:focus + .pti-link:before,
+      &:hover + .pti-link:before {
+        width: 185% !important;
+      }
+    }
+
+    .pti-ps,
+    .pti-ps-2 {
+      .pti-link-2:before {
+        right: 0;
+        content: "<";
+      }
+    }
+
+    .pti-ps-1,
+    .pti-ps-2 {
+      .pti-item {
+        flex-basis: 50%;
+        max-width: 50%;
+      }
+    }
+
+    .pti-ps-2 {
+      justify-content: flex-end;
+    }
+
+    .pti-link {
+      position: absolute;
+      left: 0;
+      right: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  // grupo 5 - governança de ti abaixo de todos
+  .pti-area-5 {
+    > ul {
+      padding: 0 $space $space 0;
+      justify-content: flex-start;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      > li {
+        margin-top: $space !important;
+        margin-left: $space;
+        // flex: 1;
+        max-width: 16%;
+      }
+    }
   }
 }

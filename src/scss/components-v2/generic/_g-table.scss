@@ -1,0 +1,60 @@
+/* ======================================================
+    _g-table
+    reference: https://lowrey.me/creating-responsive-tables-with-flexbox/
+*/
+.pti-table {
+  display: flex;
+  flex-flow: column nowrap;
+  // font-size: 0.8rem;
+  // margin: 0.5rem;
+  // line-height: 1.5;
+  flex: 1 1 auto;
+
+  &.pti-table-striped {
+    .pti-tr:nth-of-type(even) {
+      background-color: #f2f2f2;
+    }
+
+    .pti-tr:nth-of-type(odd) {
+      background-color: #ffffff;
+    }
+  }
+
+  &.pti-table-condensed {
+    .pti-td {
+      padding: 0 0.5rem;
+    }
+  }
+}
+
+.pti-th {
+  display: none;
+  font-weight: 700;
+  background-color: #f2f2f2;
+}
+
+.pti-th > .pti-td {
+  white-space: normal;
+  justify-content: center;
+}
+
+.pti-tr {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.pti-td {
+  display: flex;
+  flex-flow: row nowrap;
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: 0.5em;
+  word-break: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0px;
+  white-space: nowrap;
+  align-items: center;
+  border-bottom: 1px solid #d0d0d0;
+}
