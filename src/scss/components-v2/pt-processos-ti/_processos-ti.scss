@@ -22,7 +22,7 @@
   overflow-x: auto;
 
   .pti-framework {
-    min-width: 1000px;
+    min-width: 1100px;
   }
 
   // links
@@ -93,10 +93,14 @@
       position: relative;
       list-style: none;
       text-align: center;
-      // border: 1px solid #000;
+
+      > span,
+      > .pti-link > span {
+        margin: 0 5px;
+      }
 
       &,
-      > a {
+      > .pti-link {
         min-height: $mHeight;
         border-radius: $br;
         word-break: break-word;
@@ -118,7 +122,7 @@
       .pti-title {
         text-transform: uppercase;
         font-weight: bold;
-        font-size: 85%;
+        font-size: 90%;
       }
     }
   }
@@ -139,6 +143,9 @@
       }
 
       > .pti-link {
+        font-size: 90%;
+        text-transform: uppercase;
+
         &:before {
           background-color: $color-1;
         }
@@ -158,6 +165,7 @@
     > .pti-item {
       background-color: $cor-white;
       margin-top: $space;
+      // text-transform: capitalize;
 
       .pti-link:before {
         background-color: $color-2;
@@ -176,6 +184,13 @@
     .pti-item {
       color: #000;
       background-color: $cor-white;
+
+      > span {
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
 
       > .pti-link {
         &:before {
@@ -225,7 +240,6 @@
 
   // tabela Projetos e PPs
   .pti-area-2a {
-
     .pti-th {
       border-radius: $br $br 0 0;
       color: $cor-white;
@@ -281,7 +295,6 @@
         top: 0;
       }
 
-      
       // efeito slider mouseover
       a.pti-link {
         z-index: 3;
@@ -289,7 +302,7 @@
         &:before {
           content: none;
         }
-        
+
         &:focus + .pti-link:before,
         &:hover + .pti-link:before {
           justify-content: flex-end;
