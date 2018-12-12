@@ -12,7 +12,7 @@ dist
 # css generate by scss
 src/css/style.css
 src/css/fonts.css
-src/css/style-v2.css
+# src/css/style-v2.css
 
 package-lock.json
 
